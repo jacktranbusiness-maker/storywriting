@@ -17,7 +17,7 @@ It must **feel like the same story** the caption promised — same characters, s
 
 | Property | Value |
 |---|---|
-| Length | **3000–4000 characters** (count **characters**, not words) |
+| Length | **6000–8000 characters** (count **characters**, not words) |
 | Language | English |
 | Format | Continuous prose — short paragraphs (2–4 sentences each) |
 | Opening | Must **match and extend** the Facebook caption — same hook energy, same situation; reader should feel "yes, this is what I came for" |
@@ -28,28 +28,32 @@ It must **feel like the same story** the caption promised — same characters, s
 
 ## Story Structure (4 acts in prose)
 
-### Act 1 — Hook (≈600–800 characters)
+### Act 1 — Hook (≈1200–1600 characters)
 - Mirror the caption's opening beat — do not restart with unrelated setup
 - Name characters, place, and the unfair moment quickly
 - One sensory detail tied to the photo (light, smell, texture, sound)
+- Room for one short pre-history beat or relationship sketch that earns the stakes
 - End act on rising tension
 
-### Act 2 — Pressure (≈800–1000 characters)
+### Act 2 — Pressure (≈1600–2000 characters)
 - Deepen humiliation, stakes, or misunderstanding
 - Show antagonist's confidence and bystander reactions
 - Introduce or sharpen the **object clue** (ring, letter, recorder, worn item)
 - Protagonist's restraint or quiet dignity — make reader side with them
+- Use the extra runway for a small secondary scene or witness POV beat that raises the cost
 
-### Act 3 — Turn (≈800–1000 characters)
+### Act 3 — Turn (≈1600–2000 characters)
 - Recognition begins — witness reacts, clue connects, hidden identity surfaces
 - Antagonist's certainty cracks
 - One sharp dialogue exchange or physical beat (door opens, phone buzzes, name spoken)
-- Build to reversal — do not rush the reveal
+- Hold the reveal slightly — let the room register before the words land
+- Build to reversal — do not rush the truth into the open
 
-### Act 4 — Payoff (≈800–1200 characters)
+### Act 4 — Payoff (≈1600–2400 characters)
 - Full twist landed clearly — reader understands who protagonist really is / what object meant
 - Antagonist consequence: humiliation, silence, apology forced, escorted out, etc.
 - Emotional closure for protagonist — dignity restored, connection found, justice served
+- Short epilogue beat (days/weeks later) showing the world has changed
 - Final line: specific image or quiet line — **not** a moral lecture or "and they all learned..."
 
 ---
@@ -127,7 +131,7 @@ No outfit changes mid-story unless narrated. No new major characters after Act 2
 
 ## Quality Checklist
 
-- [ ] 3000–4000 characters (count them)
+- [ ] 6000–8000 characters (count them)
 - [ ] Opening matches caption hook — reader continuity
 - [ ] All 4 acts present with clear turn and payoff
 - [ ] Twist fully revealed; antagonist consequence shown
@@ -136,6 +140,7 @@ No outfit changes mid-story unless narrated. No new major characters after Act 2
 - [ ] Final line is concrete, not moralizing
 - [ ] Visual details consistent with photo prompt
 - [ ] Google content policy respected (see `nano-banana-2.md`)
+- [ ] Extra length earns its keep — no padding, no repeated beats
 
 ---
 

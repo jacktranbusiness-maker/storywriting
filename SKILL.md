@@ -3,7 +3,7 @@ name: story-photo-full-v1
 description: >
   Full pipeline for Facebook drama content with Nano Banana 2 image generation (4:5 vertical,
   self-taken photo aesthetic): Concept → 4:5 Photo Prompt → Facebook Caption → Full Story Article
-  (3000–4000 characters) → HTML Package with copy functions.
+  (6000–8000 characters) → HTML Package with copy functions.
 
   Use this skill whenever the user mentions any of the following:
   - "story-photo-full-v1", "story photo full", "photo story pipeline"
@@ -57,7 +57,7 @@ User gives: concept list OR topic OR "10 prompts from concepts2 group 03"
      ↓
 Stage 1 — 4:5 Photo Prompt (Nano Banana 2, self-taken aesthetic)
 Stage 2 — Facebook Caption (1000–1200 chars, hook only — no twist spoil)
-Stage 3 — Full Story Article (3000–4000 chars, complete arc for website)
+Stage 3 — Full Story Article (6000–8000 chars, complete arc for website)
 Stage 4 — HTML Package (copy photo / caption / full story)
      ↓
 Output: single .html file
@@ -162,7 +162,7 @@ Load `references/full-story-methodology.md` before writing.
 
 ### Quick rules
 
-- **Length**: 3000–4000 characters (count characters, not words)
+- **Length**: 6000–8000 characters (count characters, not words)
 - **Language**: English
 - **Opening**: Must match and extend the caption — same scene, same emotional hook; reader feels continuity
 - **Structure**: 4 acts in prose — Hook → Pressure → Turn → Payoff
@@ -295,7 +295,7 @@ Before delivering the HTML file, verify:
 - [ ] CTA uses only MORE / YES / NEXT
 
 **Full story**
-- [ ] 3000–4000 characters each
+- [ ] 6000–8000 characters each
 - [ ] Opening matches caption hook — reader continuity
 - [ ] Complete twist + antagonist consequence + concrete final line
 - [ ] Voice human and engaging, not robotic
