@@ -16,12 +16,12 @@
       },
       "peakTensionMoment": "Old Navy chaplain in dress blacks placing dog tags on altar table; bride frozen halfway down aisle in ivory satin; stepfather gripping bride's elbow with mouth opening in protest; sunlight through ship-motif stained glass.",
       "characterBible": "CHARACTER LOCK — do not change across photo, caption, and full story:\n• Ava Petersen-Hale — 26, ash-blonde French braid, ivory satin gown, single pearl studs, hand resting on stepfather's arm\n• Chaplain Daniel Reeve (USN ret.) — 73, dress blacks with white collar tab, weathered hands, navy velvet pouch in left hand, dog tags in right\n• Gregory Hale (stepfather) — 58, charcoal suit, gold tie clip, possessive grip on Ava's elbow, mouth half-open in protest\n• Setting — San Diego Naval Memorial Chapel, weathered teak pews, ship-motif stained-glass windows, Saturday 3pm ocean light\n• Object clue — worn dog tags stamped 'PETERSEN — USS BURKE' in navy velvet pouch (pays off in full story Act 3–4)",
-      "photoPrompt": null,
+      "photoPrompt": "4:5 vertical photo, smartphone snapshot aesthetic, natural unposed moment, realistic phone-camera detail.\n\nSan Diego Naval Memorial Chapel, California, Saturday afternoon around 3pm. Soft ocean-side daylight through tall stained-glass windows etched with ship motifs casts blue and amber stripes across weathered teak pews. Chaplain Daniel Reeve (USN ret.), 73, in formal Navy dress black uniform with white chaplain collar tab, gray hair, weathered hands; Ava Petersen-Hale, 26, ash-blonde hair in a French braid, ivory satin gown, single pearl studs, lace bouquet drooping in one hand; Gregory Hale (stepfather), 58, charcoal suit, gold tie clip, salt-and-pepper hair, tense red face.\n\nThe photo captures the moment the wedding stops mid-aisle: the old chaplain has stepped past the bride to the altar table and is calmly placing a worn pair of dog tags onto the white altar cloth, his head slightly bowed. Ava is frozen halfway down the aisle, the other hand still resting on her stepfather's arm, lips parted. Her stepfather grips her elbow possessively, mouth open in protest, eyes locked on the dog tags. A small navy velvet pouch lies open on the altar beside the tags. Guests in the front pews have turned in their seats; one older woman in the very front row is already crying into a handkerchief. Petals scattered on the runner from a paused processional.\n\nFraming: handheld over-the-shoulder angle from a guest two rows back, slightly low. Shallow phone depth-of-field, the bride and chaplain sharp, the back of guests' heads softly blurred. Candid, like someone in the pew just raised their phone. No readable text on dog tags, hymn books, programs, or signage — keep all metallic and printed surfaces angled or blurred. No subtitles. No watermark.",
       "caption": null,
       "fullStory": null,
       "status": {
         "plan": true,
-        "photo": false,
+        "photo": true,
         "caption": false,
         "story": false
       }
@@ -39,17 +39,16 @@
       },
       "peakTensionMoment": "Vendor in faded blue apron weighing apples on metal scale, lips parted mid-chant; CEO frozen mid-stride in charcoal overcoat with phone half-raised; city planner pointing at clipboard toward stalls; charred tin ladle on apron strap.",
       "characterBible": "CHARACTER LOCK — do not change across photo, caption, and full story:\n• Daniel Whittaker — 56, charcoal overcoat, leather gloves, phone in hand, frozen mid-stride\n• Estelle 'Granny Tess' Vargas — 81, gray bun under headscarf, faded blue apron, weathered hands at metal scale, charred tin ladle on apron strap\n• Marisa Cruz (city planner) — 39, navy coat, clipboard, mid-gesture toward stalls\n• Setting — Smith Street weekend market in Cobble Hill, Brooklyn, brownstone backdrop, Sunday autumn 11am, low sun between brick buildings\n• Object clue — charred tin ladle hooked to apron strap (pays off in full story Act 3–4)",
-      "photoPrompt": null,
+      "photoPrompt": "4:5 vertical photo, smartphone snapshot aesthetic, natural unposed moment, realistic phone-camera detail.\n\nSmith Street weekend market, Cobble Hill, Brooklyn, New York, Sunday morning around 11am. Low autumn sun cuts between brownstone buildings and falls across produce stalls in long warm bands; a delivery van blurs softly in the background brick. Estelle 'Granny Tess' Vargas, 81, gray bun under a tied headscarf, faded blue cotton apron over a knit cardigan, weathered hands at a metal hanging scale; Daniel Whittaker, 56, charcoal wool overcoat, leather gloves, salt-and-pepper hair, smartphone half-raised in his right hand; Marisa Cruz (city planner), 39, navy puffer coat, black ponytail, clipboard tucked under her arm.\n\nThe photo captures the precise second the CEO stops walking: he is mid-stride between stalls, weight shifted to his back foot, free hand drifting toward his temple as if a song just hit him in the chest. The old vendor at the apple stall has not noticed him yet — she is calmly weighing two red apples on the metal scale, lips parted in a soft chant only her regulars hear. A small charred tin ladle hangs from her apron strap, blackened from an old fire, catching the low sun. The city planner beside Daniel is mid-gesture toward a row of stalls with her clipboard, oblivious to his stillness. A few neighborhood shoppers in the background carry canvas totes; nobody else notices the man freeze.\n\nFraming: handheld eye-level POV from a customer ten feet away, slightly off-center. Shallow phone depth-of-field — Daniel and the vendor sharp, the brick brownstones and traffic softly blurred. Candid, like a passerby just snapped a market photo and accidentally caught a private moment. No readable text on price signs, awnings, the planner's clipboard, or the charred ladle — keep all letters out of focus or angled away. No subtitles. No watermark.",
       "caption": null,
       "fullStory": null,
       "status": {
         "plan": true,
-        "photo": false,
+        "photo": true,
         "caption": false,
         "story": false
       }
     },
-
     {
       "id": "C063",
       "title": "Drunk Gambler Throws Chips → Floor Attendant Owns the Block",
@@ -63,12 +62,12 @@
       },
       "peakTensionMoment": "Drunk gambler in open suit jacket mid-throw of chip stack across green felt; elderly attendant in vest bowed slightly to retrieve a chip from carpet; pit boss with two fingers at earpiece staring past gambler; chandelier light across marble floor.",
       "characterBible": "CHARACTER LOCK — do not change across photo, caption, and full story:\n• Frank Adler — 58, gray suit jacket open, silk tie loose at collar, red face, mid-throw of chip stack\n• Walter 'Walt' Donato — 74, casino floor-attendant vest with name tag 'Walt', silver hair, wire-frame glasses, calm posture, slight bow to retrieve chip\n• Diane Russo (security chief) — 44, black blazer, earpiece coiled to collar, badge clipped at hip\n• Setting — Coastal Crown Casino high-limit table, Atlantic City, NJ, Friday near midnight, chandelier light, marble floor reflections, slot-machine glow in background\n• Object clue — vintage 1978 casino chip with original logo in attendant's vest pocket (pays off in full story Act 3–4)",
-      "photoPrompt": null,
+      "photoPrompt": "4:5 vertical photo, smartphone snapshot aesthetic, natural unposed moment, realistic phone-camera detail.\n\nCoastal Crown Casino high-limit baccarat table, Atlantic City, New Jersey, Friday night near midnight. Cold gold chandelier light pools over a green felt table while slot machines glow magenta and amber in the background, polished marble floor reflecting both. Frank Adler, 58, gray suit jacket open at the collar, silk tie loose, salt-and-pepper hair, red flushed face; Walter 'Walt' Donato, 74, casino floor-attendant black vest with a small name tag, silver hair combed back, wire-frame glasses, calm posture; Diane Russo (security chief), 44, black blazer over a charcoal blouse, dark hair pulled back, coiled earpiece running to her collar, badge clipped at her hip.\n\nThe photo captures the instant after a chip throw: Frank is leaning forward over the felt, jaw tight, right arm still extended from the toss, a stack of high-denomination chips frozen mid-air bouncing across the table edge toward the carpet. Walt has bowed slightly at the waist, one steady hand reaching down for a chip on the carpet, his expression unreadable, glasses catching the chandelier light. Behind Walt the pit boss has two fingers pressed to her earpiece, eyes already past Frank toward the security catwalk above. Other high-roller patrons at adjacent tables have started to turn their heads. A couple of dealers stand frozen, hands hovering over their shoes.\n\nFraming: handheld low angle from a player seat at the next table, just over a shoulder. Shallow phone depth-of-field — Frank and Walt sharp, the slot wall behind softly bokeh-blurred into colored light. Candid, like a nearby gambler quickly raised their phone before being told to stop. No readable text on chips, name tag, vest patches, table signs, or chip-rack labels — keep all text angled away or blurred into shape only. No subtitles. No watermark.",
       "caption": null,
       "fullStory": null,
       "status": {
         "plan": true,
-        "photo": false,
+        "photo": true,
         "caption": false,
         "story": false
       }
@@ -86,17 +85,16 @@
       },
       "peakTensionMoment": "Bailiff with hand on busker's shoulder; busker holding battered banjo case, surprised eyes; judge in black robes frozen mid-step, eyes locked on faded paper bracelet at busker's wrist; marble columns and tall windows.",
       "characterBible": "CHARACTER LOCK — do not change across photo, caption, and full story:\n• Judge Marcus Hollis — 61, black judicial robes, gray temples, reading glasses pushed up on forehead, hand pressed to chest\n• Eli 'Banjo Eli' Marlow — 30, denim jacket, road-worn boots, banjo case slung on shoulder, faded orange-and-blue paper carnival bracelet on left wrist\n• Bailiff Gomez — 35, courthouse uniform, hand on Eli's shoulder, half-apologetic\n• Setting — Davidson County Courthouse main hallway, Nashville, TN, Tuesday 9am, gray light through tall arched windows, marble columns, polished stone floor\n• Object clue — faded orange-and-blue paper carnival bracelet 'Marlow Family Carnival 1997' (pays off in full story Act 3–4)",
-      "photoPrompt": null,
+      "photoPrompt": "4:5 vertical photo, smartphone snapshot aesthetic, natural unposed moment, realistic phone-camera detail.\n\nDavidson County Courthouse main hallway, Nashville, Tennessee, Tuesday morning around 9am. Cool gray daylight falls through tall arched windows onto a long polished stone floor between marble columns; the corridor is mostly empty except for two clusters of people heading to morning hearings. Judge Marcus Hollis, 61, black judicial robes over a white shirt, gray temples, reading glasses pushed up onto his forehead, free hand pressed flat against his chest; Eli 'Banjo Eli' Marlow, 30, dark blond hair, denim jacket over a worn flannel shirt, road-dusty boots, battered banjo case slung across his back, faded orange-and-blue paper carnival bracelet on his left wrist; Bailiff Gomez, 35, courthouse uniform, dark hair short, hand resting firmly but not roughly on Eli's shoulder.\n\nThe photo captures the moment the judge stops. He has half-turned back toward the entrance, robes still in motion from the abrupt stop, staring at Eli's left wrist where the faded paper bracelet hangs against weathered denim. Eli has both hands raised slightly, palms open, mid-protest of his innocence to the bailiff. The bailiff is mid-sentence, looking at the judge for instruction, confused that his honor has frozen mid-stride. The corridor light catches the orange-and-blue paper of the bracelet just enough to make the colors visible. A few attorneys in suits at the far end of the hall walk past unaware.\n\nFraming: handheld eye-level POV from a witness on a hallway bench, slightly low and to the side so the bracelet sits in the center of the frame between Eli and the judge. Shallow phone depth-of-field — Eli and the judge sharp, marble columns and walking attorneys softly blurred. Candid, like someone waiting for their own hearing just took the picture. No readable text on the bracelet, the bailiff's uniform patch, courtroom door numbers, attorney briefs, or the wall directory — keep all text turned away or out of focus. No subtitles. No watermark.",
       "caption": null,
       "fullStory": null,
       "status": {
         "plan": true,
-        "photo": false,
+        "photo": true,
         "caption": false,
         "story": false
       }
     },
-
     {
       "id": "C065",
       "title": "Wealthy Father Shoves Cardboard Robot → Boy's Algorithm Wins",
@@ -110,12 +108,12 @@
       },
       "peakTensionMoment": "Wealthy father in navy polo and khakis mid-shove of cardboard robot off navy-cloth table; boy in oversized blue hoodie reaching to catch falling robot; expensive metallic competitor bot frozen in foam maze beside; lead judge half-rising from chair with schematic in hand.",
       "characterBible": "CHARACTER LOCK — do not change across photo, caption, and full story:\n• Tyler Brennan — 11, oversized blue hoodie, cargo shorts, scuffed sneakers, gripping hand-drawn schematic in right hand, left hand reaching for falling robot\n• Cardboard robot 'B-9' — duct tape, cereal-box panels, two visible ultrasonic sensors, small servo wheels\n• Brad Sutter — 47, navy polo, khaki pants, expensive watch, mid-shove of robot off table edge\n• Dr. Anika Reyes (lead judge) — 51, university lanyard, charcoal blazer, holding schematic, eyes wide\n• Setting — UW–Madison Field House gym during regional youth robotics fair, Saturday 2pm, harsh overhead floods, autumn light through high clerestory windows, navy cloth tables, foam maze grid\n• Object clue — hand-drawn schematic with ultrasonic timing equations in pencil margin (pays off in full story Act 3–4)",
-      "photoPrompt": null,
+      "photoPrompt": "4:5 vertical photo, smartphone snapshot aesthetic, natural unposed moment, realistic phone-camera detail.\n\nUW–Madison Field House regional youth robotics fair, Madison, Wisconsin, Saturday afternoon around 2pm. Harsh overhead gym floods mix with cold autumn light slanting through high clerestory windows, washing the navy-cloth tables and foam maze grids in flat illumination. Tyler Brennan, 11, oversized blue hoodie, cargo shorts, scuffed sneakers, messy brown hair, hand-drawn schematic crinkled in his right hand and left hand reaching desperately forward; Brad Sutter, 47, navy polo, khaki pants, expensive watch, neatly cut brown hair, mid-shove of a small cardboard robot off the table edge; Dr. Anika Reyes (lead judge), 51, university lanyard, charcoal blazer, salt-and-pepper hair pulled into a low knot, half-rising from her judges' chair clutching a schematic.\n\nThe photo captures the moment a small cardboard robot leaves the table: a duct-taped robot built from cereal-box panels with two visible ultrasonic sensors and small servo wheels — Tyler's 'B-9' — is tipping off the navy table edge, mid-air. Brad's open palm is still in contact with its side from the shove, mouth set in a contemptuous sneer. Tyler is lunging forward with both arms, the corner of his hand-drawn pencil schematic crinkling in his fist. To his left, an expensive metallic competitor robot sits frozen halfway through a foam maze, the polished aluminum kind that costs thousands. Dr. Reyes is half-out of her seat at the judges' table, schematic in one hand, mouth opening to call security. Other young contestants and parents in the rows behind are turning toward the noise, phones lifting.\n\nFraming: handheld low angle from a parent two rows back, slightly off-center so the falling cardboard robot sits in the middle third of the frame. Shallow phone depth-of-field — Tyler, the falling robot, and Brad's hand sharp; the gym ceiling lights and crowd softly blurred. Candid, like a parent quickly raised their phone when they heard the shove. No readable text on robot competition signs, schematics held in hand, judges' nameplates, lanyards, or table cards — keep all text out of focus or angled away. No subtitles. No watermark.",
       "caption": null,
       "fullStory": null,
       "status": {
         "plan": true,
-        "photo": false,
+        "photo": true,
         "caption": false,
         "story": false
       }
@@ -143,7 +141,6 @@
         "story": false
       }
     },
-
     {
       "id": "C067",
       "title": "Boy Gives Yellow Raincoat → Foundation Director Awards Scholarship",
@@ -190,7 +187,6 @@
         "story": false
       }
     },
-
     {
       "id": "C069",
       "title": "Guest Orders Housekeeper to Carry Bags → Host Calls Her 'Mother'",
