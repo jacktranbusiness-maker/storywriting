@@ -1,0 +1,188 @@
+{
+  "batchId": "batch-08",
+  "prefix": "C081",
+  "conceptSource": "concepts2 — random rotate groups 01–12",
+  "categoriesUsed": [12, 5, 9, 3, 7, 10, 4, 6, 11, 8],
+  "items": [
+    {
+      "id": "C081",
+      "title": "Rain-Soaked Woman Sings → Bride Drops Bouquet",
+      "conceptSource": "concepts2 / Concept 12 #17",
+      "openingStyle": "Dialogue slap",
+      "beats": {
+        "setup": "Wedding coordinator yells at rain-soaked woman at chapel door, physically blocking entry.",
+        "clue": "Woman begins singing a lullaby no one should know; bride drops bouquet mid-aisle.",
+        "turn": "Groom's mother turns pale; bride whispers 'That's my baby recording.'",
+        "payoff": "Rain-soaked woman is bride's biological mother, declared dead after house fire, survived in burn unit under false name."
+      },
+      "characterBible": "CHARACTER LOCK — do not change across photo, caption, and full story:\n• Nora Sinclair (bride) — 29, honey-brown hair in loose updo, ivory tulle gown, trembling hands, bouquet falling\n• Grace Adler (rain-soaked woman) — 54, short gray hair plastered wet, soaked navy coat, old burn scars on hands, singing softly\n• Coordinator Sandra Beale — 46, black pencil skirt suit, earpiece, arm outstretched blocking doorway\n• Setting — Magnolia Chapel, Savannah, Georgia, white marble floors, warm amber candlelight, Saturday 5pm rain outside\n• Object clue — the lullaby melody / rain puddle at chapel threshold (pays off in full story Act 3–4)",
+      "peakTensionMoment": "Sandra blocking doorway with arm outstretched; Grace soaked and singing, burn-scarred hands visible; Nora frozen mid-aisle with bouquet slipping; rain visible through open doors.",
+      "photoPrompt": null,
+      "caption": null,
+      "fullStory": null,
+      "status": { "plan": true, "photo": false, "caption": false, "story": false }
+    },
+    {
+      "id": "C082",
+      "title": "One-String Violin Mocked → Conductor Hears Lost Mentor's Composition",
+      "conceptSource": "concepts2 / Concept 05 #4",
+      "openingStyle": "Silent witness",
+      "beats": {
+        "setup": "Gala guest laughs at a child playing damaged one-string violin on sidewalk outside Lincoln Center, tosses dollar contemptuously.",
+        "clue": "Concert hall conductor emerges and freezes — the melody is a lost composition by his former mentor, never published.",
+        "turn": "Conductor kneels on sidewalk, asks boy where he learned the piece. Boy says his grandfather played it every night.",
+        "payoff": "Boy's grandfather was mentor's student who memorized composition before fire destroyed the only manuscript; conductor offers full conservatory scholarship."
+      },
+      "characterBible": "CHARACTER LOCK — do not change across photo, caption, and full story:\n• Mateo Reyes — 9, oversized gray coat, fingerless gloves, damaged violin with one string, focused expression\n• Gala Guest Harrison Webb — 55, black tuxedo, champagne flute, contemptuous toss of dollar bill\n• Conductor Adrian Volkov — 63, silver hair swept back, formal black suit with white scarf, frozen mid-step\n• Setting — Lincoln Center side entrance, NYC, Friday 8pm, gold light spilling from doors, cold autumn air, street lamp above boy\n• Object clue — damaged one-string violin (pays off in full story Act 3–4)",
+      "peakTensionMoment": "Harrison mid-toss of dollar bill; Mateo seated on milk crate playing one-string violin with eyes closed; Conductor Volkov emerging from lit doorway, hand raised to chest, frozen in recognition.",
+      "photoPrompt": null,
+      "caption": null,
+      "fullStory": null,
+      "status": { "plan": true, "photo": false, "caption": false, "story": false }
+    },
+    {
+      "id": "C083",
+      "title": "Mute Busboy Humiliated → Investor Owner Revealed",
+      "conceptSource": "concepts2 / Concept 09 #2",
+      "openingStyle": "Object clue",
+      "beats": {
+        "setup": "Wealthy patron humiliates mute busboy for spilling water on Italian shoes, snaps fingers demanding he kneel to wipe them.",
+        "clue": "Busboy's notebook falls open on floor — architectural sketches of restaurant renovation with investor approval stamps.",
+        "turn": "Restaurant owner rushes over to introduce busboy as the silent investor who saved the business from bankruptcy.",
+        "payoff": "Busboy lost his voice in car accident that killed his wife; invested insurance settlement to save restaurant she loved. Patron's company is the lease-holder who nearly evicted them."
+      },
+      "characterBible": "CHARACTER LOCK — do not change across photo, caption, and full story:\n• Daniel Okafor — 34, mute, close-cropped hair, white busboy apron, small leather notebook with architectural sketches\n• Victor Harding — 48, navy blazer, gold cufflinks, Italian leather shoes, finger-snapping posture\n• Chef-Owner Maria Espinoza — 40, chef whites, rushing from kitchen, protective stance\n• Setting — The Pearl Bistro, Austin, Texas, exposed brick walls, Edison bulbs, Thursday 8pm dinner service\n• Object clue — leather notebook with renovation sketches and investor stamps (pays off in full story Act 3–4)",
+      "peakTensionMoment": "Victor pointing down at wet shoe, finger snapping; Daniel on one knee with spilled water glass and notebook fallen open showing sketches; Maria emerging from kitchen with urgent expression.",
+      "photoPrompt": null,
+      "caption": null,
+      "fullStory": null,
+      "status": { "plan": true, "photo": false, "caption": false, "story": false }
+    },
+    {
+      "id": "C084",
+      "title": "Headmistress Orders Janitor Out → Anonymous Scholarship Donor",
+      "conceptSource": "concepts2 / Concept 03 #18",
+      "openingStyle": "Accuser POV",
+      "beats": {
+        "setup": "Whitmore Academy donor dinner. Headmistress orders janitor to leave ballroom: 'This event is for donors only.'",
+        "clue": "Gold signet ring on janitor's hand catches chandelier light — same crest on every scholarship plaque in hallway.",
+        "turn": "Board chairman rises, walks to janitor, extends hand with a bow: 'Ladies and gentlemen, our keynote benefactor.'",
+        "payoff": "Janitor is alumnus who funded every scholarship for 20 years anonymously; took janitor job to test how school treats working-class people before renewing $12M endowment."
+      },
+      "characterBible": "CHARACTER LOCK — do not change across photo, caption, and full story:\n• Robert Mwangi — 58, graying temples, navy janitorial uniform, gold signet ring on right hand, dignified posture\n• Headmistress Catherine Hale — 52, blonde bob, emerald evening gown, pearl earrings, imperious pointing gesture\n• Board Chairman David Ashworth — 65, silver hair, charcoal tuxedo, rising from head table\n• Setting — Whitmore Academy Grand Ballroom, Greenwich, Connecticut, crystal chandeliers, white linen tables, Friday 7pm\n• Object clue — gold signet ring with academy crest (pays off in full story Act 3–4)",
+      "peakTensionMoment": "Catherine pointing toward exit in superiority; Robert standing still in janitor uniform, chin level, signet ring catching chandelier light; guests at tables turning with champagne glasses paused; David half-risen at head table.",
+      "photoPrompt": null,
+      "caption": null,
+      "fullStory": null,
+      "status": { "plan": true, "photo": false, "caption": false, "story": false }
+    },
+    {
+      "id": "C085",
+      "title": "Raincoat Boy Gives Coat to Stranger → Foundation Director Chooses Scholarship",
+      "conceptSource": "concepts2 / Concept 07 #6",
+      "openingStyle": "Victim restraint",
+      "beats": {
+        "setup": "Thunderstorm at Riverside Park, Chicago. Street boy sees elderly woman shivering at bench with no shelter.",
+        "clue": "Boy removes his only raincoat and drapes it over woman's shoulders without a word, turns to walk away in rain.",
+        "turn": "Woman calls after him with authoritative voice; black car pulls up, driver steps out with umbrella.",
+        "payoff": "Woman is Evelyn Price, director of Lakeside Foundation, personally observing scholarship candidates. Boy Marcus is selected for annual youth scholarship."
+      },
+      "characterBible": "CHARACTER LOCK — do not change across photo, caption, and full story:\n• Marcus Tate — 12, lean frame, torn yellow raincoat (now removed), gray hoodie soaked through, worn sneakers, quiet dignity\n• Evelyn Price — 72, silver hair under soaked silk scarf, gray wool coat, grocery bags at feet, gold bracelet on wrist\n• Setting — Riverside Park entrance, Chicago, Illinois, Thursday 6pm, heavy thunderstorm, orange streetlamp glow, park bench under bare oak tree\n• Object clue — torn yellow raincoat draped over Evelyn's shoulders (pays off in full story Act 3–4)",
+      "peakTensionMoment": "Marcus walking away in downpour without raincoat, hoodie drenched; Evelyn on bench wearing boy's yellow raincoat, one hand raised reaching toward him; grocery bags at feet; rain streaking through orange streetlamp glow.",
+      "photoPrompt": null,
+      "caption": null,
+      "fullStory": null,
+      "status": { "plan": true, "photo": false, "caption": false, "story": false }
+    },
+    {
+      "id": "C086",
+      "title": "Officer Empties Wallet → Finds Photo of Himself as Newborn",
+      "conceptSource": "concepts2 / Concept 10 #11",
+      "openingStyle": "Room goes wrong",
+      "beats": {
+        "setup": "Cedar Falls Police Station, Iowa. Young officer empties detained homeless man's wallet on booking counter as standard procedure.",
+        "clue": "A creased photograph falls out — a newborn baby. Officer's hand stops. It's him. His birthmark, hospital bracelet, mother's handwriting on back.",
+        "turn": "Booking sergeant leans in, recognizes photo. Homeless man looks up calmly and says officer's full birth name.",
+        "payoff": "Homeless man is officer's biological father who left family to protect them from criminal threat; carried photo 26 years watching from distance, too ashamed to make contact."
+      },
+      "characterBible": "CHARACTER LOCK — do not change across photo, caption, and full story:\n• Officer Ryan Galloway — 26, buzz cut, navy police uniform, latex gloves, trembling hand holding photo\n• Thomas Galloway — 54, weathered face, gray stubble, green army surplus jacket, calm gray eyes\n• Setting — Cedar Falls Police Station booking counter, Iowa, Tuesday 11pm, harsh overhead fluorescent, metal counter, scattered wallet contents\n• Object clue — creased newborn photo with mother's handwriting on back (pays off in full story Act 3–4)",
+      "peakTensionMoment": "Ryan holding creased photo up to light, face shifting from procedure to shock; Thomas seated handcuffed looking up calmly; wallet contents scattered on metal surface; harsh fluorescent overhead.",
+      "photoPrompt": null,
+      "caption": null,
+      "fullStory": null,
+      "status": { "plan": true, "photo": false, "caption": false, "story": false }
+    },
+    {
+      "id": "C087",
+      "title": "Carnival Bracelet on Performer → Judge Recognizes Missing Son",
+      "conceptSource": "concepts2 / Concept 04 #19",
+      "openingStyle": "Visual reveal",
+      "beats": {
+        "setup": "Hamilton County Fair, Cincinnati. County judge passing with family barely glances at street performer juggling near Ferris wheel.",
+        "clue": "Performer's sleeve rides up — faded carnival bracelet from decades ago, same one judge placed on his missing toddler's wrist 22 years earlier.",
+        "turn": "Judge stops cold; wife grabs his arm; performer catches judge staring and drops a juggling ball.",
+        "payoff": "Performer is judge's son, kidnapped at age 3 by ex-wife during custody dispute. Bracelet with hand-painted 'J' was last thing judge put on boy before he vanished."
+      },
+      "characterBible": "CHARACTER LOCK — do not change across photo, caption, and full story:\n• Performer 'Jay' Callahan — 25, shaggy brown hair, faded denim vest, wrist bracelet with hand-painted 'J', juggling pins\n• Judge William Callahan — 58, silver hair, weekend polo and khakis, expression of frozen recognition\n• Setting — Hamilton County Fair, Cincinnati, Ohio, Saturday 3pm, Ferris wheel behind, corn dog stands, afternoon golden light\n• Object clue — faded carnival bracelet with hand-painted 'J' (pays off in full story Act 3–4)",
+      "peakTensionMoment": "Jay mid-juggle with sleeve ridden up, bracelet visible; Judge Callahan stopped three feet away, mouth open, hand reaching forward; wife gripping his arm; fair lights and Ferris wheel blurred behind.",
+      "photoPrompt": null,
+      "caption": null,
+      "fullStory": null,
+      "status": { "plan": true, "photo": false, "caption": false, "story": false }
+    },
+    {
+      "id": "C088",
+      "title": "Poor Girl Slashes Portrait → Hidden Painting Revealed",
+      "conceptSource": "concepts2 / Concept 06 #5",
+      "openingStyle": "Deadline pressure",
+      "beats": {
+        "setup": "Harrington Gallery Auction, San Francisco. Young woman in thrift dress rushes past security, slashes billionaire's portrait moments before gavel falls.",
+        "clue": "Behind the slash, older painting underneath visible — unmistakable brushstrokes recognized immediately by auction house.",
+        "turn": "Art authenticator approaches torn canvas with trembling hands: 'This is a Rosalind Hayes original. She disappeared in 1987.'",
+        "payoff": "Young woman is Rosalind Hayes' granddaughter. Billionaire painted over Rosalind's work after forcing her from studio. Hidden painting worth more than entire auction combined."
+      },
+      "characterBible": "CHARACTER LOCK — do not change across photo, caption, and full story:\n• Zara Hayes — 22, dark curly hair, secondhand floral dress, determined eyes, security pinning her arms\n• Billionaire Collector Grant Mercer — 60, charcoal suit, silk pocket square, face red with outrage\n• Authenticator Dr. Nina Rao — 45, tortoiseshell glasses, black blazer, hands trembling over torn canvas\n• Setting — Harrington Gallery, San Francisco, California, Saturday 7pm auction, track lighting on art, velvet rope, well-dressed crowd\n• Object clue — hidden painting visible through slash in canvas (pays off in full story Act 3–4)",
+      "peakTensionMoment": "Zara held by two security guards, arms pinned, staring defiantly at slashed portrait; faint brushstrokes of hidden painting visible through tear; Mercer on feet, face red; auction crowd frozen with paddles lowered.",
+      "photoPrompt": null,
+      "caption": null,
+      "fullStory": null,
+      "status": { "plan": true, "photo": false, "caption": false, "story": false }
+    },
+    {
+      "id": "C089",
+      "title": "Customer Snaps at Laundromat Singer → Missing Mother's Lullaby",
+      "conceptSource": "concepts2 / Concept 11 #3",
+      "openingStyle": "Wrong apology",
+      "beats": {
+        "setup": "SunnySide Laundromat, Phoenix. Wealthy customer snaps at worker for singing while folding sheets: 'Can you not? Some of us have headaches.'",
+        "clue": "Worker apologizes, goes quiet. But customer freezes — she knows the second verse. No one knows the second verse. Only her missing mother knew.",
+        "turn": "Customer's hands tremble on basket; she turns back and whispers: 'Where did you learn that song?'",
+        "payoff": "Worker is customer's mother's best friend, asked to memorize lullaby before mother disappeared into witness protection. Mother recently died, left instructions to sing publicly until daughter found her."
+      },
+      "characterBible": "CHARACTER LOCK — do not change across photo, caption, and full story:\n• Claire Whitman — 36, blonde ponytail, designer athleisure set, expensive sunglasses on head, trembling hands on basket\n• Rosa Delgado — 62, gray-streaked hair in braid, blue SunnySide polo, folding white sheets, kind weathered face\n• Setting — SunnySide Laundromat, Phoenix, Arizona, Wednesday 2pm, fluorescent lights, humming dryers, white tile floor\n• Object clue — the lullaby melody (second verse) / envelope in Rosa's apron pocket (pays off in full story Act 3–4)",
+      "peakTensionMoment": "Claire turned back mid-step, basket clutched to chest, face shifting from annoyance to shock; Rosa pausing mid-fold of white sheet, looking up with gentle knowing expression; dryers humming behind; flat fluorescent overhead.",
+      "photoPrompt": null,
+      "caption": null,
+      "fullStory": null,
+      "status": { "plan": true, "photo": false, "caption": false, "story": false }
+    },
+    {
+      "id": "C090",
+      "title": "Security Removes Sleeping Veteran → Unit Patch Recognized",
+      "conceptSource": "concepts2 / Concept 08 #9",
+      "openingStyle": "Moral choice",
+      "beats": {
+        "setup": "Riverside Mall food court, San Diego. Security guard shakes awake sleeping veteran: 'Sir, this isn't a shelter.'",
+        "clue": "Younger veteran at nearby table sees unit patch on faded jacket and goes rigid — only twelve men ever wore it.",
+        "turn": "Younger veteran stands, crosses food court, places himself between guard and old man: 'Do you know who this is?'",
+        "payoff": "Sleeping veteran is Master Sgt. Frank Kowalski who led classified extraction saving 11 men including younger veteran. Never decorated because mission was never acknowledged. Within an hour, six squad members arrive and stand watch."
+      },
+      "characterBible": "CHARACTER LOCK — do not change across photo, caption, and full story:\n• Master Sgt. Frank Kowalski (ret.) — 69, gaunt face, gray crew cut, faded desert camo jacket with unit patch, worn boots, sleeping posture\n• Security Guard Damon Lewis — 28, khaki uniform, radio on belt, hand on veteran's shoulder\n• Sgt. Jake Torres (younger veteran) — 34, civilian flannel shirt, military haircut, standing protectively, jaw set\n• Setting — Riverside Mall food court, San Diego, California, Saturday 1pm, skylights above, food vendors behind, plastic tables\n• Object clue — faded unit patch on desert camo jacket (pays off in full story Act 3–4)",
+      "peakTensionMoment": "Damon with hand on Frank's shoulder gesturing toward exit; Frank blinking awake, unit patch visible on faded jacket; Jake on feet three tables away, tray abandoned, moving toward them with protective urgency; skylight casting noon light.",
+      "photoPrompt": null,
+      "caption": null,
+      "fullStory": null,
+      "status": { "plan": true, "photo": false, "caption": false, "story": false }
+    }
+  ]
+}
