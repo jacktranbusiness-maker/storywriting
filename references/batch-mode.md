@@ -52,9 +52,10 @@ output/{batch-id}/
   "items": [
     {
       "id": "C041",
-      "title": "Humiliation phrase → Reveal phrase",
+      "title": "Setup phrase → Payoff phrase",
       "conceptSource": "Concept 03 #7",
-      "openingStyle": "Silent witness",
+      "engine": "E08",
+      "openingStyle": "Object Clue",
       "characterBible": "CHARACTER LOCK — do not change...",
       "photoPrompt": null,
       "caption": null,
@@ -142,17 +143,19 @@ Dùng skill storywriting — Phase 0 ONLY.
 
 Batch: {BATCH_ID} | Items: {IDS} | Source: {CONCEPT_SOURCE}
 
-Đọc concept bank tương ứng (concepts1 hoặc concepts2).
+Đọc concept bank tương ứng (concepts1 / concepts2 / concepts3 / concepts4).
+Nếu dùng concepts4 hoặc gán engine: đọc thêm references/story-engines.md.
 
 Tạo STORY PLAN — KHÔNG viết photo prompt, caption, full story, txt.
 
 Mỗi item gồm:
-- id | title (humiliation → reveal)
+- id | title (`[setup] → [payoff]` theo engine của item)
 - conceptSource
-- 4-beat arc (Setup / Clue / Turn / Payoff) — 1–2 câu/beat
-- Character Lock đầy đủ (protagonist, antagonist, setting US, object clue)
-- Peak-tension moment cho photo (Beat 1–2, không spoil twist)
-- openingStyle (1 trong 10 styles, không trùng liên tiếp)
+- engine (E01–E22 từ story-engines.md) — rotate trong batch, tránh 3+ item liên tiếp cùng engine
+- 4-beat arc (Hook / Build / Turn / Payoff) — 1–2 câu/beat, map theo engine
+- Character Lock đầy đủ (nhân vật, setting US, object clue)
+- Peak-tension moment cho photo (Beat 1–2 = scroll-stop của engine, không spoil payoff)
+- openingStyle (theo style engine gợi ý, không trùng liên tiếp)
 
 Output:
 1. output/{BATCH_ID}/{BATCH_ID}-plan.md
@@ -176,7 +179,7 @@ Dùng skill storywriting — Phase 1A ONLY.
 Viết PHOTO PROMPT cho {IDS} (nửa đầu batch).
 - Mở đầu: 4:5 vertical + smartphone snapshot aesthetic
 - Character Lock khớp plan/JSON
-- Peak tension Beat 1–2, twist KHÔNG được vẽ
+- Scroll-stop = "Photo" line của engine item đó (xem story-engines.md); Beat 1–2, KHÔNG vẽ payoff
 - Không readable text in scene
 
 Cập nhật {BATCH_ID}.json — chỉ photoPrompt + status.photo=true cho items này.
@@ -194,14 +197,15 @@ DỪNG sau Phase 1A. KHÔNG commit/PR (chờ Phase 4).
 Dùng skill storywriting — Phase 2A ONLY.
 
 Đọc references/caption-methodology.md
+Đọc references/story-engines.md (opening style + tone theo engine)
 Đọc output/{BATCH_ID}/{BATCH_ID}.json (items có photoPrompt)
 
 Viết CAPTION cho {IDS} (nửa đầu).
 - 1000–1200 ký tự mỗi caption (đếm ký tự) — nếu lố thì GIỮ NGUYÊN, không trim
 - 3 đoạn + blank line + CTA (MORE / YES / NEXT)
 - Đoạn 2: 1 visual detail từ photo prompt
-- Không spoil twist
-- openingStyle đúng plan
+- Không spoil payoff (giấu đúng "Withhold" của engine)
+- openingStyle theo engine của item
 
 Cập nhật JSON — chỉ caption + status.caption=true.
 In bảng verify: id | char count | opening style | CTA
@@ -218,13 +222,14 @@ DỪNG sau Phase 2A. KHÔNG commit/PR (chờ Phase 4).
 Dùng skill storywriting — Phase 3 ONLY.
 
 Đọc references/full-story-methodology.md
+Đọc references/story-engines.md (payoff + tone theo engine)
 Đọc output/{BATCH_ID}/{BATCH_ID}.json
 
 Viết FULL STORY cho {ID_A} và {ID_B} ONLY.
 - 6000–8000 ký tự mỗi bài (đếm ký tự) — nếu lố thì GIỮ NGUYÊN, không trim
 - Mở đầu khớp caption — reader cảm continuity
-- 4 acts: Hook → Pressure → Turn → Payoff
-- Twist + consequence antagonist + final line cụ thể
+- 4 acts: Hook → Build → Turn → Payoff (map theo engine)
+- Payoff theo engine + final line cụ thể; antagonist consequence CHỈ khi engine có antagonist
 - Character Lock nhất quán
 - Không copy CTA Facebook vào story
 

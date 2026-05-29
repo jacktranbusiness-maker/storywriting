@@ -51,15 +51,22 @@ Every prompt must read like a **real person took this photo on a phone**, not a 
 
 ## Prompt Output Format
 
-One **4:5 hero photo prompt** per concept. The image captures the **scroll-stop moment** — conflict + emotional hook visible, **twist NOT shown**.
+One **4:5 hero photo prompt** per concept. The image captures the **scroll-stop moment** — the
+engine's emotional hook visible, **payoff NOT shown**. For `humiliation → reveal` that hook is
+visible conflict; for other engines it's a curious ritual, a lonely vigil, an unlikely tender
+pairing, a quiet unease, etc. (see `references/story-engines.md`, the **Photo (scroll-stop)** line
+of each engine).
 
 ### Title format
 
 ```
-NNN | [humiliation/conflict phrase] → [reveal/twist phrase]
+NNN | [setup / hook phrase] → [payoff / meaning phrase]
 ```
 
-The title names the full arc for production reference. The **photo prompt itself must not depict the twist payoff**.
+Default (`humiliation → reveal`): `[humiliation phrase] → [reveal phrase]`.
+Engine variants: `[odd ritual] → [the reason]`, `[ordinary moment] → [what was lost]`,
+`[two strangers] → [a chosen family]`. The title names the full arc for production reference;
+the **photo prompt itself must not depict the payoff**.
 
 ### Photo prompt structure
 
@@ -77,12 +84,18 @@ Framing: [handheld angle — slightly low, eye-level, over-shoulder POV, etc.]. 
 
 ## What the Hero Photo Should Show
 
+The photo shows the engine's **scroll-stop moment** (Beat 1–2) and withholds the payoff.
+
 | Beat | Show in photo? | Notes |
 |------|----------------|-------|
-| Setup / humiliation | **Yes** | Antagonist blocking, mocking, or dismissing protagonist |
-| Object clue | **Optional** | Ring, envelope, worn item — visible but meaning unclear |
-| Recognition beginning | **Rarely** | Only if it doesn't spoil twist |
-| Twist payoff | **Never** | Do not show reversal, reveal, or antagonist humiliated |
+| Scroll-stop hook | **Yes** | The engine's hook: humiliation (default), a repeated ritual (Mystery/Long Wait), an unlikely warm pairing (Found Family), a quiet vigil (Quiet Protector), an ordinary moment with dread (Bittersweet) |
+| Object clue | **Optional** | Ring, envelope, worn item, two coffees, folded note — visible but meaning unclear |
+| Recognition / turn beginning | **Rarely** | Only if it doesn't spoil the payoff |
+| Payoff | **Never** | Do not show the reveal, reunion, explanation, or antagonist's fall |
+
+> Per-engine scroll-stop guidance is in `references/story-engines.md`. Example: for **E06
+> Bittersweet** the photo is an ordinary moment carrying quiet dread (a son walking into a nursing
+> home), NOT a confrontation; for **E21 Found Family** it's a gentle unlikely pairing, not a conflict.
 
 The photo pairs with a **caption that stops before the payoff** and a **full story article** that completes the arc.
 
