@@ -18,6 +18,16 @@ Use this file for every batch of 2+ concepts. **Never one-shot a full batch in a
 
 ---
 
+## Git (hard rule)
+
+- **No commit/PR per phase.** Phases 0–3 stay local. An earlier version opened a PR per phase
+  (`{batch-id}-phase-N`) — that is no longer wanted.
+- **One batch = one PR**, created **only after Phase 4**, on branch `{batch-id}`.
+- Cross-session: if the workspace resets to remote between phases, push the working branch
+  (commit, no PR) at each phase end to preserve the JSON; still open the single PR at Phase 4.
+
+---
+
 ## File layout per batch
 
 ```
@@ -117,6 +127,9 @@ Workflow bắt buộc — mỗi phase = 1 session riêng:
 
 KHÔNG one-shot. KHÔNG HTML. Deliverable cuối: {BATCH_ID}-package.txt
 
+Git: KHÔNG commit/PR sau mỗi phase. Phase 0–3 chỉ làm local.
+Chỉ tạo ĐÚNG 1 PR sau khi Phase 4 xong (branch {BATCH_ID}).
+
 Bắt đầu Phase 0 ONLY. Dừng sau khi xong, chờ tôi confirm.
 ```
 
@@ -146,7 +159,7 @@ Output:
 2. output/{BATCH_ID}/{BATCH_ID}.json — skeleton với characterBible + status.plan=true
 
 Rotate location, twist type, opening style across items.
-DỪNG sau Phase 0. Không làm Phase 1.
+DỪNG sau Phase 0. Không làm Phase 1. KHÔNG commit/PR (chờ Phase 4).
 ```
 
 ---
@@ -168,7 +181,7 @@ Viết PHOTO PROMPT cho {IDS} (nửa đầu batch).
 
 Cập nhật {BATCH_ID}.json — chỉ photoPrompt + status.photo=true cho items này.
 KHÔNG viết caption, story, txt.
-DỪNG sau Phase 1A.
+DỪNG sau Phase 1A. KHÔNG commit/PR (chờ Phase 4).
 ```
 
 **Phase 1B** — same prompt, second half of IDs.
@@ -184,7 +197,7 @@ Dùng skill storywriting — Phase 2A ONLY.
 Đọc output/{BATCH_ID}/{BATCH_ID}.json (items có photoPrompt)
 
 Viết CAPTION cho {IDS} (nửa đầu).
-- 1000–1200 ký tự mỗi caption (đếm ký tự)
+- 1000–1200 ký tự mỗi caption (đếm ký tự) — nếu lố thì GIỮ NGUYÊN, không trim
 - 3 đoạn + blank line + CTA (MORE / YES / NEXT)
 - Đoạn 2: 1 visual detail từ photo prompt
 - Không spoil twist
@@ -192,7 +205,7 @@ Viết CAPTION cho {IDS} (nửa đầu).
 
 Cập nhật JSON — chỉ caption + status.caption=true.
 In bảng verify: id | char count | opening style | CTA
-DỪNG sau Phase 2A.
+DỪNG sau Phase 2A. KHÔNG commit/PR (chờ Phase 4).
 ```
 
 **Phase 2B** — second half.
@@ -208,7 +221,7 @@ Dùng skill storywriting — Phase 3 ONLY.
 Đọc output/{BATCH_ID}/{BATCH_ID}.json
 
 Viết FULL STORY cho {ID_A} và {ID_B} ONLY.
-- 6000–8000 ký tự mỗi bài (đếm ký tự)
+- 6000–8000 ký tự mỗi bài (đếm ký tự) — nếu lố thì GIỮ NGUYÊN, không trim
 - Mở đầu khớp caption — reader cảm continuity
 - 4 acts: Hook → Pressure → Turn → Payoff
 - Twist + consequence antagonist + final line cụ thể
@@ -217,7 +230,7 @@ Viết FULL STORY cho {ID_A} và {ID_B} ONLY.
 
 Cập nhật JSON — chỉ 2 items này + status.story=true.
 In verify: id | char count | first 80 chars of opening
-DỪNG. Không viết story khác.
+DỪNG. Không viết story khác. KHÔNG commit/PR (chờ Phase 4).
 ```
 
 Repeat for each pair until all items done.
@@ -239,6 +252,11 @@ Xuất output/{BATCH_ID}/{BATCH_ID}-package.txt theo format batch-mode.md.
 
 Optional: cũng xuất -photos.txt, -captions.txt, -stories.txt
 Hoặc chạy: node scripts/json-to-txt.js output/{BATCH_ID}/{BATCH_ID}.json
+
+Sau khi assemble xong (đây là phase cuối):
+- Tạo ĐÚNG 1 PR cho cả batch, branch tên {BATCH_ID}.
+- KHÔNG tạo PR riêng cho từng phase.
+- PR body: liệt kê items + char count caption/story.
 ```
 
 ---
@@ -277,6 +295,8 @@ Sau khi sửa: cập nhật JSON + regenerate {BATCH_ID}-package.txt cho item đ
 
 Total: **11 short sessions** vs 1 session that breaks.
 
+The single PR (branch `batch-NN`) is created only in the final session (Phase 4) — never per phase.
+
 ---
 
 ## Single concept (1 item)
@@ -290,5 +310,5 @@ Prompt:
 Dùng skill storywriting — single item {ID}.
 Phase 0→3 trong 1 session (chỉ 1 item).
 Output: output/{BATCH_ID}/{BATCH_ID}.json + {BATCH_ID}-package.txt
-KHÔNG HTML.
+KHÔNG HTML. Tạo ĐÚNG 1 PR ở cuối (branch {BATCH_ID}), không commit giữa chừng.
 ```

@@ -36,6 +36,7 @@ Platform: **Nano Banana 2** (Google image generation)
 3. **JSON is source of truth** — `output/{batch-id}/{batch-id}.json`
 4. **Final deliverable = TXT** — never HTML unless user explicitly overrides
 5. **Phase prompts** — copy from `references/batch-mode.md`
+6. **No commit/PR per phase** — do NOT commit or open a pull request after each phase. Work locally through Phases 0–3. Create **exactly one PR** for the whole batch only after Phase 4 finishes (see `Git workflow` section below).
 
 ---
 
@@ -47,12 +48,14 @@ Platform: **Nano Banana 2** (Google image generation)
 | `references/nano-banana-2.md` | Before any photo prompt |
 | `references/concepts1.md` | Category bank A–M (~130 templates) |
 | `references/concepts2.md` | 240 seeds in 12 groups |
+| `references/concepts3.md` | 400 seeds in 20 groups (Concepts 13–32) |
 | `references/caption-methodology.md` | Before any caption |
 | `references/full-story-methodology.md` | Before any full story |
 
 **Concept source:**
 - "concepts1" / "category B" → `concepts1.md`
 - "concepts2" / "concept 03" → `concepts2.md`
+- "concepts3" / "concept 13–32" → `concepts3.md`
 - Custom scenario → no bank required
 
 ---
@@ -64,8 +67,10 @@ Phase 0 — Story Plan        → plan.md + JSON skeleton
 Phase 1 — Photo Prompts     → JSON (max 5/session)
 Phase 2 — Captions          → JSON (max 5/session)
 Phase 3 — Full Stories      → JSON (max 2/session)
-Phase 4 — Export TXT        → package.txt from JSON (format only)
+Phase 4 — Export TXT        → package.txt from JSON, then ONE PR
 ```
+
+**Commit policy:** nothing is committed during Phases 0–3. Only Phase 4 opens a single PR for the whole batch.
 
 **Session limits:** see `references/batch-mode.md`
 
@@ -141,7 +146,7 @@ CHARACTER LOCK — do not change across photo, caption, and full story:
 
 Read `references/caption-methodology.md` first.
 
-- **Length**: 1000–1200 characters (count characters)
+- **Length**: 1000–1200 characters target (count characters). **If it runs over, do NOT trim — keep it as-is.** The range is guidance, not a hard cap.
 - **Structure**: 3 paragraphs + blank line + CTA
 - **CTA**: Only `MORE`, `YES`, or `NEXT`
 - **No twist spoil** — payoff stays in full story
@@ -160,7 +165,7 @@ After writing, print verify table: `id | char count | opening style | CTA`
 
 Read `references/full-story-methodology.md` first.
 
-- **Length**: 6000–8000 characters (count characters)
+- **Length**: 6000–8000 characters target (count characters). **If it runs over, do NOT trim — leave the full story intact.** The range is guidance, not a hard cap.
 - **Opening**: Match and extend caption — same scene, same hook
 - **Structure**: 4 acts — Hook → Pressure → Turn → Payoff
 - **Ending**: Full twist + antagonist consequence + concrete final line
@@ -213,6 +218,24 @@ node scripts/json-to-txt.js output/{batch-id}/{batch-id}.json
 
 ---
 
+## Git workflow
+
+**One batch = one PR, created only after Phase 4.**
+
+- Phases 0–3: write/update files locally only. Do **not** `git commit`, push, or open a PR.
+- Do **not** create a PR per phase (an earlier version of this skill did — that is no longer wanted).
+- Phase 4: after the TXT package is assembled, stage the whole batch (plan, JSON, TXT) and
+  create **one** PR for the entire batch.
+- Branch name: `{batch-id}` (e.g. `batch-09`) — not `{batch-id}-phase-N`.
+
+**Cross-session note:** if a phase runs in a fresh session and the workspace was reset to the
+remote, the prior phase's JSON must still be reachable to continue. If the environment does NOT
+persist files between sessions, push the working branch (commit, **no PR**) at each phase end to
+preserve the JSON, and still open the single PR only at Phase 4. If the workspace persists between
+sessions, no intermediate push is needed.
+
+---
+
 ## JSON schema (summary)
 
 ```json
@@ -256,13 +279,13 @@ Full schema + copy-paste prompts: `references/batch-mode.md`
 - [ ] Google content policy OK
 
 **Caption**
-- [ ] 1000–1200 chars each
+- [ ] ≥1000 chars (target 1000–1200; if over, keep — do not trim)
 - [ ] Paragraph 2 has photo visual detail
 - [ ] No twist spoil; no consecutive same opening style
 - [ ] CTA = MORE / YES / NEXT only
 
 **Full story**
-- [ ] 6000–8000 chars each
+- [ ] ≥6000 chars (target 6000–8000; if over, keep — do not trim)
 - [ ] Opening matches caption
 - [ ] Complete twist + consequence + final line
 - [ ] No Facebook CTA in body
@@ -271,6 +294,7 @@ Full schema + copy-paste prompts: `references/batch-mode.md`
 - [ ] All items have photoPrompt, caption, fullStory
 - [ ] All status flags true
 - [ ] package.txt assembled (no content edits during export)
+- [ ] Single PR opened for the batch (no per-phase commits/PRs)
 
 ---
 
