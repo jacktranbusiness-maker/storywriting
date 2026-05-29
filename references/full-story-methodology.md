@@ -21,12 +21,21 @@ It must **feel like the same story** the caption promised — same characters, s
 | Language | English |
 | Format | Continuous prose — short paragraphs (2–4 sentences each) |
 | Opening | Must **match and extend** the Facebook caption — same hook energy, same situation; reader should feel "yes, this is what I came for" |
-| Ending | Complete resolution — twist revealed, antagonist consequence shown, emotional payoff delivered |
+| Ending | Complete resolution — the **engine's payoff** delivered. Default (`humiliation → reveal`): twist + antagonist consequence. Other engines may end bittersweet, with a reunion, or with no antagonist at all (see `references/story-engines.md`). |
 | Dialogue | Natural American speech; expand beyond caption quotes |
 
 ---
 
 ## Story Structure (4 acts in prose)
+
+> **Engine note:** the four acts are the generic spine **Hook → Build → Turn → Payoff**. The
+> bullets below describe the *default* `humiliation → reveal` instantiation. For other engines,
+> remap the slots using `references/story-engines.md`:
+> - **Act 1 Hook** = the engine's opening tension (unfairness / puzzle / lonely ritual / dread)
+> - **Act 2 Build** = deepen *that* tension (not necessarily humiliation)
+> - **Act 3 Turn** = the engine's pivot (recognition / explanation / the message read / the past surfacing)
+> - **Act 4 Payoff** = the engine's landing + its tone. **Only enforce an "antagonist consequence"
+>   when the engine has an antagonist.** Bittersweet/Found Family/Long Wait endings have none.
 
 ### Act 1 — Hook (≈1200–1600 characters)
 - Mirror the caption's opening beat — do not restart with unrelated setup
@@ -50,9 +59,10 @@ It must **feel like the same story** the caption promised — same characters, s
 - Build to reversal — do not rush the truth into the open
 
 ### Act 4 — Payoff (≈1600–2400 characters)
-- Full twist landed clearly — reader understands who protagonist really is / what object meant
-- Antagonist consequence: humiliation, silence, apology forced, escorted out, etc.
-- Emotional closure for protagonist — dignity restored, connection found, justice served
+- Full payoff landed clearly — reader understands the engine's promise resolved (who the protagonist really is / what the object meant / why the ritual / what the message said)
+- **If the engine has an antagonist:** their consequence — silence, apology forced, escorted out, self-inflicted fall, etc.
+- **If it does not** (Bittersweet, Found Family, Long Wait, Reunion, Mystery…): land the engine's tone instead — grief, belonging, fulfillment, awe — no forced "villain gets what's coming"
+- Emotional closure for protagonist — dignity restored, connection found, justice served, or a quiet, earned ache
 - Short epilogue beat (days/weeks later) showing the world has changed
 - Final line: specific image or quiet line — **not** a moral lecture or "and they all learned..."
 
@@ -98,9 +108,9 @@ The first 2–3 sentences of the full story must feel like the **next paragraph*
 
 Every full story must end with:
 
-1. **Twist fully explained** — reader is not left guessing
-2. **Antagonist arc closed** — they don't vanish off-page
-3. **Protagonist emotional beat** — relief, quiet victory, reunion, or dignity
+1. **Payoff fully delivered** — reader is not left guessing (the engine's promise resolved)
+2. **Antagonist arc closed** — *if the engine has one*; they don't vanish off-page. Engines with no antagonist skip this.
+3. **Protagonist emotional beat** — relief, quiet victory, reunion, dignity, or an earned ache
 4. **Final image or line** — one concrete moment, under 25 words, that lingers
 
 Good final lines:
@@ -134,7 +144,8 @@ No outfit changes mid-story unless narrated. No new major characters after Act 2
 - [ ] ≥6000 characters (target 6000–8000; if over, keep it — do not trim)
 - [ ] Opening matches caption hook — reader continuity
 - [ ] All 4 acts present with clear turn and payoff
-- [ ] Twist fully revealed; antagonist consequence shown
+- [ ] Payoff fully delivered for the engine; antagonist consequence shown **only if the engine has one**
+- [ ] Ending tone matches the engine (catharsis / tears / belonging / awe…)
 - [ ] Voice is human, specific, not robotic
 - [ ] No caption CTA text copied into story body
 - [ ] Final line is concrete, not moralizing

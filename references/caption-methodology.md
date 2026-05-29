@@ -8,7 +8,14 @@ Full guide for writing Facebook captions that accompany **4:5 drama photo prompt
 
 Write the caption as the **beginning of a dramatic story**, not a summary of the image.
 The reader should feel like they're reading the first paragraph of a real emotional Facebook post.
-Create curiosity, social tension, and a reason to click through to the **full story article** — then stop before the payoff.
+Create a pull — curiosity, tension, longing, or dread depending on the **story engine** — and a
+reason to click through to the **full story article**, then stop before the payoff.
+
+> **Engine note:** the *kind* of tension depends on the engine (see `references/story-engines.md`).
+> `humiliation → reveal` (social conflict) is the default, but a caption can also hook with a
+> curious ritual (Mystery), a lonely vigil (Long Wait), an unlikely pairing (Found Family), or a
+> line from a letter (Message From the Past). The craft below is the same; only the *flavor* of the
+> hook changes per engine.
 
 **Workflow:** Post photo + caption on Facebook → user comments article link → reader lands on website for full story.
 
@@ -27,9 +34,15 @@ Create curiosity, social tension, and a reason to click through to the **full st
 
 ---
 
-## The 10 Opening Styles
+## The Opening Styles
 
-Choose the single best fit for each story. Rotate styles — no two consecutive captions use the same one.
+Choose the single best fit for each story — **guided by the engine** (each engine in
+`references/story-engines.md` recommends a default opening style). Rotate styles: no two
+consecutive captions use the same one.
+
+**Styles 1–10** below suit engines that have a judger/antagonist (the `humiliation → reveal`
+family). **Styles 11–15** are neutral openers for engines with no antagonist (Mystery, Long Wait,
+Found Family, Bittersweet, etc.).
 
 ### 1. Dialogue Slap Opener
 Open with a strong insult or accusation line from the story.
@@ -71,18 +84,45 @@ Best for: defensive position that inverts.
 Open with unexpected selfless choice before stakes are clear.
 Best for: small kindness triggering the twist.
 
+### 11. Curious Ritual Opener
+Open with a strange behavior repeated over time — the reader wants to know *why*.
+Best for: Mystery, Long Wait, Anonymous Benefactor.
+
+### 12. Tender Oddity Opener
+Open with an unlikely, gentle pairing or moment that doesn't quite add up.
+Best for: Found Family, A Reason to Stay, Bittersweet.
+
+### 13. Countdown of Years Opener
+Open with a span of time ("For 31 years, every morning…").
+Best for: Long Wait / Devotion, Promise Kept, Role Reversal.
+
+### 14. Letter Fragment Opener
+Open with one line lifted from a letter, note, voicemail, or inscription.
+Best for: Message From the Past, Reunion, Gift Comes Full Circle.
+
+### 15. Quiet Watch Opener
+Open with someone observing or protecting from a distance, unexplained.
+Best for: Quiet Protector, Hidden Burden, Pay-It-Forward.
+
 ---
 
 ## Paragraph Structure
 
+> The flow below is **Hook → Build → hold-before-Turn**. For `humiliation → reveal` the hook is
+> "unfairness"; for other engines substitute the engine's tension (a curious ritual, a lonely
+> vigil, a quiet dread). See `references/story-engines.md`.
+
 ### Paragraph 1 — Emotional Hook
-Establish social conflict in the first two sentences. Get to the unfairness fast.
+Establish the central situation in the first two sentences. Get to the source of tension fast —
+the unfairness (default), the puzzle (Mystery), the longing (Long Wait), the unease (Quiet Protector).
 
 ### Paragraph 2 — Build the Pressure
-Deepen humiliation or tension. Include **one specific visual detail** from the photo prompt (worn shirt, oil on hands, cracked sole, badge clipped backward).
+Deepen the engine's central tension. Include **one specific visual detail** from the photo prompt
+(worn shirt, oil on hands, cracked sole, two cooling coffees, a folded note).
 
-### Paragraph 3 — Begin the Twist
-Let something shift — stop before full payoff. Use action, reaction, object clue, or one exact dialogue line. End one step from knowing.
+### Paragraph 3 — Begin the Turn
+Let something shift — stop before full payoff. Use action, reaction, object clue, or one exact
+dialogue line. End one step from knowing.
 
 ### Blank Line + CTA
 One blank line before CTA. CTA must contain exactly one of: `'MORE'`, `'YES'`, `'NEXT'`
@@ -135,5 +175,6 @@ Type 'NEXT' if you want the next part!! 🔗
 - **"The room went silent"** as closing line
 - **"His/her face changed"** as twist signal — use specific action
 - **Summarizing the prompt** — caption is a story opening
-- **Revealing twist category** (e.g., "she owned the building")
+- **Revealing the withheld payoff** — e.g., "she owned the building", or stating the reason behind a ritual, or that it's already too late (Bittersweet). Whatever the engine hides, keep it hidden.
 - **Same structure** as previous caption in batch
+- **Wrong opening style for the engine** — don't force a "Dialogue Slap" onto a no-antagonist engine like Found Family or Mystery

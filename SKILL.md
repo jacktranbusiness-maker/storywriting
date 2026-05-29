@@ -49,6 +49,8 @@ Platform: **Nano Banana 2** (Google image generation)
 | `references/concepts1.md` | Category bank A–M (~130 templates) |
 | `references/concepts2.md` | 240 seeds in 12 groups |
 | `references/concepts3.md` | 400 seeds in 20 groups (Concepts 13–32) |
+| `references/story-engines.md` | **22 narrative engines** beyond humiliation→reveal (E01–E22) |
+| `references/concepts4.md` | ~660 seeds grouped by engine (E01–E22) |
 | `references/caption-methodology.md` | Before any caption |
 | `references/full-story-methodology.md` | Before any full story |
 
@@ -56,7 +58,12 @@ Platform: **Nano Banana 2** (Google image generation)
 - "concepts1" / "category B" → `concepts1.md`
 - "concepts2" / "concept 03" → `concepts2.md`
 - "concepts3" / "concept 13–32" → `concepts3.md`
+- "concepts4" / "engine E0x" / a named engine → `concepts4.md` (+ read `story-engines.md`)
 - Custom scenario → no bank required
+
+**Story engine:** every item also has an **engine** (E01–E22, see `references/story-engines.md`)
+that sets its emotional driver, photo scroll-stop, opening style, and ending tone.
+`humiliation → reveal` is the default engine; rotate engines across a batch for variety.
 
 ---
 
@@ -90,12 +97,13 @@ Beat 4 — Payoff: full twist (caption + story only — NOT in photo)
 ```
 
 Per item output in plan + JSON:
-- id | title (humiliation → reveal)
+- id | title (`[setup] → [payoff]` per the item's engine)
 - conceptSource
-- 4-beat arc (1–2 sentences each)
+- **engine** (E01–E22 from `references/story-engines.md`) — rotate across batch; avoid 3+ consecutive same engine
+- 4-beat arc (1–2 sentences each) — map to the engine's Hook → Build → Turn → Payoff
 - Character Lock (all persons, setting US, object clue)
-- Peak-tension moment for photo (Beat 1–2)
-- openingStyle (rotate across batch — no consecutive duplicates)
+- Peak-tension moment for photo (Beat 1–2 = the engine's scroll-stop moment)
+- openingStyle (use the engine's recommended style; no consecutive duplicates)
 
 ---
 
@@ -153,9 +161,10 @@ Read `references/caption-methodology.md` first.
 - **Visual anchor**: Paragraph 2 includes one detail from photo prompt
 - **Style variety**: No two consecutive same opening style
 
-Opening styles:
+Opening styles (pick the one your item's **engine** recommends — see `references/story-engines.md`):
 `Dialogue slap` · `Silent witness` · `Object clue` · `Accuser POV` · `Victim restraint` ·
-`Room goes wrong` · `Visual reveal` · `Deadline pressure` · `Wrong apology` · `Moral choice`
+`Room goes wrong` · `Visual reveal` · `Deadline pressure` · `Wrong apology` · `Moral choice` ·
+`Curious ritual` · `Tender oddity` · `Countdown of years` · `Letter fragment` · `Quiet watch`
 
 After writing, print verify table: `id | char count | opening style | CTA`
 
@@ -167,8 +176,8 @@ Read `references/full-story-methodology.md` first.
 
 - **Length**: 6000–8000 characters target (count characters). **If it runs over, do NOT trim — leave the full story intact.** The range is guidance, not a hard cap.
 - **Opening**: Match and extend caption — same scene, same hook
-- **Structure**: 4 acts — Hook → Pressure → Turn → Payoff
-- **Ending**: Full twist + antagonist consequence + concrete final line
+- **Structure**: 4 acts — Hook → Build → Turn → Payoff (map to the item's **engine**)
+- **Ending**: deliver the engine's payoff + concrete final line. Antagonist consequence **only if the engine has one** (Bittersweet/Found Family/Long Wait end on tone, not a villain's fall)
 - **Voice**: Human storytelling — not summary-style or robotic
 - **No CTA** in story body
 
@@ -245,9 +254,10 @@ sessions, no intermediate push is needed.
   "conceptSource": "concepts2 / Concept 03",
   "items": [{
     "id": "C041",
-    "title": "Humiliation → Reveal",
+    "title": "Setup → Payoff (per engine)",
     "conceptSource": "Concept 03 #7",
-    "openingStyle": "Silent witness",
+    "engine": "E08",
+    "openingStyle": "Object Clue",
     "characterBible": "...",
     "photoPrompt": "...",
     "caption": "...",
