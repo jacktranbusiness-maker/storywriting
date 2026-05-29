@@ -18,7 +18,7 @@ Create curiosity, social tension, and a reason to click through to the **full st
 
 | Property | Value |
 |---|---|
-| Length | 1000–1200 characters (count **characters**, not words) |
+| Length | 1000–1200 characters target (count **characters**, not words). **If it runs over, do NOT trim — keep it as-is.** Range is guidance, not a hard cap. |
 | Language | English |
 | Structure | 3 paragraphs + 1 blank line + CTA |
 | Dialogue | Only quote lines that appear **verbatim in the photo prompt or full story plan** — never invent for caption alone |
@@ -120,7 +120,7 @@ Type 'NEXT' if you want the next part!! 🔗
 
 ## Quality Checklist
 
-- [ ] 1000–1200 characters (count them)
+- [ ] ≥1000 characters (target 1000–1200; if over, keep it — do not trim)
 - [ ] Reads like story opening, not image description
 - [ ] Paragraph 2 has one visual detail from photo prompt
 - [ ] Paragraph 3 begins twist without completing it

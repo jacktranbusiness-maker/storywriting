@@ -17,7 +17,7 @@ It must **feel like the same story** the caption promised — same characters, s
 
 | Property | Value |
 |---|---|
-| Length | **6000–8000 characters** (count **characters**, not words) |
+| Length | **6000–8000 characters** target (count **characters**, not words). **If it runs over, do NOT trim — leave the full story intact.** Range is guidance, not a hard cap. |
 | Language | English |
 | Format | Continuous prose — short paragraphs (2–4 sentences each) |
 | Opening | Must **match and extend** the Facebook caption — same hook energy, same situation; reader should feel "yes, this is what I came for" |
@@ -131,7 +131,7 @@ No outfit changes mid-story unless narrated. No new major characters after Act 2
 
 ## Quality Checklist
 
-- [ ] 6000–8000 characters (count them)
+- [ ] ≥6000 characters (target 6000–8000; if over, keep it — do not trim)
 - [ ] Opening matches caption hook — reader continuity
 - [ ] All 4 acts present with clear turn and payoff
 - [ ] Twist fully revealed; antagonist consequence shown
