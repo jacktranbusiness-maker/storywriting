@@ -61,9 +61,12 @@ Platform: **Nano Banana 2** (Google image generation)
 - "concepts4" / "engine E0x" / a named engine → `concepts4.md` (+ read `story-engines.md`)
 - Custom scenario → no bank required
 
-**Story engine:** every item also has an **engine** (E01–E22, see `references/story-engines.md`)
+**Story engine:** every item also has an **engine** (E00–E22, see `references/story-engines.md`)
 that sets its emotional driver, photo scroll-stop, opening style, and ending tone.
-`humiliation → reveal` is the default engine; rotate engines across a batch for variety.
+`E00 — humiliation → reveal` is the default (concepts1/2/3); E01–E22 are in concepts4.
+Rotate engines across a batch for variety. For a **mixed concepts3 + concepts4 batch**, run
+`node scripts/pick-batch.js 10` to auto-pick a balanced set and print the engine map + JSON
+skeleton (see "Mixed-bank batches" in `references/batch-mode.md`).
 
 ---
 
@@ -99,7 +102,7 @@ Beat 4 — Payoff: full twist (caption + story only — NOT in photo)
 Per item output in plan + JSON:
 - id | title (`[setup] → [payoff]` per the item's engine)
 - conceptSource
-- **engine** (E01–E22 from `references/story-engines.md`) — rotate across batch; avoid 3+ consecutive same engine
+- **engine** (E00–E22 from `references/story-engines.md`) — rotate across batch; avoid 3+ consecutive same engine
 - 4-beat arc (1–2 sentences each) — map to the engine's Hook → Build → Turn → Payoff
 - Character Lock (all persons, setting US, object clue)
 - Peak-tension moment for photo (Beat 1–2 = the engine's scroll-stop moment)

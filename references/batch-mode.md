@@ -78,6 +78,44 @@ output/{batch-id}/
 
 ---
 
+## Mixed-bank batches (concepts3 + concepts4)
+
+Mixing banks is safe **only if every item is tagged with its engine** — otherwise the agent
+drifts and writes everything as humiliation→reveal. Use **controlled random**, not pure random.
+
+**Engine tagging**
+- concepts1 / concepts2 / concepts3 item → `engine: "E00"` (Humiliation → Reveal)
+- concepts4 item → its own `E01`–`E22` (the group it came from)
+
+**Controlled-random rules for a 10-item batch**
+1. **≤ 6 distinct engines** in the batch (4–6 is the sweet spot).
+2. **No 3 consecutive items** with the same engine (ideally alternate).
+3. **Tone balance:** at most **3** "heavy/sad" items (engines E04, E06, E12, E20). Include at
+   least 2 different moods (punchy / warm / sad).
+4. Don't let one engine exceed ~3 items unless the user asks.
+
+**Phase 0 MUST print an engine map** before writing anything, so balance is visible:
+
+```
+| ID  | Source            | Engine                  | Opening style      | Tone        |
+|-----|-------------------|-------------------------|--------------------|-------------|
+| 01  | concepts3 #142    | E00 Humiliation→Reveal  | Dialogue Slap      | satisfying  |
+| 02  | concepts4 E02 #7  | E02 Mystery             | Curious Ritual     | warm/bitter |
+| 03  | concepts4 E21 #3  | E21 Found Family        | Tender Oddity      | belonging   |
+| 04  | concepts4 E06 #11 | E06 Bittersweet         | Tender Oddity      | grief+love  |
+| ... | ...               | ...                     | ...                | ...         |
+```
+
+**Helper:** `node scripts/pick-batch.js 10 --batch batch-09` auto-selects a balanced set from
+concepts3 + concepts4, enforces the rules above, and prints the engine map **and** a JSON
+skeleton (with `engine` filled per item) ready for Phase 0. See `references/story-engines.md`
+for each engine's photo scroll-stop, opening style, and ending tone.
+
+> In every later phase, read the per-item engine card in `story-engines.md`. Phase 3 stays at
+> **2 stories/session** — pairing items of the same/similar engine reduces structure-switching.
+
+---
+
 ## TXT package format (Phase 4)
 
 ```text

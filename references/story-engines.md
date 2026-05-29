@@ -1,8 +1,8 @@
 # Story Engines — Narrative Structure Variants
 
 The original pipeline (concepts1/2/3) runs on ONE emotional engine: **humiliation → reveal**
-(justice + surprise). This file defines **22 additional engines** so a feed can mix emotional
-drivers instead of repeating one formula.
+(justice + surprise) — labeled **E00** below. This file defines **22 additional engines**
+(E01–E22) so a feed can mix emotional drivers instead of repeating one formula.
 
 Every engine still fits the same abstract spine the pipeline already uses:
 
@@ -43,6 +43,18 @@ engines with no antagonist:
 
 
 ## The 22 engines
+
+> **E00 — Humiliation → Reveal (default).** The original engine used by concepts1/2/3. Tag every
+> concepts1/2/3 item as `E00`. Included here so mixed-bank batches can label every item consistently.
+>
+> - **Driver:** justice + surprise
+> - **Photo:** the humiliation/dismissal moment — antagonist blocking, mocking, or dismissing
+> - **Withhold:** the protagonist's hidden identity / power / connection
+> - **Turn:** recognition begins; the antagonist's certainty cracks
+> - **Payoff / tone:** twist landed + antagonist consequence; satisfying
+> - **Antagonist:** YES
+> - **Opening style:** Dialogue Slap · Silent Witness · Accuser POV
+> - **Title:** `[humiliation] → [reveal]`
 
 ### E01 — Kindness → Karma
 - **Driver:** warmth + justice
@@ -275,6 +287,7 @@ engines with no antagonist:
 
 | Engine | Driver | Antagonist? | Default opening style | Ending tone |
 |--------|--------|-------------|-----------------------|-------------|
+| E00 Humiliation → Reveal (default) | justice + surprise | YES | Dialogue Slap | satisfying |
 | E01 Kindness → Karma | warmth | optional | Moral Choice | uplifting |
 | E02 Mystery → Explanation | curiosity | none | Curious Ritual | warm/bitter |
 | E03 Hidden Burden | empathy | mild | Quiet Watch | respect |
@@ -310,4 +323,7 @@ engines with no antagonist:
   before the **Turn**.
 - **Phase 3 (story):** map Hook → Build → Turn → Payoff; only enforce an "antagonist
   consequence" when **Antagonist = yes**. Match the **ending tone**.
-- Concept seeds for each engine live in `references/concepts4.md` (grouped E01–E22).
+- Concept seeds: **E00** seeds live in `concepts1.md` / `concepts2.md` / `concepts3.md`;
+  **E01–E22** seeds live in `references/concepts4.md` (grouped by engine).
+- **Mixed-bank batches** (concepts3 + concepts4): see the "Mixed-bank batches" section in
+  `references/batch-mode.md`, or run `node scripts/pick-batch.js` to auto-select a balanced set.
