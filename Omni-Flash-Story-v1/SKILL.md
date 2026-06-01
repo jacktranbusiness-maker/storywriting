@@ -1,43 +1,47 @@
 ---
 name: omni-flash-story-v1
 description: >
-  Phased pipeline for Facebook drama content using Gemini Omni Flash multi-act generation:
-  Story Plan -> Character Lock + Act Storyboard Sheets -> Omni Flash Video Prompts ->
-  Facebook Caption -> Full Story (6000-8000 chars) -> TXT package export.
-  Uses JSON as source of truth and strict phase-by-phase batch mode to prevent context drift.
+  Phased pipeline for Facebook drama with Gemini Omni Flash 20s clips (2 acts × 10s):
+  Story Plan (concepts3 + concepts4, story engines E00–E22) → Character Lock + 2 Act Storyboards
+  → 2 Omni Flash Video Prompts → Facebook Caption → Full Story (6000–8000 chars) → TXT export.
+  JSON source of truth; strict phase-by-phase batch mode.
 
-  Use whenever the user mentions: omni flash story, omni-flash-story-v1, multi-act storyboard,
-  act storyboard, 10s clips, 30s video, 40s video, stitch clips, long-form omni flash drama,
-  character lock consistency, storyboard to video prompt pipeline, facebook caption + full story.
+  Use whenever the user mentions: omni-flash-story-v1, omni flash story, 20s video, 2 act storyboard,
+  concepts3, concepts4, story engines, E00–E22, mixed concept batch, character anchor sheet,
+  storyboard to omni prompt, facebook caption + full story, pick-batch omni.
 
-  Default: phased batch workflow (never one-shot 6+ items). Output TXT package, never HTML.
-  Single item: Phases 0-4 in one session OK if user asks.
+  Default: concepts3 + concepts4 only; actCount always 2 (20s). Never one-shot 6+ items.
+  Output TXT package, never HTML.
 ---
 
 # Omni-Flash-Story v1 (Batch Mode)
 
-Phased pipeline: **Plan -> Storyboard -> Omni Flash Prompt -> Caption -> Full Story -> TXT Export**
+Phased pipeline: **Plan → Storyboard (×2) → Omni Prompt (×2) → Caption → Full Story → TXT Export**
 
-Platform: **Gemini Omni Flash** (I2V generation, 9:16, 10s per act)
+Platform: **Gemini Omni Flash** · **9:16 · 10s per act · 2 acts = 20s total**
+
+**Concept focus:** `references/concepts3.md` + `references/concepts4.md` only (do not default to concepts1/2 unless user overrides).
+
+**Narrative variety:** every item has an **engine** (`E00`–`E22` in `references/story-engines.md`). Only concepts3 items use **E00**; concepts4 items use their seed’s engine. **Do not write every story as humiliation → reveal.**
 
 **User workflow:**
-1. Generate Character Anchor Sheet (image reference)
-2. Generate each Act Storyboard Sheet (16:9 board with 4 vertical panels)
-3. Generate each Act 10s video from Omni Flash prompts
-4. Stitch acts into one 30-40s reel
-5. Post video + caption on Facebook
-6. Publish full story article on website
+1. Generate Character Anchor Sheet
+2. Generate **Act 1** and **Act 2** storyboard sheets
+3. Generate **2** Omni Flash clips → stitch to **20s**
+4. Post video + caption on Facebook
+5. Publish full story on website
 
 ---
 
 ## Critical rules
 
 1. **Never one-shot a batch** of 2+ items in one session
-2. **One session = one phase** for batches, then stop and wait for confirmation
-3. **JSON is source of truth** - `output/{batch-id}/{batch-id}.json`
-4. **Final deliverable = TXT** - never HTML unless user explicitly overrides
-5. **Phase prompts** - copy from `references/batch-mode.md`
-6. **No commit/PR per phase** - complete all phases locally first; open one PR only after export
+2. **One session = one phase** — stop and wait for confirmation
+3. **JSON is source of truth** — `output/{batch-id}/{batch-id}.json`
+4. **Final deliverable = TXT** — never HTML unless user overrides
+5. **Phase prompts** — copy from `references/batch-mode.md`
+6. **`actCount` is always `2`** — exactly 2 storyboards + 2 video prompts per item (20s)
+7. **No commit/PR per phase** — one PR only after Phase 5 export
 
 ---
 
@@ -45,140 +49,114 @@ Platform: **Gemini Omni Flash** (I2V generation, 9:16, 10s per act)
 
 | File | When |
 |------|------|
-| `references/batch-mode.md` | **Always** for batches - phase prompts, limits, JSON schema |
-| `../Ommi-Storyboard/references/character-anchor-sheet.md` | Before Stage 1 for character lock + anchor prompt |
-| `../Ommi-Storyboard/references/act-storyboard.md` | Before writing each act storyboard |
-| `../Ommi-Storyboard/references/frames-to-video.md` | Before writing each Omni Flash video prompt |
-| `../references/caption-methodology.md` | Before writing any caption |
-| `../references/full-story-methodology.md` | Before writing any full story |
-| `../references/concepts1.md` | Optional concept bank A-M |
-| `../references/concepts2.md` | Optional 240 concept seeds |
-| `../references/concepts3.md` | Optional 400 concept seeds |
-| `../references/concepts4.md` + `../references/story-engines.md` | Optional engine-based ideation |
+| `references/batch-mode.md` | **Always** for batches |
+| `references/two-act-by-engine.md` | **Always** before storyboards — 2-act beats per engine |
+| `references/story-engines.md` | **Every item** — driver, scroll-stop, opening style, payoff |
+| `references/concepts3.md` | Picking / tagging concepts3 seeds (engine E00) |
+| `references/concepts4.md` | Picking concepts4 seeds (engines E01–E22) |
+| `references/character-anchor-sheet.md` | Phase 1 — anchor + bible |
+| `references/act-storyboard.md` | Phase 1 — each act sheet (4 panels per 10s) |
+| `references/frames-to-video.md` | Phase 2 — each act video prompt |
+| `references/caption-methodology.md` | Phase 3 |
+| `references/full-story-methodology.md` | Phase 4 |
+
+**Batch picker (concepts3 + concepts4 mix):**
+```bash
+cd Omni-Flash-Story-v1
+node scripts/pick-batch.js 10 --batch batch-omni-01 --prefix O --write
+```
 
 ---
 
 ## Phased pipeline
 
 ```
-Phase 0 - Story Plan + JSON skeleton
-Phase 1 - Character Lock + Anchor + Act Storyboards (N=3 or 4)
-Phase 2 - Omni Flash Video Prompts per act
-Phase 3 - Facebook Captions
-Phase 4 - Full Stories
-Phase 5 - Export TXT package, then one PR
+Phase 0 — Plan + engine map + JSON skeleton
+Phase 1 — Character bible + anchor + 2 act storyboards   (max 4/session)
+Phase 2 — 2 Omni Flash video prompts per item              (max 4/session)
+Phase 3 — Facebook captions                                (max 5/session)
+Phase 4 — Full stories                                     (max 2/session)
+Phase 5 — Export TXT from JSON, then one PR
 ```
 
-**Session limits:** see `references/batch-mode.md`
+**10-item batch ≈ 12–14 sessions** (not 1).
 
 ---
 
-## Phase 0 - Story Plan
+## Phase 0 — Story Plan
 
-Per item define:
-- id, title, conceptSource
-- actCount (`3` for 30s or `4` for 40s, default `4`)
-- 4-beat arc: setup -> clue -> recognition -> payoff
-- characterBible draft (names, age, hair, outfit, prop, setting lock)
-- openingStyle for caption
+For each item:
 
----
+| Field | Rule |
+|-------|------|
+| `conceptSource` | `concepts3 #NNN` or `concepts4 E0x #NNN` |
+| `engine` | E00 for concepts3; E01–E22 for concepts4 (from seed group) |
+| `actCount` | **Always `2`** |
+| `openingStyle` | From engine card in `story-engines.md` |
+| `title` | Engine-appropriate (not always humiliation → reveal) |
+| `twoActPlan` | Act 1 + Act 2 labels from `two-act-by-engine.md` |
+| `characterBible` draft | Names, outfits, prop, US setting |
 
-## Phase 1 - Storyboard Assets
+**Phase 0 must print engine map** (see `batch-mode.md`).
 
-For each item write:
-1. `characterBible` (final lock block)
-2. `characterAnchorPrompt` (16:9 reference sheet prompt)
-3. `actStoryboards[]` where each act contains:
-   - `act`: number
-   - `label`: beat label
-   - `storyboardPrompt`: 16:9 sheet, 4x vertical 9:16 panels, with F1-F4 printed notes
-
-Rules:
-- Continuity required: Act N+1 Frame 1 continues Act N Frame 4
-- No readable in-scene text
-- Outfit changes only at act boundaries
-- Keep twist fully resolved only in final act storyboard
+Controlled-random batch rules (when mixing banks):
+- ≤ 6 distinct engines per 10-item batch
+- No 3 consecutive same engine
+- Max 3 sad engines (E04, E06, E12, E20) per batch
 
 ---
 
-## Phase 2 - Omni Flash Video Prompts
+## Phase 1 — Storyboard assets (2 acts only)
 
-Fill `omniPrompts[]` per act.
+Per item:
+1. `characterBible` (final)
+2. `characterAnchorPrompt` (16:9 reference sheet — **no drama panels**)
+3. `actStoryboards[]` — **length 2** only:
+   - Act 1: Hook + Build (engine scroll-stop / withhold)
+   - Act 2: Turn + tease (continuity from Act 1 Frame 4)
 
-Each prompt must:
-- Open with: `Vertical 9:16, 24fps, 10 seconds, cinematic realism.`
-- Instruct two uploads: Character Anchor Sheet + matching Act Storyboard
-- Use explicit timestamps: 0-3s, 3-6s, 6-8s, 8-10s
-- Use hard cuts between panels (no morph)
-- Include character lock + sound arc + `No subtitles. No watermark.`
-
----
-
-## Phase 3 - Facebook Caption
-
-Use the same methodology from `../references/caption-methodology.md`.
-
-- Target 1000-1200 chars (if over, keep as-is)
-- 3 paragraphs + blank line + CTA (`MORE` / `YES` / `NEXT`)
-- No full twist spoil
-- Quote lines consistent with storyboard/video prompts
-
-After writing, print verify table: `id | char count | opening style | CTA`
+Read `two-act-by-engine.md` + engine card. Template: `act-storyboard.md`.
 
 ---
 
-## Phase 4 - Full Story Article
+## Phase 2 — Omni Flash video prompts (2 only)
 
-Use the same methodology from `../references/full-story-methodology.md`.
+Per item: `omniPrompts[]` length **2**.
 
-- Target 6000-8000 chars (if over, keep as-is)
-- Opening must match caption scene/hook
-- 4 acts: Hook -> Build -> Turn -> Payoff
-- No CTA in body
+Each prompt: `Vertical 9:16, 24fps, 10 seconds` + two-reference upload + timestamps + hard cuts.
 
-After writing, print verify: `id | char count | first 80 chars of opening`
+Template: `frames-to-video.md`.
 
 ---
 
-## Phase 5 - TXT Export
+## Phase 3 — Facebook Caption
 
-Assemble from JSON only (no rewriting).
+Same as story-photo-full-v1 (`caption-methodology.md`):
+- 1000–1200 chars target (over = keep)
+- 3 paragraphs + CTA (`MORE` / `YES` / `NEXT`)
+- Para 2: visual from **Act 1–2 storyboard**
+- **Do not complete** engine payoff (full twist in full story only)
+- Opening style from **engine**, not always Dialogue Slap
 
-Output: `output/{batch-id}/{batch-id}-package.txt`
+---
 
-Format per item:
-```
-================================================================================
-{id} | {title}
-================================================================================
+## Phase 4 — Full Story
 
-[CHARACTER LOCK]
-...
+Same as story-photo-full-v1 (`full-story-methodology.md`):
+- 6000–8000 chars target (over = keep)
+- 4 narrative acts in prose (Hook → Build → Turn → Payoff) mapped to **engine**
+- Antagonist consequence only if engine requires it
 
-[CHARACTER ANCHOR PROMPT]
-...
+---
 
-[ACT STORYBOARDS]
-Act 1 | ...
-...
+## Phase 5 — TXT Export
 
-[OMNI FLASH VIDEO PROMPTS]
-Act 1 | ...
-...
-
-[CAPTION - {n} chars]
-...
-
-[FULL STORY - {n} chars]
-...
+From skill folder:
+```bash
+node scripts/json-to-txt.js output/{batch-id}/{batch-id}.json
 ```
 
-Optional split files:
-- `{batch-id}-storyboards.txt`
-- `{batch-id}-omni-prompts.txt`
-- `{batch-id}-captions.txt`
-- `{batch-id}-stories.txt`
+Do not rewrite content during export.
 
 ---
 
@@ -188,20 +166,24 @@ Optional split files:
 {
   "batchId": "batch-omni-01",
   "prefix": "O001",
-  "conceptSource": "concepts2 / Concept 03",
+  "conceptSource": "concepts3 + concepts4 mixed",
   "items": [{
     "id": "O001",
-    "title": "Setup -> Payoff",
-    "conceptSource": "Concept 03 #7",
-    "actCount": 4,
-    "openingStyle": "Dialogue Slap",
+    "title": "Odd ritual → the reason",
+    "conceptSource": "concepts4 E02 #7",
+    "engine": "E02",
+    "actCount": 2,
+    "openingStyle": "Curious Ritual",
+    "twoActPlan": { "act1": "Odd ritual", "act2": "Explanation begins" },
     "characterBible": "...",
     "characterAnchorPrompt": "...",
     "actStoryboards": [
-      { "act": 1, "label": "Setup", "storyboardPrompt": "..." }
+      { "act": 1, "label": "Hook + Build", "storyboardPrompt": "..." },
+      { "act": 2, "label": "Turn + tease", "storyboardPrompt": "..." }
     ],
     "omniPrompts": [
-      { "act": 1, "videoPrompt": "..." }
+      { "act": 1, "videoPrompt": "..." },
+      { "act": 2, "videoPrompt": "..." }
     ],
     "caption": "...",
     "fullStory": "...",
@@ -220,20 +202,30 @@ Optional split files:
 
 ## Output checklist (before Phase 5)
 
-**Storyboard + Omni prompts**
-- [ ] Character lock is consistent across all acts
-- [ ] Act continuity enforced (N Frame1 follows N-1 Frame4)
-- [ ] Omni prompts include two-reference instruction
-- [ ] Hard cuts, timestamps, no readable in-scene text
+**Engine + plan**
+- [ ] concepts3/4 source tagged; engine set (not all E00 unless batch is concepts3-only)
+- [ ] Engine map printed in Phase 0
+- [ ] `actCount` = 2; exactly 2 storyboards + 2 omni prompts
 
-**Caption**
-- [ ] >=1000 chars target, CTA valid, no full twist spoil
+**Storyboard + video**
+- [ ] Anchor sheet separate from drama boards
+- [ ] Act 2 Frame 1 continues Act 1 Frame 4
+- [ ] Hard cuts; no readable in-scene text
 
-**Full story**
-- [ ] >=6000 chars target, opening matches caption, no CTA
+**Caption + story**
+- [ ] Caption withholds full payoff; story completes engine payoff
+- [ ] Opening style matches engine
 
-**JSON + TXT**
-- [ ] All required fields are filled
-- [ ] All status flags true
-- [ ] package.txt assembled without content edits
+**Export**
+- [ ] All status flags true; package.txt assembled
 
+---
+
+## Batch size guidance
+
+| Request | Action |
+|---------|--------|
+| 1 item | Phases 0–4 in one session OK if user asks |
+| 2–10 items | Mandatory phased batch mode |
+| concepts3 only | All `engine: "E00"` — still vary opening styles |
+| concepts4 only | Rotate E01–E22 using pick-batch or manual engine map |
