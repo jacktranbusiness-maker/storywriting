@@ -9,6 +9,8 @@ Guide for writing the **website article** that completes each drama concept afte
 The full story is what readers get after clicking the article link posted in Facebook comments.
 It must **feel like the same story** the caption promised — same characters, same conflict, same emotional temperature — then deliver the complete arc with a satisfying ending that keeps them reading to the last paragraph.
 
+> **Long captions (2000–3000 chars):** the Facebook post may already carry Hook through partial Turn. The full story should **continue forward** from where the caption held — do not repeat the same beats verbatim; deepen backstory, widen the scene, then complete Payoff.
+
 **Voice:** Storytelling that pulls the reader forward. Warm, specific, human. Not AI-generic, not stiff, not summary-style.
 
 ---

@@ -319,8 +319,9 @@ engines with no antagonist:
   feed mixes drivers — avoid 3+ consecutive items on the same engine, and don't run a whole
   batch on a single engine unless the user asks.
 - **Phase 1 (photo):** build the scroll-stop from the engine's **Photo** line; obey **Withhold**.
-- **Phase 2 (caption):** open with the engine's **Opening style**; the caption stops one beat
-  before the **Turn**.
+- **Phase 2 (caption):** 2000–3000 chars, storytelling voice (5 beats in
+  `caption-methodology.md`); open with the engine's **Opening style**; stop one beat before
+  the **Turn** / full **Payoff**.
 - **Phase 3 (story):** map Hook → Build → Turn → Payoff; only enforce an "antagonist
   consequence" when **Antagonist = yes**. Match the **ending tone**.
 - Concept seeds: **E00** seeds live in `concepts1.md` / `concepts2.md` / `concepts3.md`;
