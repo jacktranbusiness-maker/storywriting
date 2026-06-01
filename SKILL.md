@@ -3,7 +3,8 @@ name: story-photo-full-v1
 description: >
   Phased pipeline for Facebook drama content with Nano Banana 2 image generation (4:5 vertical,
   self-taken photo aesthetic): Concept Plan → 4:5 Photo Prompt → Facebook Caption → Full Story
-  (6000–8000 chars) → TXT package export. Uses JSON source of truth and multi-session batch mode
+  (6000–8000 chars), long storytelling Facebook captions (2000–3000 chars) → TXT package export.
+  Uses JSON source of truth and multi-session batch mode
   to avoid agent context overflow.
 
   Use whenever the user mentions: storywriting, story-photo-full-v1, story photo full, photo story
@@ -75,7 +76,7 @@ skeleton (see "Mixed-bank batches" in `references/batch-mode.md`).
 ```
 Phase 0 — Story Plan        → plan.md + JSON skeleton
 Phase 1 — Photo Prompts     → JSON (max 5/session)
-Phase 2 — Captions          → JSON (max 5/session)
+Phase 2 — Captions          → JSON (max 3/session)
 Phase 3 — Full Stories      → JSON (max 2/session)
 Phase 4 — Export TXT        → package.txt from JSON, then ONE PR
 ```
@@ -84,7 +85,7 @@ Phase 4 — Export TXT        → package.txt from JSON, then ONE PR
 
 **Session limits:** see `references/batch-mode.md`
 
-**10-item batch = ~11 sessions** (not 1).
+**10-item batch = ~13 sessions** (not 1) — Phase 2 uses 3 captions/session at 2–3k chars each.
 
 ---
 
@@ -157,11 +158,12 @@ CHARACTER LOCK — do not change across photo, caption, and full story:
 
 Read `references/caption-methodology.md` first.
 
-- **Length**: 1000–1200 characters target (count characters). **If it runs over, do NOT trim — keep it as-is.** The range is guidance, not a hard cap.
-- **Structure**: 3 paragraphs + blank line + CTA
+- **Length**: 2000–3000 characters target (count characters). **If it runs over, do NOT trim — keep it as-is.** The range is guidance, not a hard cap.
+- **Voice**: Storytelling — scene, sensation, interior feeling; mini short-story opening, not a teaser blurb
+- **Structure**: 5 beats (Hook → Ground → Rise → Turn → Hold) + blank line + CTA
 - **CTA**: Only `MORE`, `YES`, or `NEXT`
 - **No twist spoil** — payoff stays in full story
-- **Visual anchor**: Paragraph 2 includes one detail from photo prompt
+- **Visual anchor**: Beat 2 includes at least one detail from photo prompt
 - **Style variety**: No two consecutive same opening style
 
 Opening styles (pick the one your item's **engine** recommends — see `references/story-engines.md`):
@@ -188,11 +190,13 @@ After writing, print verify: `id | char count | first 80 chars of opening`
 
 ### Caption ↔ Story handoff
 
+Long captions may already cover Hook through partial Turn. The full story **continues forward** — do not repeat the same beats verbatim.
+
 | Caption ends with... | Story opens with... |
 |----------------------|---------------------|
-| Rising tension, twist hidden | Same moment, wider lens |
-| One quoted line | Same line in context, then expands |
-| Object clue teased | Object gets meaning in Act 2–3 |
+| Beat 5 hold — tension, twist hidden | Next beat after the hold; wider lens, not a reboot |
+| One quoted line | Same line in context, then new action |
+| Object clue teased | Object gains meaning in Act 2–3 |
 
 ---
 
@@ -292,8 +296,9 @@ Full schema + copy-paste prompts: `references/batch-mode.md`
 - [ ] Google content policy OK
 
 **Caption**
-- [ ] ≥1000 chars (target 1000–1200; if over, keep — do not trim)
-- [ ] Paragraph 2 has photo visual detail
+- [ ] ≥2000 chars (target 2000–3000; if over, keep — do not trim)
+- [ ] Storytelling voice; 5-beat structure (see caption-methodology.md)
+- [ ] Beat 2 has photo visual detail
 - [ ] No twist spoil; no consecutive same opening style
 - [ ] CTA = MORE / YES / NEXT only
 
