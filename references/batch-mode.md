@@ -10,7 +10,7 @@ Use this file for every batch of 2+ concepts. **Never one-shot a full batch in a
 |-------|-------------------|-----|
 | 0 — Plan | 10 | Outline only, lightweight |
 | 1 — Photo prompt | 5 | Keep character/setting consistency |
-| 2 — Caption | 5 | Must match photo prompts |
+| 2 — Caption | **3** | Long storytelling captions (~2–3k chars); match photo prompts |
 | 3 — Full story | **2** | Heaviest stage (~7k chars each) |
 | 4 — Export TXT | 1 batch | Format only, no creative writing |
 
@@ -160,7 +160,7 @@ Concept source: {CONCEPT_SOURCE}
 Workflow bắt buộc — mỗi phase = 1 session riêng:
   Phase 0 → plan.md + JSON skeleton
   Phase 1 → photo prompts (5+5 nếu 10 items)
-  Phase 2 → captions (5+5)
+  Phase 2 → captions (3+3+… until done; see session limits)
   Phase 3 → full stories (2/lần)
   Phase 4 → package.txt từ JSON
 
@@ -229,7 +229,7 @@ DỪNG sau Phase 1A. KHÔNG commit/PR (chờ Phase 4).
 
 ---
 
-### Phase 2A — Captions (first half)
+### Phase 2A — Captions (first chunk, max 3 items)
 
 ```
 Dùng skill storywriting — Phase 2A ONLY.
@@ -238,10 +238,11 @@ Dùng skill storywriting — Phase 2A ONLY.
 Đọc references/story-engines.md (opening style + tone theo engine)
 Đọc output/{BATCH_ID}/{BATCH_ID}.json (items có photoPrompt)
 
-Viết CAPTION cho {IDS} (nửa đầu).
-- 1000–1200 ký tự mỗi caption (đếm ký tự) — nếu lố thì GIỮ NGUYÊN, không trim
-- 3 đoạn + blank line + CTA (MORE / YES / NEXT)
-- Đoạn 2: 1 visual detail từ photo prompt
+Viết CAPTION cho {IDS} (tối đa 3 items session này).
+- 2000–3000 ký tự mỗi caption (đếm ký tự) — nếu lố thì GIỮ NGUYÊN, không trim
+- Phong cách storytelling: 5 beats (Hook → Ground → Rise → Turn → Hold) + blank line + CTA
+- Beat 2: ít nhất 1 visual detail từ photo prompt
+- Tối đa 2–3 dòng dialogue (verbatim từ prompt/plan), xen kẽ hành động
 - Không spoil payoff (giấu đúng "Withhold" của engine)
 - openingStyle theo engine của item
 
@@ -250,7 +251,7 @@ In bảng verify: id | char count | opening style | CTA
 DỪNG sau Phase 2A. KHÔNG commit/PR (chờ Phase 4).
 ```
 
-**Phase 2B** — second half.
+**Phase 2B, 2C…** — next chunks of up to 3 IDs until all captions done.
 
 ---
 
@@ -336,7 +337,7 @@ Sau khi sửa: cập nhật JSON + regenerate {BATCH_ID}-package.txt cho item đ
 | 10 | 3 Story | C049–C050 |
 | 11 | 4 Export | assemble TXT |
 
-Total: **11 short sessions** vs 1 session that breaks.
+Total: **~13 short sessions** for a 10-item batch (Phase 2 = up to 4 caption sessions at 3 items each) vs 1 session that breaks.
 
 The single PR (branch `batch-NN`) is created only in the final session (Phase 4) — never per phase.
 

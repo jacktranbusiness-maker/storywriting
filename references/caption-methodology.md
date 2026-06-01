@@ -25,10 +25,11 @@ reason to click through to the **full story article**, then stop before the payo
 
 | Property | Value |
 |---|---|
-| Length | 1000–1200 characters target (count **characters**, not words). **If it runs over, do NOT trim — keep it as-is.** Range is guidance, not a hard cap. |
+| Length | **2000–3000 characters** target (count **characters**, not words). **If it runs over, do NOT trim — keep it as-is.** Range is guidance, not a hard cap. |
+| Voice | **Storytelling** — scene, sensation, and interior feeling; read like the opening of a short story or memoir post, not a teaser blurb |
 | Language | English |
-| Structure | 3 paragraphs + 1 blank line + CTA |
-| Dialogue | Only quote lines that appear **verbatim in the photo prompt or full story plan** — never invent for caption alone |
+| Structure | **5 storytelling beats** (see below) + 1 blank line + CTA |
+| Dialogue | Up to **2–3 quoted lines** if they appear **verbatim** in the photo prompt or story plan — weave into scenes, don't stack quotes back-to-back |
 | Ending | Never reveal the full twist |
 | CTA purpose | Drive comment engagement (`MORE` / `YES` / `NEXT`) before user posts article link in comments |
 
@@ -106,25 +107,40 @@ Best for: Quiet Protector, Hidden Burden, Pay-It-Forward.
 
 ---
 
-## Paragraph Structure
+## Storytelling structure (5 beats)
 
-> The flow below is **Hook → Build → hold-before-Turn**. For `humiliation → reveal` the hook is
-> "unfairness"; for other engines substitute the engine's tension (a curious ritual, a lonely
-> vigil, a quiet dread). See `references/story-engines.md`.
+> At 2000–3000 characters you have room for a **mini short story opening**, not three tight
+> paragraphs. Flow: **Hook → Ground → Rise → Turn (partial) → Hold**. Map beats to the item's
+> **engine** (see `references/story-engines.md`). For `humiliation → reveal`, the hook is unfairness;
+> for Mystery, a curious ritual; for Long Wait, devotion over time; etc.
 
-### Paragraph 1 — Emotional Hook
-Establish the central situation in the first two sentences. Get to the source of tension fast —
-the unfairness (default), the puzzle (Mystery), the longing (Long Wait), the unease (Quiet Protector).
+Write as **continuous prose** — use paragraph breaks between beats, but each beat should breathe
+(sensory detail, a beat of silence, a remembered line). Prefer **close third person** or
+**first person** when the plan calls for it; avoid listy summary ("Then X happened. Then Y.").
 
-### Paragraph 2 — Build the Pressure
-Deepen the engine's central tension. Include **one specific visual detail** from the photo prompt
-(worn shirt, oil on hands, cracked sole, two cooling coffees, a folded note).
+### Beat 1 — Emotional hook (≈350–500 chars)
+Open in-scene. Name the place, the hour, who is present. Land the engine's tension in the first
+3–4 sentences — unfairness, puzzle, longing, or unease — without explaining the whole backstory.
 
-### Paragraph 3 — Begin the Turn
-Let something shift — stop before full payoff. Use action, reaction, object clue, or one exact
-dialogue line. End one step from knowing.
+### Beat 2 — Ground the world (≈400–550 chars)
+Who are these people to each other? One sentence of history that makes the moment hurt or matter.
+Include **one specific visual detail** from the photo prompt (worn shirt, oil on hands, cracked
+sole, two cooling coffees, a folded note). Let the reader *see* the frame the photo will show.
 
-### Blank Line + CTA
+### Beat 3 — Rise the pressure (≈450–600 chars)
+Deepen conflict or mystery. Bystanders, stakes, what will be lost if nothing changes. Use **1–2
+short dialogue lines** only if they exist in the photo prompt or plan — break them with action or
+reaction, not quote dumps.
+
+### Beat 4 — Begin the turn (≈400–550 chars)
+Something shifts: a sound, a face, a hand on an object, a line that doesn't fit. Stop **one beat
+before** the withheld payoff. The reader should feel the story tipping — not land the landing.
+
+### Beat 5 — Hold + breath (≈300–450 chars)
+Slow the pace. One image, one thought, or one line left hanging. Do **not** close with clichés
+("the room went silent", "little did they know"). End on concrete detail or unfinished action.
+
+### Blank line + CTA
 One blank line before CTA. CTA must contain exactly one of: `'MORE'`, `'YES'`, `'NEXT'`
 
 **Allowed CTA formats:**
@@ -143,10 +159,10 @@ Type 'NEXT' if you want the next part!! 🔗
 
 | Element | Caption | Photo prompt | Full story |
 |---------|---------|--------------|------------|
-| Opening beat | Hooks with conflict | Shows peak-tension moment | Opens matching caption energy, then expands |
+| Opening beat | Hooks with conflict; 5-beat storytelling arc | Shows peak-tension moment | Opens matching caption energy, then expands |
 | Twist payoff | Hidden | Not shown | Fully revealed with satisfying ending |
-| Dialogue | Max 1 quoted line if in prompt | Optional in scene description | Full dialogue allowed |
-| Visual detail | One from photo prompt | Primary source | Enriched, not contradicted |
+| Dialogue | Up to 2–3 lines if in prompt/plan | Optional in scene description | Full dialogue allowed |
+| Visual detail | At least one from photo prompt (Beat 2) | Primary source | Enriched, not contradicted |
 
 ---
 
@@ -158,13 +174,29 @@ Type 'NEXT' if you want the next part!! 🔗
 
 ---
 
+## Storytelling voice (do / don't)
+
+**Do**
+- Concrete verbs and sensory anchors (sound, smell, texture, temperature)
+- Short sentences mixed with one longer breath sentence for rhythm
+- Interior beat: what the protagonist notices or suppresses
+- Time markers sparingly ("That Tuesday", "Twenty minutes earlier") when they add tension
+
+**Don't**
+- Bullet points, numbered lists, or "Part 1 / Part 2" headers in the caption body
+- Meta narration ("This is the story of…", "Let me tell you about…")
+- Headline summary of the twist or payoff
+- Generic filler ("needless to say", "as you can imagine")
+
+---
+
 ## Quality Checklist
 
-- [ ] ≥1000 characters (target 1000–1200; if over, keep it — do not trim)
-- [ ] Reads like story opening, not image description
-- [ ] Paragraph 2 has one visual detail from photo prompt
-- [ ] Paragraph 3 begins twist without completing it
-- [ ] Quotes match source verbatim
+- [ ] ≥2000 characters (target 2000–3000; if over, keep it — do not trim)
+- [ ] Reads like a **story opening**, not an image caption or ad copy
+- [ ] All 5 beats present; Beat 2 has at least one visual detail from photo prompt
+- [ ] Beat 4–5 begin the turn without completing the payoff
+- [ ] Quotes match source verbatim (max 2–3 lines)
 - [ ] CTA uses only MORE / YES / NEXT
 - [ ] Opening style differs from previous caption in batch
 
