@@ -1,0 +1,1504 @@
+#!/usr/bin/env node
+/**
+ * Builder for batch-12 (story-photo-full-v2, one-shot).
+ * Content lives in template literals so prose keeps real newlines/quotes safely.
+ * Emits batch-12.json (status.* all true) and prints caption/story char counts.
+ */
+'use strict';
+const fs = require('fs');
+const path = require('path');
+const items = [];
+
+// ---------------------------------------------------------------- C111
+items.push({
+  id: 'C111',
+  title: 'The Legacy Kids Laughed at the Scholarship Boy in Rental Spikes -> The Putt That Went Silent on 18',
+  conceptSource: 'concepts5 #F22-09',
+  engine: 'E22 — Underdog Wins on Merit',
+  tone: 'feel-good',
+  photoRule: 'action-in-photo',
+  openingStyle: 'The return',
+  seedRefs: ['concepts5 / F22 / 9'],
+  characterBible: `CHARACTER LOCK — do not change across photo, caption, and full story:
+• Andre Wallace — 17, narrator, caddie-scholarship junior member, worn rental spikes, a thrifted polo a size too big, carries his late grandfather's old blade putter
+• Chip Langford — 17, legacy member, crisp pastel polo, white belt, the ringleader of the freeze-out
+• Mr. Pruitt — 60s, tournament chairman, club blazer, clipboard
+• Setting — Brightwater Country Club, the 18th green, Greenwich, Connecticut, late-summer afternoon, long gold light across clipped grass
+• Object clue — a worn blade putter that belonged to Andre's grandfather (pays off in full story)`,
+  photoPrompt: `4:5 vertical photo, smartphone snapshot aesthetic, natural unposed moment, realistic phone-camera detail.
+
+The 18th green of Brightwater Country Club in Greenwich, Connecticut, late-summer afternoon, long gold light raking across clipped grass and a white clubhouse blurred in the background. Andre Wallace, 17, in a thrifted polo a size too big and worn rental golf shoes, is bent over a long putt in the follow-through, an old blade putter extended, the ball just struck and rolling along the green toward the hole, his eyes locked on its line. Ringing the green, a gallery of well-dressed club members stands frozen mid-watch, hands paused. At the edge of the frame, Chip Langford, 17, in a crisp pastel polo and white belt, watches with a smirk that has begun to fade. The ball is in motion; whether it drops is not shown.
+
+Framing: handheld eye-level shot from the side of the green, slightly off-center, as if a spectator quietly lifted a phone. Shallow phone depth-of-field on Andre and the rolling ball, the gallery softer behind. Candid snapshot, subtle phone-camera grain, realistic skin texture, warm low sunlight, not cinematic grade. No readable text on the scoreboard, clubhouse signage, bags, or shirts. No subtitles. No watermark.`,
+  caption: `The last time anyone in my family stood on the 18th green at Brightwater Country Club, he was carrying somebody else's golf bag.
+
+That was my grandfather. For thirty years.
+
+My name is Andre Wallace. I'm seventeen.
+
+And this summer I became the first person with my last name allowed to play that course instead of carry for it.
+
+I got in through the caddie scholarship. It's a program that gives a junior membership to one kid each year from the families who work the bag room and the cart barn. My grandfather looped at Brightwater for three decades. My mom grew up in the parking lot waiting for his shift to end.
+
+He died when I was twelve. He left me one thing. A putter. An old blade so worn the face has a shine to it like a river stone.
+
+So when the letter came saying I'd won the scholarship, I brought his putter, and I told myself I'd play that course for both of us.
+
+I knew it would be awkward. I did not know how bad.
+
+The other junior members are legacy kids. Their grandfathers didn't carry bags here. Their grandfathers had bags carried for them.
+
+The ringleader is a kid named Chip Langford. Pastel polos. White belt. A laugh he uses like a door closing in your face.
+
+The first day, Chip looked at my feet and said, loud enough for everyone, "Are those rentals? Do they even let you keep those?"
+
+Everyone laughed. I tied my rental spikes a little tighter and said nothing.
+
+It went on like that all summer. They had a group chat I wasn't in. They'd book tee times and "forget" to tell me. At the turn they'd order food on their family accounts and watch me not order anything.
+
+One Saturday a kid named Tripp asked, loud enough for the whole grill room, whether the caddie scholarship came with "a clothing allowance, or do you just wear whatever's in the lost and found?"
+
+I was wearing my grandfather's old club polo. I didn't tell him that. I just folded my hands and waited it out, the way Granddad taught me to wait out a rain delay.
+
+I told my mom about it once. She went quiet for a while. Then she said, "Your granddad carried bags for men who talked to him like that for thirty years, and never once let it touch his swing. So you go let it touch your scorecard instead."
+
+The thing they never asked me about was my game.
+
+Because here's what Chip didn't know. My grandfather didn't just carry bags. A caddie who loops a course for thirty years knows it better than any member alive. Every break. Every place the green looks like it falls left and actually falls right. He taught me all of it on the practice green at dawn, before his shifts, when the course belonged to the people who worked it.
+
+I know Brightwater the way you know a song you were raised on.
+
+The member-guest junior tournament was the end-of-summer event. The whole club comes out. Chip's father had a name plate on his cart.
+
+They paired me last, alone, in the throwaway group. A mercy slot, Chip called it. "So he doesn't hold up real players."
+
+I shot the round of my life.
+
+Nobody noticed at first. The scoreboard by the clubhouse is run by hand, and the kid running it kept blinking at my numbers like they were a typo. By the back nine, members started drifting out to watch the kid in the rental spikes who was somehow tied for the lead.
+
+I heard one of them ask whose kid I was. I heard another one answer, "I don't think he's a member's kid. I think he's the scholarship." They said it like it explained the rental shoes.
+
+It didn't occur to a single one of them that the scholarship kid might know these greens better than any of their sons ever would.
+
+By 18, it was just me and Chip. Tied. His whole gallery — parents, friends, the chat — all crowded around the final green in their pressed clothes.
+
+Chip put his approach to fifteen feet and tipped his cap to the applause.
+
+I put mine to thirty. Uphill. With a break my grandfather walked a thousand times.
+
+Chip missed his.
+
+Which meant I had this putt — thirty feet, the exact putt Granddad used to point at and say, "This one breaks less than it looks, Dre. Everybody plays too much break here. Trust the line."
+
+I stood over a putt longer than my grandfather's entire career had ever let him stand anywhere on this course.
+
+The green went dead silent. Chip wasn't smirking anymore.
+
+I set the old blade behind the ball, heard my grandfather's voice say trust the line, and drew it back—
+
+Comment 'YES' if you want the full story!! 👉`,
+  fullStory: `I trusted the line.
+
+The ball came off the old blade with that soft click worn metal makes, and it rolled up the hill on exactly the path my grandfather had shown me a hundred mornings before anyone with a name plate was awake.
+
+It did not break as much as it looked like it should. Everybody plays too much break here. He told me that when I was ten.
+
+The ball caught the left edge of the cup, did a slow half-lap around the rim that lasted about a year, and dropped.
+
+I have never heard a sound like the one that green made. It wasn't a cheer at first. It was a gasp, then a beat of silence, and then the kind of roar that surprises the people making it.
+
+I won. The kid in the rental spikes won the Brightwater junior member-guest by one stroke.
+
+I didn't jump. I didn't look at Chip. I bent down, picked my ball out of the hole, and I held my grandfather's putter against my chest with both hands, because that was the only way I could keep my face together.
+
+Mr. Pruitt, the tournament chairman, walked out to shake my hand. He's a serious man, club blazer, sixty-something, the kind who's run this event for decades. He shook my hand and then he didn't let go. He was looking at the putter.
+
+"Son," he said quietly, "where did you get that blade?"
+
+"It was my grandfather's," I said.
+
+"What was your grandfather's name?"
+
+"Leon Wallace."
+
+Mr. Pruitt's face did something complicated. He turned to the gallery — all those pressed shirts, Chip's father front and center — and he raised his voice so it carried across the green.
+
+"Most of you don't know this," he said. "But I caddied here as a boy, same as some of your fathers did before they could afford to play. And the best caddie this club ever had — the man who taught half the loopers in this county how to read these greens — was a man named Leon Wallace. He carried this bag," he tapped his own chest, "for eleven years. He could call the break on eighteen with his eyes closed."
+
+He looked at me.
+
+"In thirty years on this property, the rules of the day never once let Leon Wallace set foot in that clubhouse as a guest. He drank his water from the spigot by the cart barn. And his grandson just won this tournament on the eighteenth green reading a putt the way Leon read it."
+
+You could hear the flag snapping on its pole.
+
+I looked around that green. The members who'd spent the summer not knowing my name were looking at me like the ground had shifted, because it had. Some of the older ones — the ones who'd been around long enough — were nodding slowly, the way people nod when a name they'd forgotten gets handed back to them. One old man near the front was openly wiping his eyes. I found out later he'd been a member in my grandfather's day. He told me, weeks after, that Leon Wallace once talked him out of quitting the game on the 14th tee, and that he'd never forgotten it, and that he'd always been ashamed he never said so while Leon was alive.
+
+I just stood there holding the blade putter, trying to keep my face from coming apart in front of everyone, thinking about a man who read these greens for thirty years and drank from a spigot.
+
+Here's the part I want to be honest about, because it would be easy to make this a story about getting back at Chip Langford.
+
+I didn't get back at Chip.
+
+I thought about it. Standing there with the trophy coming and his whole gallery suddenly not sure where to look — I could have said something. I had a summer's worth of things saved up. The rental-shoes comment. The chat I wasn't in. The food I didn't order.
+
+But my grandfather never once, in any story my mom told me, talked about Brightwater with bitterness. He talked about the greens like they were friends. He took a boy named Pruitt under his wing and never mentioned that the boy got to grow up into a member and Leon got to grow up into a spigot by the cart barn. He just taught. He loved the course more than the course was ever allowed to love him back.
+
+So when they handed me the microphone at the little ceremony, I didn't aim it at Chip.
+
+I said thank you to the caddie program. I said my grandfather's name, Leon Wallace, twice, slowly, so it would sit in that clubhouse he was never allowed into. And I said the only thing I really wanted to say:
+
+"He taught me that you don't play the break everybody else plays. You walk the green yourself, a thousand times if you have to, until you know the truth of it. Then you trust your own line, even when the whole crowd is sure you've got it wrong."
+
+I looked at Chip when I said that last part. Not mean. Just long enough.
+
+After, his father came up to me. Mr. Langford. I braced for something. Instead he stuck out his hand and said, "I remember Leon. He pulled my father's bag in the club championship in 1984. My dad still talks about a putt your grandfather called on this exact green." He paused. "I owe you an apology for my son. And I'm going to have a conversation with him on the way home."
+
+Chip apologized two days later. It was clumsy and red-faced and real. He asked if I'd play a practice round with him sometime. I said yes. He's actually not bad once you take the audience away from him. We're not best friends. But he hasn't booked a "secret" tee time since, and last week he asked me to read a putt for him, and I did, and it dropped, and he looked at me like I'd done a magic trick instead of just paying attention the way my grandfather taught me.
+
+The club did one more thing, and it's the thing that made my mom cry.
+
+At the fall meeting, they voted to rename the caddie scholarship. It's the Leon Wallace Caddie Scholarship now. There's a small framed photo going up — not in the cart barn, not by the spigot. In the clubhouse. By the trophy case. A picture of my grandfather in his caddie bib, squinting into the sun on the 18th green, the same green where his grandson trusted his line.
+
+My mom came to the unveiling. She stood in front of that photo in the clubhouse she'd grown up waiting outside of, in the parking lot, for thirty years. She didn't say anything for a long time. Then she touched the frame and said, "He used to bring me here on Sundays after his loops, when the members were gone, and we'd putt on eighteen until the sprinklers came on. He said someday somebody with our name would play this course in the daylight." She looked at me. "He just didn't know it'd be his grandson. Or that they'd hang his face on the wall to watch."
+
+I keep his putter by my bed. The face is even shinier now.
+
+People ask me if it felt good to win in front of the kids who froze me out all summer.
+
+The honest answer is that the winning wasn't the good part. The good part was Mr. Pruitt saying Leon Wallace's name out loud on the eighteenth green, and a hundred people in pressed clothes finally going quiet to hear it.
+
+My grandfather carried other people's weight up that hill for thirty years. The least I could do was carry his name up it once.
+
+Mr. Pruitt told me, the week they hung the photo, that the club had quietly retired the old guest restrictions on the caddie-scholarship kids for good — that no kid in that program would ever again read these greens for somebody else and then have to drink from the spigot while the members ate inside. He shook my hand when he told me. With both of his. The way you shake hands with someone whose name you've decided to remember.
+
+Trust the line. It breaks less than it looks.`,
+  status: { plan: true, photo: true, caption: true, story: true },
+});
+
+
+// ---------------------------------------------------------------- C112
+items.push({
+  id: 'C112',
+  title: 'I Paid Five Dollars for a Box of Old Books -> What Was Tucked Inside Belonged to Someone Else',
+  conceptSource: 'concepts5 #F19-18',
+  engine: 'E07 — The Honest Return',
+  tone: 'feel-good',
+  photoRule: 'action-in-photo',
+  openingStyle: 'Visual reveal',
+  seedRefs: ['concepts5 / F19 / 18'],
+  characterBible: `CHARACTER LOCK — do not change across photo, caption, and full story:
+• June Okafor — 38, narrator, owner of a small failing used bookshop, cardigan, reading glasses on a beaded cord, ink-smudged fingers
+• Marian Reed — 40s, granddaughter of the late author (appears in full story), guarded then tearful
+• Setting — a charity estate auction held in a tent, then June's cramped bookshop, Asheville, North Carolina, autumn
+• Object clue — a battered cookie tin holding a handwritten unpublished manuscript and letters (pays off in full story; pages never readable in photo)`,
+  photoPrompt: `4:5 vertical photo, smartphone snapshot aesthetic, natural unposed moment, realistic phone-camera detail.
+
+A charity estate auction inside a large tent in Asheville, North Carolina, on an autumn afternoon, folding tables piled with bric-a-brac and cardboard boxes, soft diffused light through white canvas. June Okafor, 38, in a cardigan with reading glasses on a beaded cord, stands at a cluttered table lifting a thick sheaf of yellowed, handwritten pages partway out of a battered cookie tin nested in a cardboard box of worn paperbacks, her eyes wide and her mouth just parted in dawning realization. Around her, a few other bidders browse other tables, paying her no attention. Her free hand rests on the edge of the box.
+
+Framing: handheld eye-level shot from across the table, slightly off-center, as if a bystander glanced over and raised a phone. Shallow phone depth-of-field on June's face and the handwritten pages, the tent and other shoppers soft behind. Candid snapshot, subtle phone-camera grain, realistic skin texture, muted autumn light. No readable text on the manuscript pages, book spines, auction tags, or signage. No subtitles. No watermark.`,
+  caption: `For five dollars I bought a cardboard box of water-stained paperbacks that nobody else at the auction wanted.
+
+Underneath the books, wrapped in a dish towel inside an old cookie tin, was a thick stack of handwritten pages.
+
+The first page had a title. And under the title, a name I knew from every bookshelf in this town.
+
+My name is June Okafor. I'm thirty-eight.
+
+I own a used bookshop in Asheville, North Carolina. Or I did. I was four months behind on rent and one bad month from closing the door my grandmother's photo hangs behind.
+
+I go to estate auctions to buy stock cheap. Most of it is junk. You bid a couple dollars on a box and hope there's something resellable in the bottom.
+
+This box was at a charity sale clearing out a house up in the hills. Five dollars. No one bid against me. The auctioneer practically thanked me for taking it.
+
+I almost didn't open it until the next morning.
+
+When I did, I moved the paperbacks aside, and there was the tin. And inside the tin, the towel. And inside the towel, the pages.
+
+Handwritten. Hundreds of them. Fountain pen, a slanting hand, edits in the margins.
+
+The title page said it was a novel. And the name under the title was Hollis Reed.
+
+If you're not from here, that name means nothing. If you are from here, you understand why I had to sit down on the floor of my shop.
+
+Hollis Reed was Asheville's author. The one they teach in the schools. The one with the bronze plaque downtown. He wrote four novels everyone loves and then he died, fifteen years ago, and everyone always said the saddest part was the book he was working on at the end. The one he never finished. The one nobody ever found.
+
+I was holding a finished one. A fifth novel. In his own hand. That the world had decided didn't exist.
+
+I'm not going to lie to you about the next part, because the next part is the whole point.
+
+I knew what it was worth.
+
+A lost, complete, handwritten manuscript by Hollis Reed? Collectors would lose their minds. A university archive would pay serious money. A private buyer would pay more and never tell a soul. I had the name of a rare-book dealer in my phone. One call. The kind of money that doesn't just save a failing bookshop — the kind that buys the building.
+
+I sat on my floor with the tin in my lap and I did the math on my own rescue.
+
+I want to be honest about how broke I was, because it's the whole weight of the choice. I'd already sold my car. I was eating off the dented-can clearance shelf at the grocery next door. My grandmother opened this bookshop in 1971 — the first woman in our family to own anything with her name on the lease — and her photograph hangs behind the register, watching me fail at the one thing she built. There was a letter in my apron pocket from the landlord with the word "eviction" in the second paragraph.
+
+A lost, complete Hollis Reed manuscript would have made every bit of that disappear with a single phone call.
+
+I had the phone in my hand.
+
+And then I read the letters tucked in the back of the tin.
+
+They were from Hollis Reed to his granddaughter. Little notes, written across years. One of them said: "When I'm gone, the words belong to you, sweet girl. Don't let anyone tell you a story is just paper."
+
+The pages weren't mine. They were hers.
+
+There were more letters, and I read them all sitting on that floor. A grandfather talking to a little girl across years — her first lost tooth, her first day of school, being brave about the dark. Private things. Things with a whole person attached to them.
+
+You can't sell that. I mean, technically you can. People do it every day. But I could not read a dead man telling his granddaughter to be brave and then, in the same hour, dial a rare-book dealer. The second I knew whose grandfather wrote those pages, they stopped being a lottery ticket and went back to being someone's heart.
+
+I found her in about an hour. Marian Reed. Still local. The estate sale had been her aunt's house — the manuscript must have been boxed up by mistake, sold off with the junk for five dollars by people who had no idea what was in the bottom.
+
+I closed my shop in the middle of a Tuesday, put the tin on the passenger seat, and drove up into the hills with the most valuable thing I have ever held sitting next to me like a passenger I was afraid to brake too hard for.
+
+I knocked on a stranger's door holding a tin that could have saved everything I own.
+
+And when the door opened, I said the sentence I'd practiced the whole drive up.
+
+Drop 'MORE' if you want to know what happens next!! 👇`,
+  fullStory: `The sentence I'd practiced was simple. I said, "I think I accidentally bought something that belongs to your family, and I'd never forgive myself if I kept it."
+
+Then I held out the tin.
+
+Marian Reed looked at it the way you'd look at a tin. Polite, a little confused. She was a guarded woman, mid-forties, the kind who's learned to expect a sales pitch behind a stranger's kindness. She probably thought I was about to ask for a finder's fee.
+
+Then I opened the lid and she saw the pages, and she saw the handwriting, and her hand went to her mouth.
+
+"That's his hand," she whispered. "That's Papa's hand."
+
+She sat down right there on her front step. I sat down next to her. A stranger and a granddaughter on a porch in the hills, both of us crying over a cookie tin, which is not how I expected my Tuesday to go.
+
+It turned out the manuscript had been stored in her late aunt's attic for fifteen years. When the aunt passed and the family hired a company to clear the house for the charity sale, the tin got swept into a box of "old paperbacks" by movers who'd never heard of Hollis Reed. Marian had spent two days at that auction looking for exactly this and had given up, assuming it was lost or thrown out. She had walked past my five-dollar box. We had probably stood within a few feet of each other.
+
+She kept asking me why. Why I drove up. Why I didn't just sell it.
+
+I told her about the letter. "When I'm gone, the words belong to you, sweet girl." I told her I have my grandmother's photo on the wall of my shop, and that I couldn't have looked at it again if I'd sold a dead man's last gift to his granddaughter to a collector who'd lock it in a climate-controlled box.
+
+She told me, on that step, what the book had cost her family to lose. Her grandfather had been writing it the last two years of his life, and when he died mid-sentence, the family had searched everywhere. Her aunt, it turned out, had quietly taken the tin home "to keep it safe" during a chaotic week and then gotten sick herself and forgotten she had it. Fifteen years. Marian had made peace, mostly, with the idea that the last book was simply gone — that her grandfather's final two years had vanished into a moving box somewhere.
+
+"I dreamed about it," she said. "For years. That it would just turn up. I never once dreamed a stranger would drive it up a mountain and hand it back."
+
+She read that letter again, the one I'd read on my shop floor, and she cried harder, because she said she'd been looking for that letter for years too.
+
+Here's the part where being honest paid me back, and I want to tell it carefully, because I didn't do the right thing in order to get paid. I did it and then the getting-paid happened anyway, which is a different and better thing.
+
+The novel was real. Complete. A literary estate, it turns out, doesn't just inherit money — it inherits decisions, and Marian had been overwhelmed by hers for fifteen years. She was a nurse, not a publishing person. She'd been sitting on her grandfather's legacy with no idea what to do with it and a slow terror of doing it wrong.
+
+A month after the porch, she called me. She asked if I would help shepherd the book into the world. Not as a charity. As a job. She wanted someone who loved books and didn't love money more, and she said she'd watched me drive an hour to hand her something I could have sold, and that was the whole résumé she needed.
+
+We did it together. It took two years.
+
+It was not glamorous work. The manuscript was handwritten, with edits in the margins and three different endings he'd been wrestling with — so the first job was just transcribing it, page by page, in my shop after closing, Marian reading the slanted script aloud while I typed, both of us arguing gently about which ending he'd have chosen. We found a real editor who treated the thing like the relic it was. We found a university press that didn't want to strip-mine it. We turned down an agent who opened our first meeting by asking about "franchise potential," because some offers tell you everything you need to know in the first sentence.
+
+There were nights I wondered if I'd been a fool. The eviction letter didn't pause politely while we did the right thing slowly. I refinanced what little I had and held on by my fingernails, transcribing a dead man's sentences at midnight in a shop I wasn't sure I'd still have in the spring. We found a real editor, a university press, an agent who didn't try to strip-mine the thing. The lost final novel of Hollis Reed came out last spring. There was a line of people down the block outside my shop for the launch. The bronze-plaque man's last book, found in a five-dollar box, sold in the little failing store that almost closed.
+
+The estate paid me properly for the work — enough to clear the back rent, enough to fix the roof, enough that my grandmother's photo isn't hanging in a place that's about to lock its doors. Marian insisted on more than I'd have asked for. She said her grandfather would have liked that the book paid the rent of a bookseller before it paid anyone in a tall building.
+
+And there's a reading room now. The Hollis Reed Reading Room, in the back of my shop, that Marian helped fund — a corner with good chairs and a lamp where any kid in Asheville can sit and read for free, no purchase, no time limit. There's a framed page from the manuscript on the wall, in his slanting hand, donated by Marian. Under it, a small card with the line from the letter: "Don't let anyone tell you a story is just paper."
+
+The first week it opened, a boy started coming in every afternoon after school. He'd read in that corner until I closed. He never bought anything — he couldn't, I could tell. And I recognized the particular way he made himself small in the chair, like he was bracing to be told he had to leave. I never told him. I just left the lamp on and a glass of water on the table beside him, the way somebody once left gifts at a shelter for a kid they'd never meet. He's probably in there right now. The lamp's on for him either way.
+
+People come in and ask if it's true, the five-dollar story. I tell them yes. Then they always ask the same thing Marian asked on the porch. Why didn't you just sell it?
+
+I tell them what I've figured out since.
+
+I was four months behind on rent and I had a dead author's fortune in a cookie tin on my passenger seat. The math said sell it. Every reasonable, exhausted, frightened part of me said sell it.
+
+But some things aren't yours just because they ended up in your hands. A story belongs to the people it was written for. I knew whose granddaughter she was the second I read that letter, and once you know who something belongs to, keeping it isn't a windfall. It's just a slower kind of theft.
+
+So I drove up the mountain and gave it back.
+
+And the strangest, truest thing happened, the thing nobody warns you about: the bookshop I was trying to save by any means necessary got saved by the one means I almost talked myself out of.
+
+I gave away the most valuable thing I ever held.
+
+It's the only reason I still have everything else.`,
+  status: { plan: true, photo: true, caption: true, story: true },
+});
+
+
+// ---------------------------------------------------------------- C113
+items.push({
+  id: 'C113',
+  title: "On Christmas Morning My Stepkids Sorted the Gifts by 'Real Family' -> The Presents They Said Were Missing Weren't",
+  conceptSource: 'concepts5 #F12-11',
+  engine: 'E20 — Generational Kindness Repaid',
+  tone: 'feel-good',
+  photoRule: 'twist-hidden',
+  openingStyle: 'Tender moment',
+  seedRefs: ['concepts5 / F12 / 11'],
+  characterBible: `CHARACTER LOCK — do not change across photo, caption, and full story:
+• Diane Marsh — 47, narrator, stepmother, soft oatmeal cardigan, small cross necklace, holds a single coffee mug
+• Kayla — 16, stepdaughter, pajamas, phone, the gatekeeper of the "real family" rule
+• Tyler — 14, stepson, hoodie, quieter, the one who finds the card
+• Rob Marsh — 49, husband, plaid robe, well-meaning but slow to see
+• Setting — a blended-family living room on Christmas morning, Naperville, Illinois, early light, a decorated tree and scattered wrapping
+• Object clue — a charity gift tag / children's-shelter donation card in Diane's handwriting (pays off in full story)`,
+  photoPrompt: `4:5 vertical photo, smartphone snapshot aesthetic, natural unposed moment, realistic phone-camera detail.
+
+A blended-family living room on Christmas morning in Naperville, Illinois, soft early light through a frosted window, a decorated tree and scattered wrapping paper on the floor. Two teenagers, a girl of 16 in pajamas and a boy of 14 in a hoodie, kneel on the rug sorting wrapped gifts into two separate piles, the larger pile in front of them and a small pile set apart to the side. A few feet away, Diane Marsh, 47, in an oatmeal cardigan with a small cross necklace, sits on the edge of the sofa holding a single coffee mug with both hands, her face calm and quietly kind as she watches. In the background a man of 49 in a plaid robe stands in a doorway, just beginning to notice.
+
+Framing: eye-level handheld shot from across the room, slightly off-center, as if a family member quietly raised a phone. Shallow phone depth-of-field on Diane's calm face and the two gift piles, the tree soft behind. Candid snapshot, subtle phone-camera grain, realistic skin texture, warm-and-cool morning light. No readable text on gift tags, cards, packaging, or the phone. No subtitles. No watermark.`,
+  caption: `Every Christmas Eve, after everyone is asleep, I fill the stockings and switch the tree to the slow-fade setting, because my husband says it's easier on the eyes.
+
+Nobody is ever awake to see me do it.
+
+I do it anyway.
+
+It's a small thing. Filling stockings for kids who spent the year reminding me I'm not their real mother. But small things are the only ones that are entirely yours to give, and nobody can sort those into piles.
+
+My name is Diane Marsh. I'm forty-seven.
+
+For three years I have been the stepmother in a house that has a very clear idea of who counts as family.
+
+I married Rob when his kids were thirteen and eleven. Kayla and Tyler. Their mom is still very much around, still very much hurt, and she taught them — not on purpose, I think, but taught them all the same — that letting me matter would be a betrayal of her.
+
+So I learned to be useful and invisible. I do the school forms. I know which one hates cilantro and which one can't sleep without the hall light. I drive the early-morning practices. I stay in the photo's edge.
+
+I know Kayla's shoe size and Tyler's inhaler refill schedule by heart. I am, functionally, a very devoted member of a family that has voted — quietly, repeatedly, without ever holding the vote out loud — that I am not really one of them.
+
+And every Christmas morning, they do the thing.
+
+The thing is the sorting.
+
+Kayla appointed herself in charge of handing out the gifts, and she sorts them into two piles. The "real family" pile — her, Tyler, Rob, the gifts from their mom's side. And a little pile off to the side. That one's mine. The cards from my sister. A couple of things I bought myself, basically.
+
+She doesn't say "real family" with venom. She says it like it's just a fact. "Okay, real family pile here, Diane's stuff over there." Sixteen-year-olds can be crueler with a flat voice than with a raised one.
+
+The first Christmas, I cried in the laundry room with the dryer running so no one would hear. The second, I told myself it didn't matter. By the third, I'd built a little system: hand out the coffee, find a reason to be busy in the kitchen during the worst of it, keep my own small pile tucked out of the way so nobody had to be reminded I was in the room.
+
+Rob never quite catches it. He's making coffee. He's a good man who has never once had to notice this, which is its own kind of luxury.
+
+This year, something was different. This year, gifts were missing.
+
+Kayla had circled things in the catalogs for weeks. The big-ticket items. And Christmas morning, they weren't under the tree. Tyler's main thing wasn't there either.
+
+Kayla's face went from confused to suspicious in about four seconds, and the suspicion pointed, the way it always does, at me.
+
+I want to explain what that feels like — being the default suspect in your own house. Anything missing, anything wrong, the eyes find you first. Not because of evidence. Because you're the one who doesn't "belong," and a family protects its own by suspecting the outsider. After three years I'd gotten used to it. I also hadn't gotten used to it at all. Both things, every time.
+
+"Where's the rest of it?" she said. Not to her dad. To me. "Did you, like, not get them?"
+
+I sipped my coffee. I said the gifts were taken care of.
+
+"That's not an answer," she said. "Tyler's controller isn't here. My stuff isn't here. Did you return them or something?"
+
+Rob came in then, finally feeling the temperature of the room, asking what was wrong. Tyler had gone quiet and was poking around behind the tree, under the skirt, like the presents might be hiding.
+
+And that's when Tyler went still.
+
+He pulled something out from where it had slipped behind the tree skirt. A card. A folded card, with my handwriting on the front.
+
+He opened it. He read it. He looked up at me with an expression I had never once seen on his face in three years.
+
+"Diane," he said slowly. "What is the Holbrook Home?"
+
+And the name of a place I had never told any of them about — a place from a part of my life I keep in a drawer that doesn't open — was suddenly sitting in the middle of that living room floor on Christmas morning.
+
+Type 'NEXT' if you want the next part!! ⬇️`,
+  fullStory: `I put my coffee down. My hands weren't quite steady.
+
+"The Holbrook Home," I said, "is a children's shelter on the south side of the city. It's where I grew up. From the time I was nine until I aged out at eighteen."
+
+The room got very quiet. Even Kayla.
+
+I had never told them. Not because it was a secret exactly, but because there had never been a moment soft enough to set it down in. You don't announce a thing like that to stepkids who've decided you don't count. You wait for a door. The door had just been opened by a fourteen-year-old looking for a video-game controller.
+
+I told them the truth about the missing gifts, because Tyler was holding the evidence anyway.
+
+Every year, when I do the Christmas shopping — and I do all of it, the lists, the wrapping, the batteries, the whole machine — I set aside part of the budget and I buy a second Christmas. For the kids at the Holbrook Home. I buy it in Kayla and Tyler's names. There's a card for each kid at the shelter that says it's from "the Marsh family," because I wanted these two to be giving something to somebody even on the years they couldn't stand me.
+
+This year I'd gone further than usual. Their mom had sent extra money for the "big" gifts, the circled-catalog ones. And a week before Christmas, the Holbrook Home posted that their donations were down and twenty kids might not have anything under the tree at the group home Christmas morning.
+
+So I made a choice I probably should have run past somebody. I took the big-ticket budget — the controller, the circled items — and I bought Christmas for twenty kids at the Holbrook Home instead. In Kayla and Tyler's names. The card Tyler found was the thank-you note I'd written to clip to the donation, the one that had slipped behind the tree.
+
+"You gave away our presents," Kayla said. But the venom wasn't there. Her voice had gone small.
+
+"I gave away the extra," I said. "You'll still have Christmas. I just — there were twenty kids who weren't going to. And I know exactly what that morning feels like. I've had nine of them."
+
+I told them about being the kid at the Holbrook Home. About the Christmas I was eleven, when there was one year that almost nothing came, and a stranger I never met had dropped off gifts at the last minute with a card that said they were from a family I didn't know. I told them I have spent my whole adult life trying to be that stranger for some other kid, because that one card — proof that somebody out in the world had thought of me on purpose — was the thing I held onto through everything that came after.
+
+"I aged out at eighteen with a garbage bag and that card," I said. "Not the gifts. I don't even remember the gifts. The card. Somebody had written a kid's name they didn't know and meant it. That's the thing that doesn't run out. That's the thing I've been trying to mail back into the world ever since."
+
+Kayla had stopped looking at her phone a while ago. Tyler was still standing close to me. Rob had set down the coffee.
+
+"I do it in your names," I said, "because someday you're going to be grown, and you're going to want to know that even when things were hard in this house, you were the kind of people who gave a kid a Christmas. I wanted that to be true about you. So I made it true and didn't bother you with it."
+
+Nobody said anything for a long moment.
+
+Then Tyler — fourteen, hoodie, the quiet one — did something he had never done. He got up off the floor, walked over, and hugged me. Hard. The kind of hug kids give before they've decided whether they're allowed to.
+
+"Can we go?" he said into my shoulder.
+
+"Go where?"
+
+"To the Holbrook Home. Today. Can we bring the rest of the stuff in person?"
+
+I looked at Rob. Rob was crying into his coffee and trying to pretend he wasn't, which is the most Rob thing in the world.
+
+We went. That afternoon, all four of us. Kayla didn't say much in the car, but when we got there, she was the one who organized the gift handoff, bossing everyone around the way she bosses the gift pile, except this time she was making sure every single kid got handed something by hand and not just left a pile. She's good at it. She found out she's good at it.
+
+On the drive home, Kayla was quiet in the front seat. Then she said, not looking at me, "That card said 'from the Marsh family.' You put us in it. Even when we were being..." She didn't finish.
+
+"You're family," I said. "I never sorted you into piles."
+
+She cried then. Sixteen and furious at herself for it.
+
+Here's where it landed, and I'll be honest that it isn't a fairy tale, because three years of a wall don't come down in one Christmas. Kayla still calls her mom first. There are still days I'm in the edge of the photo. That's okay. That's the deal I signed up for, and I'd sign it again.
+
+But the sorting stopped.
+
+This past Christmas — our fourth — Kayla handed out the gifts again, because that's her job now by tradition. There was no "real family" pile. There was one pile. And before anyone opened anything, she pulled out a stack of cards she'd made herself, for the kids at the Holbrook Home, signed "from the Marsh family," and she'd used the whole family budget's extra without anybody asking her to.
+
+She'd taken over the second Christmas. She does it now. In all our names.
+
+There's one more thing. This spring, Kayla had a school assignment — write about someone who changed your mind about something. She didn't tell me she'd written about me. I found out because her teacher emailed to say it was the best thing she'd read all year and asked if it could go in the school's literary magazine. Kayla said yes before she told me. The essay was titled "The Missing Presents." The last line — I have it memorized, I'll have it memorized when I'm ninety — was: "I spent three years deciding my stepmom wasn't my real family. It turns out she was the only one in the house who never once made anyone prove they belonged."
+
+Tyler changed too, in his quieter way. He started coming with me to the Holbrook Home on the second Saturday of every month, no prompting. He says he likes being the big kid the little ones look up to. Last month one of the little ones there asked him, point-blank, if Diane was his real mom. I was close enough to hear. He said, "Yeah." Just that. "Yeah." Didn't even look up from the toy he was fixing.
+
+I keep a printed copy in the same drawer where I keep the only thing I took from the Holbrook Home. The card. From a family I never met.
+
+It has company now.
+
+The stranger who left gifts at a shelter when I was eleven never knew what happened to the kid who got them. Never knew she grew up, and married a man with two kids who didn't want her, and turned one flat-voiced Christmas morning into a tradition that twenty other kids get to keep.
+
+You don't get to choose whether the kindness you do comes back to you. Mine took thirty-six years and arrived in the form of a sixteen-year-old finally signing my last name next to hers without being asked.
+
+I still switch the tree to the slow-fade setting on Christmas Eve, after everyone's asleep.
+
+Now, some years, I come down in the morning and someone's already done it for me.`,
+  status: { plan: true, photo: true, caption: true, story: true },
+});
+
+
+// ---------------------------------------------------------------- C114
+items.push({
+  id: 'C114',
+  title: 'My Brother Told the Family I Did Nothing While Mom Was Dying -> Her Phone Logged Every Hour I Was There',
+  conceptSource: 'concepts5 #F16-05',
+  engine: 'E15 — The Truth That Exonerates',
+  tone: 'mixed',
+  photoRule: 'twist-hidden',
+  openingStyle: 'Accuser POV',
+  seedRefs: ['concepts5 / F16 / 5'],
+  characterBible: `CHARACTER LOCK — do not change across photo, caption, and full story:
+• Renee Dale — 44, narrator, did the hands-on caregiving, tired eyes, cardigan over a plain top, holds their mother's phone
+• Greg Dale — 47, brother, pressed shirt, real-estate-confident, performs grief well
+• Ms. Okafor — 50s, estate attorney, neutral, reading glasses
+• Aunt Caroline & other relatives — seated around the table, initially swayed by Greg
+• Setting — an estate attorney's conference room, Kansas City, Missouri, gray morning light, a long table
+• Object clue — their late mother's phone, open to a caregiving-coordination app full of timestamped logs (pays off in full story)`,
+  photoPrompt: `4:5 vertical photo, smartphone snapshot aesthetic, natural unposed moment, realistic phone-camera detail.
+
+An estate attorney's conference room in Kansas City, Missouri, gray morning light through tall windows onto a long polished table with water glasses and folders. Greg Dale, 47, in a pressed shirt, stands at one side of the table mid-sentence with an open, persuasive hand gesture and a grief-stricken expression. Across from him, Renee Dale, 44, in a cardigan over a plain top with tired eyes, sits very still, calmly reaching to slide a smartphone toward the center of the table. Around them, several relatives in their fifties and sixties sit watching, a few faces beginning to turn toward Renee and the phone. An attorney with reading glasses sits at the head.
+
+Framing: handheld eye-level shot from a seat along the table, slightly off-center, catching Greg standing in the background and Renee's hand on the phone in the foreground. Shallow phone depth-of-field on the phone and Renee's calm face, Greg slightly soft. Candid snapshot, subtle phone-camera grain, realistic skin texture, cool office tones. No readable text on the phone screen, folders, or documents. No subtitles. No watermark.`,
+  caption: `"Let's be honest, Renee. You showed up twice. I'm the one who took care of Mom. I think the house is the least I'm owed."
+
+My brother said that across a lawyer's conference table, to my face, eight days after we buried our mother.
+
+My name is Renee Dale. I'm forty-four.
+
+For the last two years of our mother's life, I was her caregiver. Not a word on a card. The actual thing.
+
+I gave her the seven-thirty pills and the noon pills and the bedtime pills. I learned to change a dressing. I slept in a recliner next to her bed so I'd hear her if she got up in the night, because the third fall was the one that scared the doctors.
+
+I drove her to dialysis three mornings a week. I sat in the ER with her four times. I held the basin. I did the things you don't put on Facebook because there's no version of them that makes a nice post.
+
+My brother Greg lives twenty minutes away.
+
+Greg came on Sundays. Sometimes. He'd bring donuts, sit for an hour, take a photo of himself holding Mom's hand by the window — the good light, the side without the medical equipment — and post it. "Cherishing every moment with this incredible woman." Hundreds of likes. Our aunts would comment about what a devoted son he was.
+
+Then he'd leave, and I'd do the next eleven medication doses and the 3 a.m. panic when she couldn't catch her breath.
+
+I never said anything. You don't keep score with your dying mother. I told myself the work was its own reason.
+
+I want you to understand what the work actually was, because "caregiver" is a soft word for a hard thing. It's crushing a pill into applesauce because she can't swallow anymore. It's the sound a person makes at 3 a.m. when she's frightened and can't catch her breath and it is just you and her and the dark. It's learning to lift a grown woman without hurting either of you. It's missing your own kid's school night because the home health aide called out and there was nobody else.
+
+There was never anybody else. For two years, "nobody else" was the single most accurate phrase in my life.
+
+Then she passed, and we sat down with the estate lawyer, and I found out Greg had been keeping score the whole time. For a different game.
+
+He'd told the whole family his version. That he was the real caregiver. That I'd "checked out," "couldn't handle it," "showed up twice." That he deserved the house — the only real asset — as compensation for "carrying the load."
+
+And they believed him.
+
+My aunt Caroline actually reached over and patted Greg's hand. Across the table. Like he was the one who needed comforting. Like I was the disappointment we were all being gracious enough not to mention.
+
+Why wouldn't they? They'd seen the photos. They'd seen the donuts. They'd never seen the 3 a.m. They'd never seen me because the whole point of me was that I was there when no one was watching.
+
+Greg, meanwhile, had built a whole persona out of being The Devoted Son. He'd told the cousins I'd "fallen apart," that I "couldn't handle it," that he'd "had to step in." He'd said it so many times it had hardened into the official family record. By the time we sat down at that table, my own aunts were carrying around a version of me I'd never heard and wouldn't have recognized — and they'd had months to believe it while I was busy giving Mom her bedtime dose.
+
+I looked around that table at my aunts nodding along with Greg, looking at me like I was a daughter who'd abandoned her own mother, and I felt something I've never felt before. Not anger exactly. A kind of vertigo. Like the truth had been quietly swapped out while I wasn't looking.
+
+Greg finished his speech. He even got a little choked up at the end. He's good at it.
+
+The lawyer, Ms. Okafor, turned to me and asked, gently, if I had anything I wanted to say.
+
+I did, actually.
+
+I reached across the table and I picked up Mom's phone — the one I'd kept charged on her nightstand for two years — and I opened the app I'd been quietly filling in at three in the morning the entire time.
+
+Comment 'YES' if you want the full story!! 👉`,
+  fullStory: `The app was nothing fancy. It's one of those caregiving-coordination apps. A nurse at the dialysis center had suggested it the first month, mostly so I could keep the medication schedule straight when the prescriptions kept changing.
+
+I'd set it up on Mom's phone. And for two years, without ever thinking of it as evidence, I'd logged everything. Not to prove anything. Just to survive it — to remember whether I'd given the noon dose, to track the falls, to have the dates right for the doctors.
+
+Every medication, time-stamped. Every appointment, with the little GPS check-in the app does automatically. Every overnight, logged because the app pings you to confirm you're with the patient. Two years of it. Thousands of entries.
+
+I didn't make a speech. I just handed the phone to Ms. Okafor and asked her to scroll.
+
+"These are time-stamped," I said. "The location stamps are automatic — I couldn't fake them if I tried. You'll see who was in that house, and when."
+
+Ms. Okafor scrolled for a long time. The room got very quiet. She's a professional; she didn't editorialize. She just read out a sample, flatly, because flat is the most devastating way to read a true thing.
+
+"January. Twenty-six overnight check-ins logged at the residence. All under this account — Renee." She scrolled. "February. Twenty-four." Scroll. "Medication administrations logged: roughly eleven hundred entries over the period. Account holder: Renee." Scroll. "Emergency-room check-ins: four. Renee present at all four."
+
+Then she did the thing that ended it. She said, "And on the account, there's a second user who was invited to help. Greg. Let me see his activity." A pause. "Greg's account logged... three entries. Total. Across two years."
+
+Three.
+
+You could feel the table tilt. My aunt Caroline, who'd been nodding at Greg ten minutes earlier, put her hand over her mouth.
+
+Greg started talking fast. The app was unreliable. He didn't "do the phone thing." He was there in ways that didn't get "logged." His caregiving was "emotional," it was "being a son," you can't put a son's love in an app.
+
+And maybe that would have worked, except the GPS stamps don't care about speeches. The Sunday photos he'd posted? The app had him at the house for those exact hours — an hour or two, then gone. The timeline of his own Facebook posts matched the app's record of his arrivals and departures perfectly. He had documented his own absence, publicly, with hashtags, for two years, and never realized it.
+
+Ms. Okafor, to her credit, didn't gloat — that's not what estate lawyers do. She just laid it out, flat, the way you set down something heavy. The app's logs were admissible, time-stamped, location-verified, and corroborated by pharmacy refill records she could pull and by the dialysis center's own sign-in sheets. There was no version of this where Greg's three entries became a caregiving career.
+
+What I remember most is the faces. Not Greg's — I couldn't look at Greg yet. The aunts'. The slow, sick rearranging of a story they'd been so comfortable telling. Aunt Caroline had patted his hand twenty minutes earlier. Now she was staring at the table like it had insulted her.
+
+Greg tried one more time. He said the logs didn't capture "emotional support," the calls, the "being there for Mom in ways you can't measure."
+
+"Greg," I said, and it was the first time I'd spoken. "I have eleven hundred entries. You have three. I'm not asking the room to measure my love. I'm asking it to stop pretending you measured yours."
+
+The house didn't go to Greg.
+
+The estate was divided the way our mother's actual will said — equally — which is all I ever wanted. I never wanted Greg to get nothing. I wanted the truth on the table. I wanted my aunts to stop looking at me like I'd left my mother to die alone.
+
+I got that. The truth came out, clean and time-stamped and impossible to argue with.
+
+Here's the mixed part, the part I won't dress up.
+
+Being proven right did not feel like winning.
+
+I sat in my car in that parking garage afterward and I didn't feel triumphant. I felt hollowed out. Because the same brother who held my mother's hand for the camera had been willing, eight days after we buried her, to stand up in a room full of family and erase two years of my life to take a house. He didn't do it in a moment of grief. He'd planned it. He'd told the aunts his version for weeks before the meeting. He'd built a case against me while I was giving Mom her bedtime pills.
+
+You can recover your reputation. The app gave me that back in twenty minutes.
+
+You can't un-know that your brother looked at the hardest, most sacred two years of your life and saw an opportunity.
+
+We don't really speak now. There was no screaming finale. He sent a short text a few weeks later — "I was grieving, I said things I shouldn't have, hope we can move past it." I read it a lot of times. I noticed it wasn't an apology. It was a request that I do the work of pretending, the same way I'd done all the other work nobody saw.
+
+I didn't write back with anger. I wrote back: "I forgive you, and I'm not going to pretend it didn't happen. Those aren't the same thing. I hope you understand the difference better than you did at the lawyer's office." Then I stopped keeping his game's score, the way I'd stopped keeping Mom's.
+
+Aunt Caroline calls me now. She apologized — a real one, the kind with no "but" in it. She said, "We saw the donuts and the photos and we believed the easy story. We never asked about the nights. I'm so sorry, Renee, that the nights were invisible." That one I keep.
+
+She told me something else, too, that I turn over a lot. She said the family had wanted to believe Greg because believing him was free. If I'd done all the caregiving alone, then they'd all have to sit with the fact that they let me. Greg's story let everyone off the hook at once. My truth handed the hook back to the whole table. That's why a comfortable lie travels faster than a hard fact — the lie doesn't ask anyone to feel guilty.
+
+People hear this story and they say I should be glad I had the records. I am. But I want to tell you the actual lesson, because it isn't "log everything."
+
+The lesson is that the realest love is almost always the invisible kind. The 3 a.m. love. The basin-holding love. The love that doesn't photograph well and doesn't get hashtags and doesn't get believed, because the whole nature of it is that it happens when no one is watching.
+
+I didn't keep that app to win an argument. I kept it to keep my mother alive one more day at a time.
+
+It just turned out that the same quiet record that helped me care for her in the dark was the thing that proved, in the light, that I was there at all.
+
+I'd give back every entry to have one more ordinary, exhausting night in that recliner, listening for her in the dark.
+
+Greg sold his half of the estate within the year. I bought it. Not out of spite — because it was the house I'd given her her last two years in: the recliner room, the kitchen where I crushed the pills into applesauce, the hallway I'd walked ten thousand times at night. I couldn't stand the thought of strangers in it. He took the check. We said maybe four sentences to each other at the closing, and that was that.
+
+But I won't give back the truth. I earned every time-stamp of it.`,
+  status: { plan: true, photo: true, caption: true, story: true },
+});
+
+
+// ---------------------------------------------------------------- C115
+items.push({
+  id: 'C115',
+  title: 'Two Women in a Therapist Waiting Room Realized They Used the Same Nickname -> For the Same Man',
+  conceptSource: 'concepts5 #F05-13',
+  engine: 'E11 — Bittersweet / Too Late',
+  tone: 'bittersweet',
+  photoRule: 'twist-hidden',
+  openingStyle: 'Dialogue slap',
+  seedRefs: ['concepts5 / F05 / 13'],
+  characterBible: `CHARACTER LOCK — do not change across photo, caption, and full story:
+• Paula Reyes — 50, narrator, work blazer, a wedding band she keeps turning on her finger, composed but going pale
+• Steph — 29, the other woman waiting, denim jacket, easy open smile, holding a coffee with a cup of ice
+• Receptionist — 30s, behind a sliding glass window
+• Setting — a quiet marriage/individual-therapy waiting room, suburban Sacramento, California, late afternoon, soft lamps, two facing chairs
+• Object clue — an appointment card showing a recurring Thursday 4 p.m. slot (pays off in full story)`,
+  photoPrompt: `4:5 vertical photo, smartphone snapshot aesthetic, natural unposed moment, realistic phone-camera detail.
+
+A quiet therapy office waiting room in suburban Sacramento, California, late afternoon, soft warm lamplight, neutral walls, a small side table with a plant and a tissue box. Two women sit on facing upholstered chairs caught in a frozen moment of mutual realization: Paula Reyes, 50, in a work blazer, has gone pale and still, one hand pressed flat to her chest over a wedding band; across from her, Steph, 29, in a denim jacket, holds a coffee cup with a separate small cup of ice, her easy smile faltering as understanding dawns. Between them sits an empty third chair. A receptionist is dimly visible behind a sliding glass window in the background.
+
+Framing: eye-level handheld shot from the side of the small room, slightly off-center, as if someone glanced up from a seat. Shallow phone depth-of-field on the two women's faces and the empty chair between them. Candid snapshot, subtle phone-camera grain, realistic skin texture, warm muted indoor light. No readable text on the appointment card, wall signs, magazines, or window. No subtitles. No watermark.`,
+  caption: `"He hates when his coffee's too hot, so I always order it with a cup of ice on the side. Is that weird?"
+
+The woman across the waiting room laughed when she said it. To me. A stranger, killing time.
+
+And every drop of blood left my face.
+
+Because that is exactly how I have ordered my husband's coffee for twenty-six years.
+
+My name is Paula Reyes. I'm fifty.
+
+I was sitting in a therapist's waiting room on a Thursday afternoon, because Marcus and I had finally — finally — started couples counseling, and this was our third session.
+
+He was "running late." Parking, he texted. Start without me.
+
+So I was alone. Except for her.
+
+Younger. Late twenties. Denim jacket. An easy, open way about her, the kind of warmth that makes strangers tell you things. She was holding a coffee with a separate little cup of ice on the side.
+
+We did the waiting-room thing. Weather. The good magazines. She was bright and funny and I liked her, which is a detail I'll have to live with.
+
+She asked if I was there for couples counseling or "just me." I said couples — my husband was parking. She lit right up. Said that was wonderful, said she wished her guy would do the work like that.
+
+I remember thinking how sweet she was. I remember being a little proud, actually — proud that Marcus and I were the kind of couple a younger woman might envy.
+
+That's the part I replay at night. Being proud. Thirty seconds before.
+
+She told me she was waiting for her boyfriend. That he was always late. That he was worth it. She rolled her eyes, fond.
+
+I almost told her my husband was the same. Always late, always worth it. I almost said it out loud, two women bonding over patient love. I didn't. I will never fully understand why I didn't, and I will always be grateful to whatever small mercy stopped me.
+
+"He's got all these little things," she said. "Like the coffee. And he calls me at exactly the same time every night, eight-fifteen, like clockwork, this whole little routine—"
+
+Eight-fifteen.
+
+Marcus "takes the dog out" at eight-fifteen every night. Has for over a year. Stands in the backyard. I can see the blue light of his phone from the kitchen window.
+
+I'd asked him about it once. The eight-fifteen walks. He said the dog had a routine and you don't break a dog's routine. I'd felt foolish for asking. He was always good at making me feel foolish for asking — it's a skill, I understand now, a deliberate one. Every question I ever raised, he had a way of handing back to me so that I was the one who ended up apologizing.
+
+I made myself keep my voice level. I asked what she called him. A pet name, I said, lightly, like it was girl talk.
+
+She grinned. "Bear," she said. "I know, it's so corny. He pretends he hates it."
+
+I have called my husband Bear since our second date in 1997.
+
+The room went underwater. I could hear my own pulse. I looked at her appointment card sitting on her knee — a little card, the kind they hand you at the desk — and I could see the time slot printed on it.
+
+Thursday. Four o'clock.
+
+My slot. Our slot. The one Marcus picked because, he said, it was the only time the good therapist had open.
+
+She had the same standing appointment. Thursdays at four. With the same therapist. About the same man.
+
+And I understood, all at once, in a beige room with a tissue box between us, that "individual therapy" had never been individual therapy. That the late arrivals weren't parking. That there had been two Thursdays running back to back this whole time — and that the only reason the wall had finally cracked, after God knows how long, was that somebody, somewhere, had double-booked the four o'clock.
+
+He hadn't been coming early to "park." He'd been keeping two sets of Thursdays. And somewhere in the scheduling, on the one week the universe decided to stop protecting him, the appointments had overlapped.
+
+I asked her, very quietly, what her boyfriend's name was.
+
+She said it.
+
+She said my husband's name.
+
+And then the door opened, and Marcus walked in, shaking the rain off his jacket, already wearing the sorry-I'm-late smile he's worn for twenty-six years.
+
+He saw me.
+
+Then he saw her.
+
+And he stopped smiling.
+
+Type 'NEXT' if you want the next part!! ⬇️`,
+  fullStory: `Nobody screamed. That's the thing people always expect, and it's not what happened. The terrible moments in a real life are usually very quiet.
+
+Marcus stood in the doorway with rain on his shoulders, looking back and forth between the fifty-year-old woman he married and the twenty-nine-year-old woman he'd been calling at eight-fifteen, and his face just — fell apart. Slowly. Like a building deciding to come down.
+
+Steph — that was her name — figured it out a half-second after I did. She's quick. I watched her do the same math I'd just done, the coffee and the eight-fifteen and the Bear, except her version came with the additional fact that the woman she'd been chatting with so warmly was the wife she'd been told did not, functionally, exist anymore.
+
+Because that's what he'd told her. I found this out in the strange, awful, oddly gentle conversation the two of us had afterward, in the parking lot, while Marcus sat in his car not knowing which window to knock on.
+
+He'd told Steph that his marriage was already over. That we were "separated under the same roof for the kids." That the divorce was "in progress." She wasn't a villain. She was a young woman who'd been handed a story by a practiced man and had no reason to doubt it.
+
+We talked for a long time in that parking lot. Two women comparing notes neither of us wanted to compare. The pieces fit together with a precision that was almost obscene. The nights he was "with clients" lined up with the nights she described. The work trip to Denver in March — she'd been in Denver in March. He'd told her the same jokes he told me, the same little speeches, the same line about how he "didn't believe in wasting time on the wrong people." He had one personality and he'd been running it on both of us on a schedule.
+
+The worst part wasn't even the overlap. It was realizing how efficient he'd been. How organized. A man who "couldn't remember" our anniversary had maintained two relationships, two sets of stories, two standing Thursday appointments, for over a year, without a single slip — until a scheduling clerk made one for him. She'd even felt guilty about me — the abstract, sad, soon-to-be-ex wife. She had not expected to meet me and find me kind and whole and very much not informed that my marriage was over.
+
+When she realized what she'd actually been part of, she cried harder than I did. "I didn't know," she kept saying. "He said you knew. He said you'd agreed to be civil. He said—"
+
+"I know," I told her. "I believe you. He's good at it. He's had a lot of practice. On both of us."
+
+Here is the part that makes this a bittersweet story and not a triumphant one. There was no clever reveal that saved anything. There was nothing to save.
+
+The marriage was already gone. It had been gone for a long time. The waiting room didn't end it; it just turned the lights on so I could finally see the empty room I'd been living in.
+
+And I had seen the signs. That's the part I have to be honest about, the part that's too late. The eight-fifteen "dog walks." The new gym schedule. The phone that flipped face-down. The way he'd started saying "love you" the way you say "drive safe" — a reflex, not a sentence. I'd seen all of it and I'd done what twenty-six years teaches you to do, which is build a reason. He's stressed. It's work. This is just what a long marriage looks like. We're in counseling, we're fixing it.
+
+We weren't in counseling to fix it. I understand that now. He'd put us in counseling so that when it ended, he could say he'd "tried everything." I was a box he was checking. The Thursday session wasn't repair. It was paperwork.
+
+I did not go into our session that day. I want you to know what I did instead, because it's the only part of this I'm proud of.
+
+I stood up in that waiting room. I told the receptionist, in a steady voice, that I wouldn't be needing the four o'clock, today or ever. I walked past Marcus — who had finally gotten out of his car and was doing the thing where he says your name like it's a question, "Paula? Paula—" — and I did not stop. I did not give him the screaming finale he was braced for, the one that would have let him tell the story as "she's crazy."
+
+I just said, "I met Steph. She seems lovely. You told her I knew. I didn't. Now I do."
+
+And I left. I drove to my sister's. I cried for about four days. And then I started the slow, unglamorous work of getting my own life back.
+
+The divorce was not pretty, because divorces aren't, but it was clean in the way that matters: I knew exactly who he was now, so there was nothing left to be confused about. You negotiate very differently with a man once you've stopped hoping he's someone else.
+
+He tried, for a while, to do the thing he always did — to hand the problem back to me until I was the one apologizing. He called it a "midlife crisis." He said I'd "checked out years ago." He said Steph "didn't mean anything," as if that were a comfort and not the most insulting sentence in the English language. For the first time in twenty-six years, none of it worked on me. The waiting room had burned out the part of me that used to take the bait. When a man's lie has been sitting across from you in a denim jacket, holding a coffee with a cup of ice on the side, his explanations lose their grip.
+
+My grown daughter asked me, gently, if I was angry I'd "wasted" twenty-six years. I told her the truth: I don't think they were wasted. I built a life, a home, a daughter I'd marry him a thousand times to get. The years weren't the lie. The last few were. There's a difference between a marriage that failed and a marriage that was always a performance, and mine, I've decided, was real for a long time before he turned it into theater. I get to keep the real part. He doesn't get to retroactively steal it just because he ended it badly.
+
+Steph and I are not friends, exactly — that would be a strange ending and I don't want to lie to you. But she testified, in a sense; she told the truth about what he'd said to her, and it mattered. And she sent me a card a few months later that just said, "I hope you're okay. You were so kind to me on the worst day, and you didn't owe me that. I'm sorry I was part of it." I keep that card. Two women he lied to, being decent to each other in the wreckage. There's something in that I can't fully explain, but it's the closest thing to grace in this whole story.
+
+I turned fifty-one last month. I have my own apartment now, with a kitchen window that looks at nothing in particular, and I make my coffee exactly as hot as I want it.
+
+I stopped ordering anyone's coffee with a cup of ice on the side.
+
+People ask if I wish I'd never gone to that appointment. If it would've been easier never to know.
+
+No. Knowing late is still better than not knowing. The cruelest thing wasn't the truth in that waiting room. The cruelest thing was the twenty-six years I'd spent learning to explain away the eight-fifteens.
+
+I lost the marriage that Thursday. But I'd actually lost it a long time before, in slow installments I refused to count.
+
+What I got back in that waiting room was myself. A little late. A little broken.
+
+But mine, again. Finally mine.`,
+  status: { plan: true, photo: true, caption: true, story: true },
+});
+
+
+// ---------------------------------------------------------------- C116
+items.push({
+  id: 'C116',
+  title: 'The Lawyer Saved One Envelope for Last While My Cousins Fought -> It Named Who Paid for All of Us',
+  conceptSource: 'concepts5 #F01-25',
+  engine: 'E20 — Generational Kindness Repaid',
+  tone: 'feel-good',
+  photoRule: 'twist-hidden',
+  openingStyle: 'Quiet devotion',
+  seedRefs: ['concepts5 / F01 / 25'],
+  characterBible: `CHARACTER LOCK — do not change across photo, caption, and full story:
+• Sam Boudreaux — 30, narrator, grandchild, plain button-down, sits toward the back
+• Aunt Lucille — 66, unmarried great-aunt, retired school bookkeeper, cardigan, a worn pocket calendar, always refilling everyone's tea
+• Brett & Dana — 40s, cousins, well-dressed, openly grasping
+• Mr. Hale — 60s, estate attorney, soft Georgia drawl, reading glasses
+• Setting — an estate attorney's wood-paneled office, Savannah, Georgia, warm afternoon light through shutters
+• Object clue — a final sealed envelope holding twenty years of tuition receipts (pays off in full story)`,
+  photoPrompt: `4:5 vertical photo, smartphone snapshot aesthetic, natural unposed moment, realistic phone-camera detail.
+
+A wood-paneled estate attorney's office in Savannah, Georgia, warm afternoon light slanting through plantation shutters onto a large desk and a semicircle of chairs. Two well-dressed cousins in their forties lean forward greedily over scattered documents on the desk, mid-argument. To the side, slightly apart, Aunt Lucille, 66, in a cardigan, stands quietly refilling a water pitcher on a side table, a worn pocket calendar tucked under one arm, her expression mild and unbothered. At the desk, Mr. Hale, 60s, in reading glasses, holds a single sealed envelope in both hands, looking toward Lucille. A younger man sits toward the back, watching.
+
+Framing: eye-level handheld shot from the back of the room, slightly off-center, as if a family member quietly raised a phone. Shallow phone depth-of-field on the sealed envelope and Lucille in the background, the arguing cousins a touch soft. Candid snapshot, subtle phone-camera grain, realistic skin texture, warm shuttered light. No readable text on the envelope, documents, or calendar. No subtitles. No watermark.`,
+  caption: `My great-aunt Lucille has brought the same two things to every family gathering for forty years: a Tupperware of pecan pralines, and a paperback she never finishes because she's too busy refilling everyone's tea.
+
+Nobody ever thanks her. We just expect the pralines.
+
+My name is Sam Boudreaux. I'm thirty.
+
+We were in the estate lawyer's office in Savannah because my grandfather had passed. Granddad was the patriarch — the one with the house, the land, the accounts. The whole family came for the reading of the will, and I do mean the whole family, with their best shirts on and their calculators running behind their eyes.
+
+It got ugly fast.
+
+My cousins Brett and Dana led the charge. Before Mr. Hale, the lawyer, had even finished his condolences, they were arguing over the house. Then the land. Then the accounts. Brett actually brought a folder of his own with a number he thought he was "owed." Dana kept saying "what's fair is fair" in a way that meant the opposite.
+
+It was a feeding frenzy in good clothes. I sat in the back and felt sick.
+
+Brett had spreadsheets. Actual spreadsheets, on his tablet, of what he believed he was "owed" for years of being "the involved grandchild," which mostly meant he lived the closest. Dana kept invoking Granddad's name like a weapon — "Daddy would have wanted me to have the china," "Daddy promised me the back acreage" — promises that grew more specific and more convenient the longer the meeting ran. Mr. Hale, the lawyer, just watched, the way a man watches weather he has seen roll through many times before.
+
+And the whole time, off to the side, Aunt Lucille was refilling the water pitcher.
+
+You should understand Aunt Lucille. She never married. She worked as the bookkeeper for the county school district for forty years and retired on a small pension. She lives in the same little house she's always had. At every holiday, she's the one in the kitchen, the one nobody saves a good seat for, the one whose name people forget on the group text. "Poor Lucille," my mother says, with that tone. "Never had much."
+
+She drives a fifteen-year-old Corolla. She clips coupons. She volunteers at the library three days a week and brings the staff cookies on Fridays. At every family event, she's the one refilling tea and the one handed a gift card to a restaurant she'll never go to alone. We loved her the way you love a piece of furniture you've had forever — without ever really looking at it.
+
+I was thirty years old and I had somehow never once wondered how a woman with "never much" had managed to be at every graduation, every wedding, every hospital room, with a card and exactly the right amount of folded cash tucked inside.
+
+The cousins talked about her like she wasn't there. At one point Brett, dividing up imaginary money, said, "And Lucille doesn't need anything, she's got her little pension," and waved his hand like she was a houseplant.
+
+She just smiled and refilled his water.
+
+I should say something here that I'm not proud of. I sat in that back row, thirty years old, and watched my cousins talk about a woman like she was a houseplant, and I said nothing — because saying something would have meant becoming the next target. The back row is a coward's seat. I know that now. I knew it then, too. I just hadn't yet been given a reason brave enough to make me stand up.
+
+Mr. Hale read the will. The house, the accounts, all of it, divided in ways that set off another round of bickering. Brett got loud. Dana cried the fake kind of tears. I wanted to leave.
+
+Then Mr. Hale did something strange.
+
+He took off his reading glasses, waited for the shouting to die down, and reached into his desk drawer for one more envelope. Sealed. Thick.
+
+"There's one final item," he said, in that soft Georgia drawl. "Your grandfather gave me specific instructions. He said I was to read this one only after the rest of the estate had been settled — after, in his words, everyone had shown me exactly who they are."
+
+The room went quiet. Brett and Dana exchanged a look, suddenly nervous, like kids who'd been louder than they realized.
+
+Mr. Hale looked at the envelope. Then he looked across the room — past the cousins, past the desk — to the corner, where Aunt Lucille was quietly setting down the water pitcher.
+
+And when he started to read, his voice cracked.
+
+Drop 'MORE' if you want to know what happens next!! 👇`,
+  fullStory: `"This is a letter from your grandfather," Mr. Hale said, "and a set of records he asked me to keep sealed until today. I'm going to read the letter first."
+
+He cleared his throat and read.
+
+It was Granddad's voice, plain as anything. He wrote that he'd spent his last years watching the family circle his money like buzzards, and that he wanted, just once, to make sure the truth got told in the same room as the money — because the two had been strangers in this family for too long.
+
+Then he wrote about Lucille.
+
+For more than twenty years, my great-aunt Lucille — the unmarried bookkeeper with the small pension, the one Brett called a houseplant — had been quietly paying the college tuition of every grandchild in the family.
+
+Every one of us.
+
+Mine. Brett's two kids. Dana's daughter. The cousins in Atlanta. All of us.
+
+She'd done it through Granddad, on purpose, so the checks came from "the family fund" and nobody would know it was her. We all grew up thinking Granddad was the generous one, the one who "took care of college." He let us think that. Because Lucille asked him to. She didn't want the thanks. She didn't want anyone to feel they owed her. She just didn't want a single kid in this family to start adult life buried in debt the way she had.
+
+Mr. Hale set down the letter and picked up the records. The thick envelope. He told us what was inside: twenty years of tuition receipts. Semester after semester, paid in full, traced back to a bookkeeper who lived in the same little house and drove the same old car and brought pralines to every holiday because that was what she could afford to give on top of everything she was already secretly giving.
+
+She'd put eleven kids through college on a school district bookkeeper's salary by spending almost nothing on herself for two decades.
+
+The math, once Mr. Hale walked us through it, was staggering and quiet at the same time. No vacations. The same Corolla, maintained instead of replaced. A house she could have traded up from twenty years ago and never did. She'd run her own life like the careful bookkeeper she was — every dollar she didn't spend on herself routed, semester by semester, into degrees for kids who called her "poor Lucille." She'd even kept the receipts in date order, because of course she had. Forty years of being the person who balances the books, and the book she balanced most carefully was the one nobody knew existed.
+
+Brett had college-paid kids. Brett, who'd waved his hand ten minutes earlier and said she didn't need anything. He went a color I'd never seen on a grown man. Dana put her face in her hands, and this time the tears were real, and they were shame.
+
+I looked at Aunt Lucille.
+
+She hadn't moved from the corner. She looked, more than anything, embarrassed. Caught. Like she'd been hoping to make it all the way to her own grave without anyone finding out, and Granddad had spoiled it.
+
+"Roy wasn't supposed to tell," she said quietly. That was all. "He promised me he wouldn't tell."
+
+Here's the thing about my grandfather, which I only understood in that office: he didn't leave that envelope to reward Lucille. Lucille didn't want a reward; she'd spent twenty years actively avoiding one. He left it to expose the rest of us. He wanted Brett to hear, out loud, in front of everyone, that the woman he'd dismissed as a houseplant had paid for his children's degrees. He wanted the buzzards to know who'd actually been feeding the family the whole time.
+
+It worked. You have never seen a room of grasping people get so quiet so fast.
+
+What happened next is the part I think about.
+
+Lucille could have had her moment. God knows she'd earned a victory lap. We all braced for it — for the gentle woman in the corner to finally say the thing, to look at Brett and let him have it.
+
+She didn't.
+
+She picked the water pitcher back up. She came around the desk. And she went down the row, refilling everyone's glasses, the cousins who'd insulted her included, and she said, to the room, "I didn't do it to be paid back. I did it because somebody did it for me once, a long time ago, and I never got to thank them. So I just kept passing it along and figured that counted." She paused at Brett's chair. "Your kids are doing real good, Brett. That's the only thank-you I ever wanted. Drink your water."
+
+And that was it. No speech. No knife. Just a woman refilling the glasses of people who didn't deserve it, because that is, apparently, the only thing she knows how to do.
+
+The family is different now. You can't un-hear a thing like that. Brett can't look at her without his voice going soft and stupid. Dana drives down to Savannah once a month now to take Lucille to lunch — Lucille lets her, mostly, I think, because she can tell Dana needs to. The group text has Lucille's name spelled right these days, and people save her the good seat, and somebody else refills the tea so she can finally finish a paperback.
+
+She hates the fuss. She tolerates it the way you tolerate weather.
+
+The cousins are different now, in the way people get different when they've been shown something true about themselves they can't un-see. Brett set up automatic monthly payments into Dana's exam-fee fund. Dana drives Lucille to the library on her volunteer days and stays to shelve books beside her. Nobody says "poor Lucille" anymore. They don't call her anything but Lucille now — which is, I think, exactly what she always wanted. Not gratitude. Not a plaque. Just to finally be seen at her actual size, which turns out to be the largest person in any room she's ever quietly stood in the corner of.
+
+I asked her, a few months after, who paid for her once. The kindness she said she was passing along. She told me it was a teacher, when she was sixteen and there was no money and she was going to have to quit school and go to work. A teacher who quietly paid for her books and her exam fees and never once made her feel like charity, and never let her thank her, and only said, "Pass it on someday, when you can."
+
+"What was the teacher's name?" I asked.
+
+"Miss Abernathy," she said, and her whole face changed saying it, sixty-six years old and still sixteen for a second. "She's long gone now. I tried to thank her properly when I got my first real paycheck. She wouldn't take a dime. She told me the only thank-you that counted was the next kid. So I started saving. Took me a while to afford the first one." She smiled. "Your cousin Dana was the first. 1998. She has no idea. Don't you tell her."
+
+I didn't tell Dana. But I think Dana figured it out on her own, eventually, on one of those drives to Savannah, because she's the one who quietly set up a fund last year — a real one, with Lucille's name on it, that pays exam fees for kids at the county high school where Miss Abernathy used to teach. Lucille fought the name on it and lost, for once.
+
+"So I did," Lucille said. "Eleven times. Took me forty years to find a way to afford it. But a promise is a promise."
+
+I'm thirty. I have a college degree and zero student debt, and for thirty years I thought it was because my grandfather was generous.
+
+It was because a sixteen-year-old girl with no money made a promise to a teacher in 1975, and then spent the rest of her life quietly keeping it, one refilled glass at a time, asking no one to notice.
+
+I notice now, Aunt Lucille.
+
+We all do.
+
+Pass the pralines.`,
+  status: { plan: true, photo: true, caption: true, story: true },
+});
+
+
+// ---------------------------------------------------------------- C117
+items.push({
+  id: 'C117',
+  title: 'My In-Laws Sat Me at the Kids Table for Thanksgiving Again -> They Did Not Know Whose Name Was on the Deed',
+  conceptSource: 'concepts5 #F11-01',
+  engine: 'E12 — Karma / Comeuppance',
+  tone: 'mixed',
+  photoRule: 'twist-hidden',
+  openingStyle: 'Gut-punch question',
+  seedRefs: ['concepts5 / F11 / 1'],
+  characterBible: `CHARACTER LOCK — do not change across photo, caption, and full story:
+• Mara Hollis — 35, narrator, accountant, simple sweater, a slim folder in her bag, quiet and composed
+• Carol Hollis — 66, mother-in-law, pearls, hostess apron, gatekeeper of "the family home"
+• Dale Hollis — 68, father-in-law, sweater vest, proud, financially shakier than he admits
+• Tom Hollis — 38, Mara's husband, kind but conflict-avoidant, slow to defend her
+• Setting — the Hollis family Thanksgiving, a formal dining room with an adults' table and a small kids' table, Plano, Texas
+• Object clue — a slim folder in Mara's bag holding the deed and mortgage-payoff papers (pays off in full story)`,
+  photoPrompt: `4:5 vertical photo, smartphone snapshot aesthetic, natural unposed moment, realistic phone-camera detail.
+
+A formal Thanksgiving dining room in Plano, Texas, warm overhead light, a long table crowded with platters and well-dressed adults laughing in the background. In the foreground, slightly apart near a doorway, Mara Hollis, 35, in a simple sweater, sits alone at a small low kids' table set with paper plates, her expression composed but tight, a cloth bag with the corner of a folder visible hanging on her chair. At the main table, an older woman in pearls and a hostess apron, Carol, gestures while speaking, not looking at Mara. The contrast between the grand main table and the small side table is clear.
+
+Framing: eye-level handheld shot from across the room, slightly off-center, as if a relative quietly raised a phone. Shallow phone depth-of-field on Mara at the small table and the folder corner, the main table soft behind. Candid snapshot, subtle phone-camera grain, realistic skin texture, warm indoor light. No readable text on the folder, place cards, or papers. No subtitles. No watermark.`,
+  caption: `What would you do if the people eating Thanksgiving dinner in a house you paid for sat you at the kids' table — and then threatened to uninvite you next year?
+
+I found out last Thursday.
+
+My name is Mara Hollis. I'm thirty-five. I'm an accountant. I married into a family that has a very expensive sense of itself.
+
+The center of that family is "the family home." A big house in Plano my in-laws, Carol and Dale, have hosted every holiday in for thirty years. Carol runs it like a queen runs a court. Dale sits at the head of the table and tells the same stories. And the house — the house is the throne. Everything in this family orbits who gets to feel like they belong in it.
+
+I never qualified.
+
+From the first Thanksgiving, Carol sat me at the kids' table. I was twenty-nine. I told myself it was a seating mistake. It wasn't. It happened the next year, and the next. The accountant who married her son, parked on a folding chair with the eight-year-olds and the paper plates, while the adults' table laughed thirty feet away over the good china.
+
+I'm not exaggerating the book. Three years running, I read paperbacks at a folding table with my husband's little cousins, refilling their juice boxes, while the adults' table — the one with my husband at it — discussed me in the third person, if at all. "Mara's so quiet." "Does Mara not eat turkey?" I was four feet away. I could have answered. Nobody was asking me.
+
+My husband Tom — he's kind, he really is — never made it stop. He'd give me an apologetic look from the big table and mouth "sorry" and pass the rolls. Conflict makes him disappear.
+
+He's the kind of man who'd rather absorb an injustice than make a scene about it — which is a lovely trait right up until the injustice is happening to the person he married, at which point it stops being gentleness and quietly becomes a door he keeps holding open for it. I learned to bring a book in my purse.
+
+Here's what Carol and Dale did not know.
+
+Two years ago, Dale's business went sideways. Badly. He'd borrowed against the family home and gotten behind, and the bank was three months from foreclosing on the throne. He was too proud to tell anyone. Tom found out by accident and came to me in a panic, because I'm the one in this family who actually understands money.
+
+So I fixed it. Quietly.
+
+I had savings — my own, from fifteen years of being the boring responsible one everybody patronized. I paid off the mortgage. All of it. To save the house Dale was about to lose, to spare Tom's father the humiliation, to keep the family's whole sense of itself from collapsing.
+
+We structured it properly, because I'm an accountant and I don't do things sloppily. The title transferred. To protect the loan, the deed went into my name.
+
+I didn't do it to own anything. I did it because Tom couldn't sleep and Dale was too proud to ask and somebody in this family had to be the adult with a spreadsheet. I covered it out of fifteen years of being the boring one who saved instead of spent. I emptied most of what I had.
+
+And then I drove to that next Thanksgiving as the secret owner of the house, and Carol pointed me to the kids' table, and I went and sat down. Because some pathetic, hopeful part of me still believed that if I was good enough, and quiet enough, and useful enough, they would let me in on their own someday. That I could earn a seat I had, by then, literally purchased.
+
+I own the family home.
+
+I never said a word. Not to spare myself — to spare Dale. I let them keep believing the throne was theirs, because taking that from a proud old man felt cruel, and because I genuinely didn't want anything to change. I just wanted to finally be invited to the big table.
+
+This Thanksgiving, I wasn't.
+
+Carol sat me at the kids' table again. And when I quietly asked, just once, if I might sit with the adults this year, she smiled her hostess smile and said it loud enough for the room:
+
+"Maybe next year you'll be more comfortable spending the holiday with your own family. This house has standards, dear."
+
+The table chuckled. Tom studied his plate.
+
+And something in me that had been folding itself into a small chair for six years just... stopped folding.
+
+I set down my fork. I reached into my bag. And I pulled out the slim folder I had truly hoped I would never have to open.
+
+Comment 'YES' if you want the full story!! 👉`,
+  fullStory: `I didn't raise my voice. I've noticed the people who actually hold the power in a room almost never have to.
+
+I walked to the head of the table — to the throne, where Dale was sitting — and I set the folder down on the good china in front of Carol.
+
+"Before next year's invitation list," I said, "I think everyone should know whose standards this house actually runs on."
+
+Carol opened the folder the way you'd open something you already suspect is going to bite you.
+
+It was the deed. The mortgage-payoff statement. The title transfer. All of it, clean and notarized, with one name on the ownership line.
+
+Mine.
+
+I watched her read it three times. I watched Dale's face go from confusion to a kind of gray understanding, because Dale knew. Dale was the only other person at that table who knew the house had nearly been lost, and now he was learning, in front of everyone, who'd caught it.
+
+"Two years ago this house was ninety days from foreclosure," I said, to the room, evenly. "Dale borrowed against it and fell behind. I paid it off. All of it. The title's been in my name since. I never told anyone, because I didn't do it for credit. I did it so Dale wouldn't lose the home he built, and so this family could keep having its Thanksgivings."
+
+You could hear the gravy congealing.
+
+The relatives looked back and forth between me and Dale like a tennis match, waiting for him to deny it. He didn't. He couldn't. That was the part that made it real for the room — not my folder, but Dale's silence. The patriarch at the head of the table, the man who told the same proud story every single year about building this house with his own two hands, sat there and said nothing, because there was nothing to say. The house had been sliding out from under him, and the daughter-in-law he seated with the children had quietly bought it back.
+
+"I have sat at the children's table in my own house for six years," I went on, "and I never said a word, because I kept hoping kindness would be returned with kindness. Today I was told I might not be welcome next year. In the house I own. So I think it's time the standards in this house got corrected."
+
+Now — here's where it could have become a different kind of story, and I want to be honest about the choice, because the choice is the whole point.
+
+I had the power, in that moment, to end them. I could have told Carol that she had until the weekend to find a new place to host her holidays. I could have evicted my in-laws from their throne on Thanksgiving Day in front of the whole family, and a part of me — the part that had read paperback novels alone on a folding chair for six years — wanted to do exactly that. It would have been justice. Everyone in that room knew it.
+
+I didn't do it.
+
+I looked at Dale — proud, gray-faced, suddenly small — and I understood that humiliating him completely wouldn't make me bigger. It would just make me Carol. And I'd spent six years learning exactly how it feels to be made small by someone who could. I wasn't going to learn how to do it back.
+
+So I said this instead:
+
+"I'm not taking anyone's home. Dale, you built this house, and you'll live in it as long as you want to. Carol, you can host every holiday here until the end of time. Nothing has to change."
+
+I let that land. Then I added the only condition.
+
+"But the kids' table era is over. I will be sitting at the adults' table, because I'm an adult, and apparently I'm the landlord. And anyone in this family who gets treated like they don't belong here — anyone — answers to me now, because it turns out belonging in this house was never about a bloodline or a set of standards. It was about who showed up when it mattered. I showed up. Quietly. With a checkbook. Now I'm done being quiet."
+
+Then I sat down. At the big table. In the empty chair next to Tom.
+
+The silence held for a long, awful second.
+
+And then Dale — proud, stubborn Dale — did the thing I'll always respect him for. He stood up, slowly, came around the table, and pulled my chair in for me like a host seating an honored guest. "I should've told you thank you two years ago," he said, his voice rough. "I was ashamed. That was my failing, not yours. You saved this family and we sat you with the children. I'm sorry, Mara."
+
+Carol didn't apologize that day. Carol is Carol. But the seating chart died that Thanksgiving and never came back. And over the next year, something thawed in her — slowly, grudgingly, the way a proud woman thaws when she's been shown a grace she didn't extend. She calls me now when she needs help with anything involving money or paperwork, which from Carol is practically a love letter. Last month she introduced me to a friend as "my daughter-in-law, Mara — she's the one who really keeps this family standing." I nearly dropped my coffee.
+
+I think about that first Thanksgiving a lot. Twenty-nine, newly married, reading a paperback at a folding table, deciding it was a seating mistake. If you'd told me then that the way out wasn't to be quieter or more useful or more patient — that it was simply to stop waiting to be invited to a table I already owned — I'd have said that wasn't my style. I don't make scenes. I'm the one with the spreadsheet.
+
+It turns out the spreadsheet was the scene. I'd had the deed in a drawer for two years. The boundary was sitting there the whole time, notarized, waiting for me to be done hoping.
+
+Tom and I had a longer conversation, the one we'd needed for six years. He cried. He said he'd told himself "that's just how my mother is" because it was easier than defending me, and that watching me defend myself — and then, harder, watching me choose not to destroy his parents when I clearly could have — made him see exactly what he'd let me carry alone. He's different now. At the next gathering, when someone made a little dig, Tom was the one who shut it down before I had to. Six years late. But he got there.
+
+We host Thanksgiving now — Tom and I, in the house with my name on the deed. Carol still brings the good china; I let her, because it makes her happy and because the china was never the problem. There's one long table. No folding table in the other room. The first year I hosted, I caught myself instinctively setting a smaller place off to the side — an old reflex, muscle memory from six years of exile — and Tom quietly moved the setting back to the main table before I'd even finished. That's the whole marriage now, in one gesture: he moves the place setting back before I can put myself in the corner.
+
+People hear this and they tell me I was too soft. That I should have evicted them, made them grovel, taken the throne for real.
+
+But I didn't pay off that mortgage to win a war. I paid it off to keep a family from falling apart. Burning it down two years later would have made my own kindness a lie.
+
+I own the house. I sit at the head of the table when I want to now.
+
+But the best thing I own isn't the deed. It's the fact that I held all the power in that room on Thanksgiving Day, and I used it to set one boundary and spare one proud old man — and not one ounce more.
+
+That's the difference between karma and cruelty. Karma just makes sure the truth gets to sit at the big table.
+
+What you do once you're sitting there is up to you.`,
+  status: { plan: true, photo: true, caption: true, story: true },
+});
+
+
+// ---------------------------------------------------------------- C118
+items.push({
+  id: 'C118',
+  title: 'They Hid a Camera to Catch the New Nanny Doing Something Wrong -> It Caught Them Instead',
+  conceptSource: 'concepts5 #F07-02',
+  engine: 'E15 — The Truth That Exonerates',
+  tone: 'mixed',
+  photoRule: 'twist-hidden',
+  openingStyle: 'Silent witness',
+  seedRefs: ['concepts5 / F07 / 2'],
+  characterBible: `CHARACTER LOCK — do not change across photo, caption, and full story:
+• Gloria Vance — 34, narrator, licensed family-services social worker placed undercover as a nanny, plain cardigan, a small pocket notebook
+• Brooke Hale — 41, mother, affluent, athleisure, dismissive
+• Sutton Hale — 44, father, polished, controlling about appearances
+• Lily — 5, the child, quiet, often drowsy, clings to Gloria
+• Setting — a large hillside home, Scottsdale, Arizona, bright desert light, glass walls, a tidy playroom
+• Object clue — a nanny-cam teddy bear with a faint lens on a shelf; Gloria's pocket notebook (pays off in full story)`,
+  photoPrompt: `4:5 vertical photo, smartphone snapshot aesthetic, natural unposed moment, realistic phone-camera detail.
+
+A bright, tidy children's playroom in a large hillside home in Scottsdale, Arizona, strong desert light through floor-to-ceiling glass, expensive toys arranged a little too perfectly. Gloria Vance, 34, in a plain cardigan, kneels at child height beside a quiet, drowsy five-year-old girl who leans against her shoulder, Gloria's face gentle and watchful. On a shelf behind them sits a teddy bear angled toward the room, a faint glassy lens just visible in its chest. Through a glass doorway in the background, a woman in athleisure is dimly visible, not looking in.
+
+Framing: eye-level handheld shot from the playroom doorway, slightly off-center, as if someone paused and quietly raised a phone. Shallow phone depth-of-field on Gloria and the child, the teddy bear and the distant mother softer. Candid snapshot, subtle phone-camera grain, realistic skin texture, bright cool desert light. No readable text on toys, labels, screens, or signage. No subtitles. No watermark.`,
+  caption: `I watched them give a five-year-old a second dose of the medicine that makes her sleepy, at two in the afternoon, so she wouldn't "bother the adults" during their pool party.
+
+I wrote down the time. I always write down the time.
+
+My name is Gloria Vance. The family thinks I'm their new live-in nanny.
+
+I'm not.
+
+I'm a licensed family-services social worker. I was placed in that house, quietly and legally, after the agency I work with received a report serious enough to need eyes inside the home. My job was simple and careful: observe, document, and keep a little girl safe while the people who are supposed to decide these things gathered what they needed.
+
+It is careful, legal, ordinary work that most people never realize is happening in the house next door. We don't kick down doors. We sit on playroom floors and pay attention.
+
+The family is the Hales. Brooke and Sutton. Beautiful house in the Scottsdale hills, all glass and desert light, the kind of home that photographs like a magazine and feels like a held breath.
+
+Their daughter is Lily. She's five. She is the quietest five-year-old I have ever met.
+
+From the first day, I understood why she was quiet. Lily had learned that being noticed was dangerous. Not from hitting — I want to be precise, because the truth is precise. From being inconvenient. In that house, a child's needs were a scheduling problem. And the solution, more than once, was the bottle of sleep medicine that a doctor had prescribed for "occasional travel" and the Hales used like an off switch.
+
+Naptime that was really sedation. Extra doses on party days. A little girl kept drowsy so she'd be easy.
+
+It's hard to explain how that looks up close, because it isn't loud. There were no bruises. The house was beautiful. Lily had a closet of clothes with the tags still on. To a visitor, it looked like nothing but privilege.
+
+But Lily flinched when adults laughed too loud. She asked permission before ordinary things — before a snack, before the bathroom, once before she let herself cry. A five-year-old should never have to ask permission to cry. That's the kind of thing you don't catch on a tour. You catch it living in a house. Which is exactly why people like me get placed in them.
+
+So I did my job. I wrote it down. Times, doses, what I saw, in the small notebook I kept in my cardigan pocket. I never staged anything. I never provoked. A good witness just watches and records and protects the child in front of them, and I held Lily's hand through a lot of long afternoons.
+
+The Hales did not trust me. People who are hiding something rarely trust the quiet new person in the house. Brooke especially watched me like she was waiting for me to slip.
+
+She'd test me. Leave cash on a counter and check later if it moved. Ask Lily leading questions about whether "Miss Gloria was nice today." Go through the trash. I let her do all of it. A person looking that hard for a thief in someone else is usually managing a guilt of their own — and the harder Brooke watched me, the less anyone was watching her, and the more the little glass eye in that teddy bear recorded.
+
+And then they made a decision that I will be grateful for as long as I live.
+
+They hid a camera.
+
+To catch me.
+
+They put a nanny cam in a teddy bear on the playroom shelf, certain that the problem in their home was the nanny — that I was the one neglecting Lily, mishandling her, something they could catch on film and use to fire me and bury whatever the agency might be hearing.
+
+For two weeks, that little glass lens in the bear's chest pointed at the playroom and recorded everything.
+
+Everything.
+
+Then, last Friday, they sat me down at the kitchen island with their lawyer. Brooke was almost smiling. Sutton had that polished, in-control voice. They said they had "footage" that proved I was "unfit," and that I'd be leaving quietly today if I knew what was good for me.
+
+They turned the laptop screen toward me, ready to watch me fall apart.
+
+They had no idea their hidden camera had been pointing at them the whole time, too.
+
+And they had no idea who I actually was.
+
+Drop 'MORE' if you want to know what happens next!! 👇`,
+  fullStory: `I let them talk first. That's something you learn in this work: let people show you who they are before you show them anything.
+
+Sutton played their clips. He'd cherry-picked moments — me looking tired, me sitting on the floor while Lily fussed, a second where I raised my voice gently to stop her from touching a hot pan. Out of context, with a lawyer narrating, they'd built a little story: negligent nanny.
+
+When he finished, Brooke folded her hands and said, "So you understand why we have to let you go. We'll keep this... discreet, if you cooperate."
+
+I asked one question. "Does that camera record continuously, or only when triggered?"
+
+Sutton blinked. "Continuously. Why?"
+
+"Then you have two weeks of continuous footage," I said. "Of the entire playroom. Including the parts where I'm not the one in frame."
+
+The room changed temperature.
+
+I watched it land on them in stages. Sutton's eyes went to the teddy bear on the shelf — the one he'd positioned himself — and you could see him running the tape back in his head, all the afternoons it had been recording while he and Brooke moved through that playroom believing the only person being watched was the nanny. The lens doesn't blink. It doesn't take a side. It had been pointed at the whole room the entire time, and the whole room included them.
+
+Because here is what people forget when they install a camera to catch someone else: the camera does not take sides. It records the whole room. The same lens they aimed at me had recorded every afternoon I'd been documenting in my notebook. The two-o'clock doses. The party day. The long stretches where Lily was left alone in a house with a pool while the adults were elsewhere. The off switch, on film, in their own footage, time-stamped by their own device.
+
+Then I told them who I was.
+
+I'm not just a nanny they hired off an agency website. I'm a licensed social worker. I was placed in the home as part of an open assessment following a mandated report. My notebook wasn't a diary; it was professional documentation. And the footage they'd just shown me, plus the two weeks they'd unknowingly recorded of themselves, plus my notes, weren't going to fire me.
+
+They were going to do the opposite of fire me. They were going to corroborate everything.
+
+I didn't seize anything or threaten anyone. That's not how it works, and it's not what protects a child. What I did was exactly what I'd been doing all along: I documented. I noted the footage existed and where, before anyone could decide to lose it. The actual decisions — what the footage meant, what happened next — those belong to the people whose job it is to make them, with oversight, on the record. My role was never to be the hero who kicks the door down. My role was to make sure that when the right people finally looked, the truth was still there to be seen, time-stamped and undeniable, half of it filmed by the very people it indicted.
+
+That distinction matters more than anything in my work. The loud version — the confrontation, the gotcha — feels satisfying and helps no one. The quiet version, the patient and documented version, is the one that actually holds up when it counts. I learned a long time ago to want the boring kind of justice. It's the only kind that sticks.
+
+I want to be careful and honest about what happened next, because this is the part of the story that isn't a triumphant fist-pump. Child welfare is never a fist-pump.
+
+The footage and documentation went where they needed to go, through the proper channels — the agency, the people whose job it is to make these calls, the court. I didn't "bust" anyone in a kitchen. My job was to be a careful, truthful witness, and that's what the record was: careful and truthful and impossible to spin, because half of it had been filmed by the Hales themselves.
+
+Lily was removed from the home. Safely, by the right people, with the right oversight. She went, for now, to her maternal grandmother — a warm, frightened, loving woman who had suspected something for a year and hadn't known how to prove it, and who wept when she learned someone had been inside the house watching out for her granddaughter the whole time. The medical side got handled by doctors who specialize in exactly this. There are consequences working their way through the system for Brooke and Sutton; those aren't mine to narrate, and I wouldn't if they were.
+
+It's a sad outcome. I won't pretend otherwise. A family came apart. Two parents who, I genuinely believe, loved their daughter in some broken, self-centered way are facing the wreckage of choosing their own convenience over her safety, over and over, until convenience became harm. There's no version of that day that feels like winning. The best you can hope for in my work is "the child is safe now," and that is exactly as much and as little as I got.
+
+But the child is safe now.
+
+Here's what I keep coming back to.
+
+The Hales were so certain the danger in their home was the quiet woman watching from the corner. They were so sure that if they could just catch the nanny, the problem would be solved. So they spent money and effort to install a lens and aim it at me.
+
+They aimed it at the truth and called it a trap for someone else.
+
+That's the thing about the truth. It doesn't care who set up the camera. It just records what's actually in the room, and waits for someone to press play.
+
+I think about Lily's grandmother's kitchen now. Lily's there. She's loud. The first time I visited, the social worker handing off the case told me Lily had asked, that morning, if she was "allowed" to sing. Allowed. Five years old, asking permission to make noise.
+
+Her grandmother told her, "Baby, you can sing as loud as you want in this house."
+
+I drove home and cried in a grocery store parking lot, which is where people in my line of work do most of our crying.
+
+I want to say something about the grandmother, because she's the part that keeps me doing this job. She'd suspected for a year. She'd raised concerns and been told she was a meddling old woman, been cut off from visits, been made to doubt her own eyes — the way families like the Hales are very skilled at making the worried relative feel like the problem. When the call finally came that Lily was safe and coming to her, she didn't say "I told you so." She just asked, over and over, "Was someone with her? This whole time, was there someone in that house who saw her?" She needed to know her granddaughter hadn't been alone with it.
+
+"Yes," I got to tell her. "Someone saw her. Someone was with her the whole time."
+
+That's the job. Not the reveal. Not the camera. The being-with. Sitting on a floor at child height so a frightened five-year-old has one adult in the house whose face is safe.
+
+People ask if it's strange, the undercover part. Living in a home as someone you're not.
+
+I always tell them the same thing. I was exactly who I said I was, in the only way that counted. I said I was there to take care of Lily.
+
+I was. I did.
+
+I just took care of her all the way.`,
+  status: { plan: true, photo: true, caption: true, story: true },
+});
+
+
+// ---------------------------------------------------------------- C119
+items.push({
+  id: 'C119',
+  title: 'Two Years After We Buried My Father, He Walked Into the Anniversary Dinner Alive',
+  conceptSource: 'concepts5 #F04-04',
+  engine: 'E27 — The Protector Who Stayed Away',
+  tone: 'bittersweet',
+  photoRule: 'twist-hidden',
+  openingStyle: 'Room goes wrong',
+  seedRefs: ['concepts5 / F04 / 4'],
+  characterBible: `CHARACTER LOCK — do not change across photo, caption, and full story:
+• Tasha Greer — 24, narrator, community-college student, denim jacket, guarded and angry-grieving
+• Raymond Greer — 54, father, gaunt, secondhand wool coat, his old wind-up wristwatch, hollow-eyed
+• Denise Greer — 52, mother, apron, still openly grieving
+• Setting — the Greers' small living room, a candlelit two-year-anniversary memorial dinner, Detroit, Michigan, winter evening
+• Object clue — a worn wind-up wristwatch and plain envelopes of cash that had arrived anonymously (pays off in full story)`,
+  photoPrompt: `4:5 vertical photo, smartphone snapshot aesthetic, natural unposed moment, realistic phone-camera detail.
+
+A small, modest living room in Detroit, Michigan, on a winter evening, a candlelit dinner laid on a table for a quiet memorial, warm lamplight, a framed memorial photo of a man propped on a side table. Family members at the table have turned sharply toward the front door, where a gaunt man of about 54 in a worn secondhand wool coat stands in the open threshold, snow on his shoulders, hollow-eyed and hesitant. At the table, a woman in an apron has half-risen, a serving spoon slipping from her hand; a young woman in a denim jacket sits frozen, gripping the table edge. The framed photo on the side table shows the same man's face.
+
+Framing: eye-level handheld shot from the side of the room, slightly off-center, as if a relative looked up and raised a phone. Shallow phone depth-of-field on the man in the doorway and the young woman's stunned face, the table and photo softer. Candid snapshot, subtle phone-camera grain, realistic skin texture, warm interior light against cold blue from the open door. No readable text on the photo, envelopes, or surfaces. No subtitles. No watermark.`,
+  caption: `Two years ago we buried an empty box, because there wasn't enough of my father left to bury.
+
+That's what they told us. A boating accident. The lake. A body never recovered.
+
+Last Thursday, at the dinner we have every year to remember him, the front door opened.
+
+And my father walked in.
+
+My name is Tasha Greer. I'm twenty-four.
+
+You have to understand how I felt about my dad before he "died," because it matters.
+
+I loved him and I was furious at him. Both, all the way, at the same time. He was warm and funny and he was also in trouble all the time — money trouble, the kind that brought strange men to our door and made my mother cry in the bathroom with the fan on so I wouldn't hear.
+
+He owed people. Not banks. The other kind. The kind you don't negotiate with.
+
+I was sixteen when the men first started coming around. I remember the specific quiet that would fall over our house — my mom running the bathroom fan so I wouldn't hear her cry, my dad's jaw doing a thing it did when he was scared and pretending he wasn't. We moved twice. He'd get "a handle on it," he'd say, and for a while it would go calm, and then a different car would idle across the street, and the quiet would come back like weather.
+
+And then one fall morning, his truck was at the boat launch and he was gone, and the lake gave back nothing, and we buried an empty box and a framed photo.
+
+He left us with grief and with his debt. For two years I was angry at a dead man.
+
+Do you know what it does to a kid to be furious at a dead parent? You can't fight a grave. You can't get an apology out of a photo. The anger just sits in you with nowhere to go, and on top of it you feel like a bad person for being angry at someone everyone else is busy turning into a saint. For two years I was the only one at the candlelit dinner who wasn't sure she even missed him.
+
+Angry that he'd gone out on that water with everything hanging over us. Angry that "accident" felt too convenient. Angry that I had to grow up fast while my mom worked doubles to keep the lights on.
+
+There were two strange things in those two years.
+
+The first: cash started arriving. Plain envelopes, no return address, a few hundred dollars at a time, every month or so. My mother assumed it was a church thing, or a mistake, or some insurance technicality. We were too broke to ask questions. We just used it.
+
+The second: a man. I'd catch a glimpse of him, far off. Across the parking lot at my school. Down the block when I left work. A thin man in a dark coat who was never there when I looked twice. I told myself I was imagining it. Grief does things.
+
+But here's what I never told my mom: a few times, I'd find things. My car battery dead one morning and somehow replaced by the time I got out of class — I assumed a kind neighbor. A flat tire fixed in a parking lot while I was at work. Once, an envelope of cash tucked into the side pocket of my backpack that I would have sworn I never put there. I decided I was losing track of my own life. Grief makes you an unreliable narrator of your own days.
+
+I had no idea I had a guardian. I thought, if anything, I had a ghost.
+
+And a ghost is what I grieved. A ghost is who I stayed angry at. A ghost is who I'd finally, two years in, started to make a fragile kind of peace with — right up until the front door opened on Thursday.
+
+Last Thursday was the two-year dinner. My mom lights candles, makes his favorite, sets the framed photo at the head of the table. We were just sitting down.
+
+The door opened without a knock.
+
+Cold air. Snow.
+
+A man stood in the doorway. Thin — too thin. A secondhand coat. A face I knew better than my own, except hollowed out, older, like two years had taken ten.
+
+My mother's serving spoon hit the floor.
+
+I couldn't move. I couldn't breathe. I just gripped the edge of the table and stared at a dead man dripping melted snow onto our welcome mat, next to the side table where his own funeral photo was still smiling.
+
+He looked right at me. Not at my mother. At me.
+
+And he said, in a voice I hadn't heard in two years, "I had to let you hate me. It was the only way to keep you alive."
+
+Comment 'YES' if you want the full story!! 👉`,
+  fullStory: `Nobody hugged him. I want to be honest about that, because the movies get it wrong. When a dead man walks into your dinner, the first thing in the room isn't joy. It's horror. My mother backed into the counter. I stood up so fast my chair fell over. For a long, terrible minute, the person we'd grieved for two years was just a stranger we were afraid of.
+
+He didn't come in. He stayed in the doorway, hands open at his sides where we could see them, and he told us, fast, like he'd practiced it a hundred times in the cold.
+
+He hadn't drowned. He'd faked it.
+
+The men he owed — the other kind, the kind from the bathroom-fan nights — had stopped threatening him. They'd started threatening me. My father found out they'd been watching me, that they'd named me by name, that the "collateral" had quietly become his only daughter. And he understood, the way you understand a thing in your spine, that as long as he was alive and reachable, they would use the people he loved to get to him.
+
+So he made himself unreachable in the only permanent way he could think of.
+
+He staged the accident. He had help — an old friend, details he still won't fully give me, the kind of plan a desperate man builds in the dark. He let the lake take a man who didn't exist anymore. Because a dead man's debt dies with him. A dead man has no daughter to threaten. The moment Raymond Greer was gone, the reason to hurt me was gone too.
+
+And it worked. The threat to me evaporated within weeks. He'd checked, from a distance, obsessively. We were safe. We were safe because the world believed he was dead.
+
+He told us he'd nearly broken a hundred times. The night I graduated. The night my grandmother — his own mother — was buried, and he stood at the back of the cemetery in a hat and sunglasses and couldn't come forward, couldn't even be seen, had to grieve his mother as a stranger at the edge of her funeral. He said that was the worst one. He'd watched his own family bury him, and then watched from the cold while we buried someone else, and both times he had to stay a ghost, because the moment Raymond Greer was confirmed alive, the math that kept me safe would flip back the other way.
+
+"Every envelope I mailed," he said, "I addressed in block letters so you wouldn't know my hand. Do you understand what that's like? Hiding your own handwriting from your own kid so you can take care of her without getting her killed?"
+
+The cash was him. Every plain envelope, scraped together from whatever work a legally dead man can find, mailed from different towns so it couldn't be traced. The thin man at the edge of my life was him — watching me graduate from a parking lot, watching me start community college from across a street, close enough to know I was okay and never close enough to ruin it.
+
+He stayed dead for two years to keep me alive. And he came back now, he said, because the men who'd hunted him were finally gone — arrested, the operation collapsed, the danger genuinely over. It was safe to be Raymond Greer again. So he'd walked through the snow to a dinner being held in his memory, to tell his daughter why she'd spent two years hating a ghost.
+
+Here's the bittersweet part. The part I'm still living inside.
+
+I don't get those two years back.
+
+That's the thing nobody tells you about a sacrifice like his. It's real, and it's love, and it also can't be undone. I grieved my father. I stood at an empty grave at twenty-two. I lay awake furious at him for leaving us in his mess. My mother aged a decade. She dated a kind man for a while, last year, and ended it out of a guilt she couldn't name — guilt, it turns out, over a husband who was alive the whole time and never told her, because telling her would have put the secret at risk, and the secret was the only thing keeping me safe.
+
+He thought he was sparing us. And he was. And he also wasn't, because grief is its own kind of harm, and we carried two years of it for a death that didn't happen.
+
+Both things are true. That's what bittersweet actually means. Not a little sad in a happy story. Two whole truths that don't cancel out: he saved my life, and he broke our hearts to do it, and I will never be able to fully separate the gratitude from the grief.
+
+The practical side is a nightmare, by the way. A legally dead man can't just reappear. There's the death certificate to undo, the small insurance payout my mother received and will have to sort out, questions from people in suits about how exactly a man fakes his own death. He's facing some of that. He's not hiding from it. He says he'll answer for whatever he has to, that two years of being dead taught him that running just turns one problem into a longer one.
+
+We're not healed. I need to say that clearly, because I don't want to hand you a bow on this. I'm still angry some days. I look at him at the dinner table — really there, eating my mom's cooking, his wind-up watch ticking on a wrist that's still too thin — and I feel a love so big it scares me, and right behind it, a grief I'm not done with. He let me believe he was gone. Even for the best reason in the world, that's a wound.
+
+But.
+
+He stood in that doorway and the first sentence out of his mouth wasn't "I'm back" or "forgive me." It was "I had to let you hate me. It was the only way to keep you alive." He'd thought about it from my side first. After two years in the cold, his first thought was my anger, and whether I'd understand it was a gift.
+
+I'm starting to. Slowly.
+
+We had dinner. Eventually. That night, after the shock burned down to something we could sit inside.
+
+It was not a reunion like in the movies. There were long silences. My mother set his plate down a little too hard. At one point she left the room and I heard her in the kitchen with the fan on — the old sound, the crying sound, except this time it wasn't fear, it was something with no name, grief and rage and relief all wearing the same coat. I went in. We stood there together by the running fan, the way we used to, except this time the man we were upset about was alive in the next room, eating, which is its own impossible thing to hold. My mother set a real plate at the head of the table and moved the framed photo to the shelf, and my father ate his favorite meal at his own memorial, and at one point he reached over and fixed the collar of my denim jacket the way he used to when I was small, and I let him, and I cried, and I'm not sure if it was the good kind or the other kind. Probably both. It's always both now.
+
+People ask how I feel about what he did.
+
+I tell them the truest thing I know: my father loved me so much he was willing to be hated, and grieved, and gone, if that was the price of my safety. That's not a fairy tale. It cost all of us something that doesn't come back.
+
+But he's at the table now. Snow melting off a secondhand coat. Watch still ticking.
+
+And I'd rather have my father back, late and complicated and two years too gone, than keep the clean, simple grief I'd gotten so used to.
+
+Turns out the man I spent two years hating spent those same two years three streets away, making sure I lived long enough to hate him.
+
+I'm done hating him.
+
+I'm not done being his daughter. I'm just getting started on that part again.`,
+  status: { plan: true, photo: true, caption: true, story: true },
+});
+
+
+// ---------------------------------------------------------------- C120
+items.push({
+  id: 'C120',
+  title: 'The HOA President Fined Me Into the Ground and Laughed at My Recall -> Then We Counted the Signatures',
+  conceptSource: 'concepts5 #F17-25',
+  engine: 'E12 — Karma / Comeuppance',
+  tone: 'mixed',
+  photoRule: 'twist-hidden',
+  openingStyle: 'Moral choice',
+  seedRefs: ['concepts5 / F17 / 25'],
+  characterBible: `CHARACTER LOCK — do not change across photo, caption, and full story:
+• Dolores Pruett — 58, narrator, widow on a fixed income, gardening gloves, her late husband's folded flag, steady and weary
+• Brad Keller — 45, HOA president, polo shirt, clipboard, a smug ledger of fines
+• Aanya Rao — 39, neighbor and ally, reads the petition count
+• Setting — an HOA clubhouse meeting room, Tempe, Arizona, folding chairs, a small head table, evening
+• Object clue — a thick stack of fine notices and a binder of recall-petition signatures (pays off in full story)`,
+  photoPrompt: `4:5 vertical photo, smartphone snapshot aesthetic, natural unposed moment, realistic phone-camera detail.
+
+An HOA clubhouse meeting room in Tempe, Arizona, in the evening, fluorescent light, rows of metal folding chairs filled with neighbors, a small head table at the front with a pitcher of water. Brad Keller, 45, in a polo shirt, stands smugly at the head table with a clipboard, mid-smirk. In the front row sits Dolores Pruett, 58, in a cardigan with gardening gloves resting on her lap, holding a thick three-ring binder against her chest, her expression calm and resolute. Beside her, a woman of about 39 is rising to her feet holding papers. Neighbors in the chairs are turning to watch.
+
+Framing: eye-level handheld shot from a few rows back, slightly off-center, catching Brad at the table in the background and Dolores with the binder in the foreground. Shallow phone depth-of-field on Dolores and the binder, Brad a touch soft. Candid snapshot, subtle phone-camera grain, realistic skin texture, flat indoor light. No readable text on the binder, fine notices, clipboard, or signage. No subtitles. No watermark.`,
+  caption: `The night I finally got enough signatures to remove the HOA president, I sat alone in my car in his cul-de-sac, the petition binder in my lap, and realized I had a choice to make.
+
+I could destroy this man.
+
+He had certainly spent two years trying to destroy me.
+
+My name is Dolores Pruett. I'm fifty-eight. I'm a widow, on a fixed income, in a tidy little subdivision outside Tempe, Arizona.
+
+My husband Walt passed three years ago. He served twenty years in the Army. When he died, I hung his flag on a small pole in our front yard, the one he asked me to fly. It's the thing I walk out to every morning.
+
+Some mornings it's the only conversation I have. I run it up, I say good morning to a man who isn't there, and I go back inside. That flag is the closest thing I have left to his voice.
+
+Then Brad Keller got elected HOA president.
+
+Brad is forty-five and runs the HOA like a man who has finally, at last, been given a kingdom. Clipboard. Polo shirt. A ledger of fines he clearly enjoys.
+
+He started with my flagpole. Cited me for "non-conforming exterior installations." I showed him the federal law that protects flag display. He couldn't fine me for the flag, so he got creative.
+
+He fined me for the color of my front door. For a "non-approved" desert plant in my xeriscape — the drought-friendly one the city literally rebates you for. For my garbage cans being visible "four minutes past the approved window." For a hairline crack in my driveway.
+
+Forty dollars here. Seventy-five there. On a fixed income, it adds up to terror. The fines started stacking toward the number where the HOA can put a lien on your house. He knew that. I think he liked that.
+
+At meetings, he'd read my violations out loud, by name, while neighbors looked at their shoes. "Mrs. Pruett, again." Like I was a problem child. A fifty-eight-year-old widow, dressed down in front of a room, for a cracked driveway and her dead husband's flag.
+
+I started keeping the notices in a shoebox. Not on purpose at first — I just couldn't bring myself to throw away official-looking paper. By spring the box was full. I'd sit at Walt's kitchen table and add them up and feel the walls come in. Eighty dollars here. A hundred and twenty there. The total creeping toward the threshold where the HOA can attach a lien to your home — where a widow on a fixed income can actually lose the house her husband's flag flies in front of. That was the part that kept me up at night. Not the money itself. The math of it. The slow, legal, smiling math.
+
+So I started knocking on doors. Just to talk. And I found out I wasn't alone.
+
+Brad had a list. The Hendersons, fined into silence. The young couple on Mesquite, too scared to plant anything. The Ramirez family, cited for their wheelchair ramp. A whole neighborhood of people quietly bleeding forty dollars at a time and feeling crazy and alone, exactly like me.
+
+The Hendersons showed me their shoebox. It looked like mine. The couple on Mesquite had given up and put in gravel — gravel and fear. Mr. Ramirez teared up telling me his wife had been cited for the ramp he'd built with his own hands so she could get her wheelchair to the front door. And every single one of them thought they were the only one. That's the trick of it. Brad fined us one at a time, in private, so each of us felt singled out and a little ashamed, and none of us ever compared notes.
+
+Until a widow with a binder started knocking.
+
+There's a thing in our bylaws. A recall. You need signatures from a third of the homeowners to force a vote to remove the president. Nobody had ever tried. It felt impossible.
+
+I spent three months walking that subdivision in the evenings with a binder and Walt's stubbornness.
+
+Brad found out, of course. At the next meeting, he actually laughed about it. "I hear Mrs. Pruett has a little petition," he said, smiling at the room. "Does anyone seriously want to waste the board's time on that?"
+
+He thought it was a joke.
+
+At the meeting last Tuesday, he asked, still smiling, if there was "any real support" for the recall before he gaveled it down.
+
+That's when my neighbor Aanya stood up, took the binder out of my hands, and started reading the signature count out loud.
+
+And I watched Brad Keller's smile come apart, number by number.
+
+Type 'NEXT' if you want the next part!! ⬇️`,
+  fullStory: `We needed signatures from a third of the homeowners. One hundred and six.
+
+Aanya read the count out loud, slowly, the way you read something you want a smug man to feel in his teeth.
+
+We had a hundred and ninety-one.
+
+Not a third. Nearly two-thirds. In a subdivision Brad thought he ruled, almost two out of every three doors had signed a piece of paper asking to be rid of him. He'd been so busy fining us that he never once considered we might be counting too.
+
+The bylaws were clear. The threshold was met, and then some. The recall vote was forced, held that night, and it wasn't close. Brad Keller was removed as president of the homeowners association by the people he'd spent two years fining into silence.
+
+And then the room did something I didn't expect. Someone nominated me. To finish his term. As president.
+
+It passed by acclamation. A show of hands so fast and so full it made my eyes sting.
+
+I want to tell you what that room felt like, because I'd spent two years in it as the accused. The same folding chairs. The same fluorescent lights. The same neighbors who'd studied their shoes while Brad read my name like a charge sheet. Except this time, when I stood up, nobody looked away. The Hendersons were there. The Mesquite couple. Mr. Ramirez, who pushed his wife's wheelchair right up to the front. People who'd felt alone for two years, looking around a room and realizing, all at once, that the loneliness had been the lie. There were a lot of us. There always had been. We'd just never been in the same room with our shoeboxes before.
+
+So there I was. Fifty-eight, widowed, three months ago a woman with a stack of fines threatening a lien on her house — and suddenly holding the gavel and the keys to the HOA. Holding, specifically, the same power Brad had used on all of us.
+
+Including his file.
+
+This is the choice I sat with in my car that night, and it's the real story, so let me tell it straight.
+
+When you take over an HOA, you get everything. The bank accounts. The bylaws. And the enforcement power — the right to inspect, to cite, to fine, to lien. I now had the authority to do to Brad Keller precisely what he had done to me. And believe me, Brad's own house wasn't perfect. Nobody's is. That's the dirty secret of the clipboard: if you go looking for forty dollars' worth of violation on any property in America, you will find it.
+
+I could have buried him. I could have read his name out loud at meetings until he sold and moved. I could have fined him toward a lien on his house and let him feel the fixed-income terror he'd handed a widow over a cracked driveway. A lot of my neighbors wanted me to. There was an appetite for it that first night, hot and understandable. "Give him a taste," somebody said.
+
+I went home and I stood in my front yard in the dark, under Walt's flag, and I thought about what my husband would have said.
+
+Walt spent twenty years defending a country precisely so that people couldn't be punished at the whim of whoever happened to be holding power that year. He used to say the test of a person isn't how they act when they're down. It's how they act the first morning they're finally up.
+
+I'd just gotten up. This was the morning.
+
+So at my first meeting as president, I did not read Brad Keller's violations out loud. I didn't mention his name at all.
+
+Instead, I did this:
+
+I forgave the fines. All of them. Every petty citation Brad had stacked on every household — the visible-trash-can fines, the wrong-plant fines, the Ramirez wheelchair ramp — wiped clean, with the board's vote. We refunded what we could from the surplus Brad had been so proud of building on our backs.
+
+I rewrote the enforcement rules. No more fining people into liens over cosmetic nonsense. We built a hardship process, so a widow or a young family or anyone on a fixed income could get a fine paused and a conversation instead of a threat. I put in a flag-and-memorial protection clause, so no future Brad could ever again come for a veteran's flag or a family's memorial.
+
+And Brad Keller's house got inspected on exactly the same gentle, humane standard as everyone else's. Which is to say: barely, and kindly, and never as a weapon. I never sent him a single fine. Not one. I had every right and every reason, and I chose not to, and that choice is the only part of this whole thing I'm actually proud of.
+
+It would have been so easy. That's what nobody tells you about getting the power you were denied — how light the trigger feels once it's finally in your hand. I had his file. I knew his fence was a half-inch over a setback. I knew his trash cans sat out past the window on Wednesdays, because I'd watched him fine three other people for exactly that. One afternoon of paperwork and I could have started his shoebox for him. I sat with that temptation longer than I'd like to admit. It felt like justice wearing a very convincing disguise.
+
+What stopped me wasn't that Brad deserved mercy. He didn't, particularly. What stopped me was that the moment I fined Brad Keller, I'd have signed my name to the idea that the HOA belongs to whoever's holding the clipboard — that the only thing wrong with the last two years was that the wrong person held it. And that's not what was wrong. What was wrong was the clipboard being a weapon at all. You don't fix that by taking better aim. You fix it by putting the weapon down where everyone can see you do it.
+
+Because here's what I figured out under that flag: revenge would have just proved Brad right. It would have said the HOA is a club for whoever holds the clipboard, and now it was my turn to swing it. The only way to actually beat what he'd built was to refuse to keep building it.
+
+It wasn't all grace and roses, and I won't pretend. Brad was humiliated — that part's just true, and I didn't lose sleep over it. He's quiet at meetings now, sits in the back, the way he used to make the rest of us sit. He moved, eventually, about a year later. He never apologized. Some people don't.
+
+But the neighborhood changed. People plant things again. The young couple on Mesquite put in a garden. The Ramirez kids decorated their ramp with string lights for the holidays and nobody cited a thing. We have a potluck now, in the clubhouse where I used to get my name read out like a criminal's. Aanya runs it.
+
+And every morning I walk out to Walt's flag, the one that started all of it, and I run it up the little pole, and nobody on God's green earth can fine me for it, because I made sure of that with the gavel he'd have wanted me to use exactly the way I used it.
+
+People ask if it felt good to take Brad down.
+
+Honestly? Taking him down felt like relief, not joy. The thing that felt good — the thing that still feels good, a year later, every single morning under that flag — was getting to hold all that power, the same power that nearly took my house, and choosing to be the kind of neighbor he never was.
+
+He fined a widow for her husband's flag.
+
+I gave a whole neighborhood back the right to fly theirs.
+
+That's the only kind of winning that lets you sleep.`,
+  status: { plan: true, photo: true, caption: true, story: true },
+});
+
+
+// ---------------------------------------------------------------- assemble + write
+const batch = {
+  batchId: 'batch-12',
+  prefix: 'C111',
+  conceptSource: 'concepts5 — RANDOM MIX (F22, F19, F12, F16, F05, F01, F11, F07, F04, F17)',
+  pipelineVersion: 'v2',
+  randomSeed: 286,
+  items,
+};
+
+const outPath = path.join(__dirname, 'batch-12.json');
+fs.writeFileSync(outPath, JSON.stringify(batch, null, 2), 'utf8');
+
+console.log('Wrote', outPath, 'with', items.length, 'items.');
+console.log('');
+console.log('id    | caption | story | opening style       | engine');
+console.log('------+---------+-------+---------------------+----------------------------------');
+for (const it of items) {
+  const cap = it.caption ? it.caption.length : 0;
+  const st = it.fullStory ? it.fullStory.length : 0;
+  const capFlag = cap < 4000 ? ' (LOW)' : cap > 5000 ? ' (HIGH)' : '';
+  const stFlag = st < 7000 ? ' (LOW)' : st > 8000 ? ' (HIGH)' : '';
+  console.log(
+    it.id + ' | ' +
+    String(cap).padStart(7) + capFlag + ' | ' +
+    String(st).padStart(5) + stFlag + ' | ' +
+    it.openingStyle.padEnd(19) + ' | ' +
+    it.engine
+  );
+}
+console.log('');
+const engs = items.map((i) => i.engine.split(' ')[0]);
+const distinct = new Set(engs);
+let dup = 0;
+for (let i = 1; i < engs.length; i++) if (engs[i] === engs[i - 1]) dup++;
+const tones = items.reduce((m, i) => ((m[i.tone] = (m[i.tone] || 0) + 1), m), {});
+const styles = items.map((i) => i.openingStyle);
+const styleDup = styles.length - new Set(styles).size;
+console.log('distinct engines:', distinct.size, '| consecutive engine dup:', dup, '| tones:', JSON.stringify(tones), '| duplicate opening styles:', styleDup);
