@@ -124,6 +124,7 @@ function build(opts) {
 
   const items = [];
   let prevStyle = null;
+  let styleCursor = randInt(rng, 0, OPENING_STYLES.length - 1);
   for (let i = 0; i < n; i++) {
     const fam = ordered[i];
     const seedNo = randInt(rng, 1, SEEDS_PER_FAMILY);
@@ -131,7 +132,17 @@ function build(opts) {
     const stylePool = fam.id === 'F01'
       ? OPENING_STYLES
       : OPENING_STYLES.filter((s) => s !== 'Third-person chaos');
-    let style = stylePool.find((s) => s !== prevStyle) || stylePool[0];
+    // Advance through the rotation until we land on an allowed, non-repeating style.
+    let style = null;
+    for (let k = 0; k < OPENING_STYLES.length; k++) {
+      const candidate = OPENING_STYLES[(styleCursor + k) % OPENING_STYLES.length];
+      if (stylePool.includes(candidate) && candidate !== prevStyle) {
+        style = candidate;
+        styleCursor = (styleCursor + k + 1) % OPENING_STYLES.length;
+        break;
+      }
+    }
+    if (!style) style = stylePool.find((s) => s !== prevStyle) || stylePool[0];
     prevStyle = style;
     const id = `${opts.prefix}${String(opts.start + i).padStart(3, '0')}`;
     const conceptRef = `concepts5 #${fam.id}-${String(seedNo).padStart(2, '0')}`;
