@@ -1,14 +1,12 @@
-# Full Story Methodology — v2
+# Full Story Methodology — v2 (cinematic drama)
 
-Website article after the Facebook photo + **viral-long caption**. Same voice as caption; completes the arc.
+Website article after Facebook photo + viral caption. **Same voice** as caption; completes Turn + Payoff.
 
 ---
 
 ## Core goal
 
-Reader clicked from Facebook — caption already invested them. Full story **continues the same first-person voice**, delivers **Turn + Payoff**, closes every thread.
-
-**Voice:** Identical register to caption — first-person, staccato lines allowed, human, specific, not summary-style or robotic.
+Reader clicked from Facebook — caption already invested them. Full story **continues same voice**, delivers all twists and consequences, closes every thread.
 
 ---
 
@@ -16,64 +14,72 @@ Reader clicked from Facebook — caption already invested them. Full story **con
 
 | Property | Value |
 |---|---|
-| Length | **7000–8000 characters**. Over 8000 → **keep as-is, never trim** |
+| Length | **7000–8000 characters** (over → keep, never trim) |
 | Language | English |
-| POV | **Same as caption** (usually first-person protagonist) |
-| Format | Short paragraphs and/or one-sentence lines (match caption rhythm) |
-| Opening | **Continue** from caption — do not repeat caption scenes verbatim |
-| Ending | Full payoff + concrete final line |
+| POV | **Same as caption** |
+| Format | Short paragraphs + one-sentence lines (match caption rhythm) |
+| Opening | **Next beat** after caption — do not repeat caption scenes |
+| Ending | Full payoff + concrete final image line |
 | CTA | **None** in story body |
 
 ---
 
 ## Handoff from caption
 
-Caption (4k–5k) may already cover Acts 1–2 and **start** Act 3 (recording, calling lawyer, disguise).
+Caption may end at: recording revealed, boys running, doctor crying, speech beginning, CEO walking to break room.
 
 **Full story must:**
-- Open as the **next beat** — same day or immediate follow-through
-- **Skip or compress** anything the caption already showed (one bridging sentence max)
+- Open as immediate follow-through (same day / same hour)
+- Compress caption recap to **one bridging sentence max**
 - Spend new words on: Turn completion, antagonist reaction, consequences, epilogue
-- **Not** paste the caption opening again
+- **Not** paste caption opening again
 
 ---
 
-## Structure (4 acts — flexible pacing)
+## Structure (4 acts)
 
-| Act | Target share | Content |
-|-----|--------------|---------|
-| 1 — Hook | ~15% | Bridge from caption; fresh pressure or decision |
-| 2 — Pressure | ~25% | Stakes deepen; object clue sharpens; antagonist doubles down |
-| 3 — Turn | ~30% | Pivot lands — reveal, action, recognition, return, confession |
-| 4 — Payoff | ~30% | Resolution per engine; antagonist consequence **if** antagonist exists; epilogue beat; final line |
+| Act | Share | Content |
+|-----|-------|---------|
+| 1 — Bridge | ~15% | Pick up from cliffhanger; fresh pressure |
+| 2 — Pressure | ~25% | Antagonist doubles down; stakes widen |
+| 3 — Turn | ~30% | Full reveal — identity, records, truth, witnesses |
+| 4 — Payoff | ~30% | Consequences, comeuppance (if villain), epilogue, final line |
 
-Engine adaptation: same table as v1 — see `story-engines.md` / concepts4. No forced villain for non-E00 engines.
+### Engine payoffs
+
+| Engine | Payoff must include |
+|--------|---------------------|
+| E00 | Public or private consequence for antagonist; protagonist regains power |
+| E02 | Community/room acknowledges sacrifice; stand-in parent vindicated |
+| E04 | Authority corrects injustice; policy or status change |
+| E08 / E26 | Misunderstanding explained; emotional reckoning |
+| E15 | Evidence read/seen; accusers defeated in court |
+| E11 / E27 | Bittersweet truth — loss acknowledged, grace or reframe |
 
 ---
 
-## Voice (same as caption)
+## Voice (sources.txt)
 
 **Do**
-- First person, scene-by-scene, dialogue, concrete verbs
-- One-line punches after longer paragraphs
-- US settings, Character Lock consistent
-- Final line under ~25 words, concrete image
+- Same staccato rhythm as caption
+- Dialogue in confrontation scenes
+- Concrete consequences: fired, escorted out, contempt of court, deed transferred
+- Final line under ~25 words — image, not moral
 
 **Don't**
-- Switch to third person unless caption did
+- Switch POV unless caption did
 - Repeat caption paragraphs
-- Moral lecture ending
-- Paste Facebook CTA into body
+- Facebook CTA in body
 - Trim to fit 8000
 
 ---
 
 ## Quality checklist
 
-- [ ] 7000–8000 characters (over = keep, no trim)
-- [ ] Voice matches caption (first-person, same protagonist)
-- [ ] Opening continues — does not reboot
-- [ ] Turn + payoff complete
-- [ ] No CTA in body
+- [ ] 7000–8000 characters (over = keep)
+- [ ] Voice matches caption
+- [ ] Opens as continuation
+- [ ] All caption threads resolved
+- [ ] Antagonist consequence if antagonist exists
 - [ ] Character Lock honored
-- [ ] Policy-safe per `nano-banana-2.md`
+- [ ] Policy-safe

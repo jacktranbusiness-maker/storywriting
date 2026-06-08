@@ -1,14 +1,14 @@
-# Caption Methodology — Viral-Long (v2)
+# Caption Methodology — Viral Cinematic Drama (v2)
 
-Facebook captions for **4:5 drama photos** (Nano Banana 2). Target style: long scroll-fiction posts (~4k chars) like viral FB drama — first-person, emotional, mobile-readable.
+Facebook captions for **4:5 cinematic drama photos**. Target voice: `sources.txt` — long scroll-fiction, first-person, staccato, US melodrama.
 
 ---
 
 ## Core goal
 
-The caption is a **long opening act** of the story — not a blurb. Reader should feel mid-episode: hooked, invested, angry or hopeful, and **still missing the final payoff** (that lives in the full story article).
+Caption = **long opening act** (~4k chars). Reader is mid-episode: hooked, angry, hopeful — **payoff incomplete** (full story on site).
 
-**Workflow:** Photo + caption on Facebook → readers comment MORE/YES/NEXT → you post article link → full story on site.
+**Workflow:** Cinematic photo + caption on Facebook → engagement → article link → full story.
 
 ---
 
@@ -16,109 +16,134 @@ The caption is a **long opening act** of the story — not a blurb. Reader shoul
 
 | Property | Value |
 |---|---|
-| Length | **4000–5000 characters** (count characters). Over 5000 → **keep as-is, never trim** |
+| Length | **4000–5000 characters** (over → keep, never trim) |
 | Language | English |
-| POV | **First person** protagonist (default) — `My name is [Full Name].` after the hook |
-| Layout | **Staccato-friendly** — many sentences on their own line; short paragraphs OK |
-| Dialogue | Only lines **verbatim** from photo prompt or approved plan |
-| Ending | Stop before **full payoff**; cliffhanger question optional |
-| CTA | **MORE / YES / NEXT only** (v1 — see below) |
+| POV | **First person** (default) — `My name is [Full Name].` after hook |
+| Exception | F01 ballroom seeds may use **third-person cinematic** if planned in Phase 0 |
+| Layout | Staccato — many one-line sentences; short paragraphs |
+| Ending | Cliffhanger before full payoff |
+| CTA | See [CTA section](#cta) |
 
 ---
 
-## Structure (viral-long arc)
+## Structure (match sources.txt)
 
-### 1. Hook (1–2 sentences, first line)
+### 1. Hook (1–3 lines)
 
-One scroll-stopping line: stakes + promise of reversal. Often starts with *My husband…*, *I thought…*, *They told me…*
+Scroll-stop. Patterns from samples:
 
-Example pattern:
-> My husband told me he was flying across the country for an important business meeting. Just hours later, I heard his voice coming from a hospital room where he was never supposed to be—and what I overheard revealed a betrayal so devastating that it changed my life forever.
+```
+I thought [belief]. Then [contradiction].
+On the night of my wedding, I [innocent action]. Instead of [expected], I [discovery].
+They called me [insult] in front of [audience]. What happened next left everyone speechless.
+```
+
+Third-person (F01 only):
+```
+The screams don't fade—they stack on top of each other.
+[Concrete chaos]. No one is filming anymore for fun.
+```
 
 ### 2. Identity anchor
 
-`My name is [Name].` — then 2–4 lines establishing the life they believed they had (marriage, status, trust, money, family).
+`My name is [Full Name].` — age, city, relationship, what she believed.
 
 ### 3. Setup & descent (largest section)
 
-- Scene-by-scene escalation: arrival → discovery → overhearing → objects → dialogue
-- **Concrete US places** and times
-- **2–4 visual details** from the photo prompt woven in naturally
-- Antagonist confidence, bystanders, internal doubt (*I wanted to believe…*)
-- Micro-beats: car ride, door crack, phone out, hands shaking
+- Scene-by-scene escalation with **concrete US places** (Chicago, Manhattan, Blue Ridge, San Antonio)
+- **Dialogue sparse and sharp** — each line = one beat
+- Antagonist confidence; protagonist restraint (stays hidden, stays calm)
+- Body grounding: *My stomach twisted.* / *The room went dead silent.*
+- **2–4 visual details** from photo prompt woven naturally
+- Micro-beats: footsteps, phone speaker, hand on stomach, cardboard box
 
 ### 4. Approach the turn (do not complete payoff)
 
-- Something shifts: recording starts, call to ally, disguise revealed, power move begins
-- End on **tension or a question** — reader must click for the rest
-- Caption may go **deeper than v1** (e.g. start revenge) but **final twist resolution** stays for full story
+- Recording starts, mic lifted, boys appear, doctor freezes, valedictorian folds speech
+- End on **tension line or question**
+- May include **first twist** if photo already shows it — save **deeper layer** for full story
 
-### 5. Blank line + CTA (required)
+### 5. Blank line + CTA
 
-Use **exactly one** of these (v1):
+---
+
+## Voice (sources.txt DNA)
+
+**Do**
+- First person confessional (unless F01 third-person planned)
+- Alternate long sentences with **one-line punches**
+- Full names: Emma Carter, Ryan Calloway, Claire Ramirez
+- Specific money/objects: Oakwood Hills apartment, Purple Heart, silver cross necklace
+- Let antagonist **overperform** — protagonist watches and waits
+- Sensory lines: *Click. Click. Click.* / *Silence doesn't fall. It collapses.*
+
+**Don't**
+- Open with *In this photo…*
+- Generic AI phrases (*little did I know*, *destiny had other plans*)
+- Moral lecture at end
+- Full legal win / complete humiliation / full reunion resolution
+- Trim to fit 5000
+
+---
+
+## CTA
+
+**Default (pipeline):** rotate MORE / YES / NEXT:
 
 ```
 Drop 'MORE' if you want to know what happens next!! 👇
 Comment 'YES' if you want the full story!! 👉
 Type 'NEXT' if you want the next part!! ⬇️
-Drop 'MORE' if you want to know what happens next!! ⤵️
-Comment 'YES' if you want the full story!! ➡️
-Type 'NEXT' if you want the next part!! 🔗
 ```
 
-**Do not** use alternate CTAs (`story in the comment` only, etc.) unless user overrides.
+**Alternate (sources style)** — use when user wants engagement-bait voice:
+
+```
+WHAT HAPPENED NEXT CHANGED THEIR LIVES FOREVER 👇💬
+...CONTINUE IN THE COMMENTS 👇
+Type "0711" 💬 and hit "Like" to see the full story👇👇
+```
+
+One CTA per caption. Rotate across batch.
 
 ---
 
-## Voice (match writing.rtfd samples)
+## Opening styles (rotate — no consecutive duplicates)
 
-**Do**
-- First person, confessional, specific names (full names for key characters)
-- Alternate **long breath** sentences with **one-line punches**
-- Show via action and dialogue — *Then I heard him say:*
-- Let protagonist **choose restraint** (doesn't burst in) when that raises tension
-- Ground emotion in body (*My hands began to shake*, *The room felt smaller*)
-
-**Don't**
-- Open with image description (*In this photo…*)
-- Generic AI phrases (*little did I know*, *destiny had other plans*)
-- Moralize at the end
-- Spoil the **final** payoff (full humiliation of villain, complete legal win, reunion embrace — save for full story)
-- Invent dialogue not in prompt/plan
-
----
-
-## Opening styles
-
-Same 14 styles as v1 — rotate across batch (no consecutive duplicates). See v1 list in `story-engines` / Phase 0 `openingStyle`. Match style to engine (humiliation vs kindness vs reunion).
+1. I thought… Then…
+2. They called me…
+3. On the night of…
+4. My name is… (cold open)
+5. Dialogue slap (opens with quoted line)
+6. Silent witness (protagonist watches without acting)
+7. Object clue (cake, ring box, scar, bread)
+8. Crisis clock (situation worsens by the minute)
+9. The return (someone comes back who shouldn't)
+10. Room goes wrong (public event breaks)
+11. Accuser POV flip (accused stays calm)
+12. Visual reveal (sees something impossible)
+13. Third-person chaos (F01 only)
+14. Medical / legal threshold (birth, verdict imminent)
 
 ---
 
 ## Caption ↔ photo ↔ full story
 
-| | Caption (v2) | Photo | Full story (v2) |
-|--|--------------|-------|-----------------|
+| | Caption | Photo | Full story |
+|--|---------|-------|------------|
 | Length | 4k–5k | — | 7k–8k |
-| Payoff | Hidden / partial | Hidden | Complete |
-| Voice | First-person viral | — | **Same voice** as caption |
+| Payoff | Partial / hidden | Emotional peak | Complete |
+| Style | Staccato viral | Cinematic still | Same voice as caption |
+| Twist | First layer OK | May show visual twist | All layers + consequences |
 
 ---
 
 ## Quality checklist
 
-- [ ] 4000–5000 characters (over = keep, no trim)
-- [ ] Hook line + `My name is…` present
+- [ ] 4000–5000 characters (over = keep)
+- [ ] Hook + identity anchor
 - [ ] Photo visual details present
-- [ ] First-person throughout
-- [ ] CTA = MORE / YES / NEXT only
-- [ ] Final payoff not fully delivered
-- [ ] Opening style ≠ previous item in batch
-
----
-
-## Anti-patterns
-
-- Copying the photo prompt sentence-for-sentence
-- Bullet lists or headers inside caption text
-- Same hook structure as previous caption in batch
-- Trimming to fit 5000 — **never trim**
+- [ ] POV matches plan
+- [ ] CTA present
+- [ ] Deepest payoff reserved for full story
+- [ ] Opening style ≠ previous item
