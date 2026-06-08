@@ -1,4 +1,4 @@
-# Photo Prompt Format (v2)
+# Photo Prompt Format (v2 — cinematic)
 
 How to **write** photo prompts in JSON and how **Phase 4** exports `{batch-id}-photos.txt`.
 
@@ -8,19 +8,17 @@ How to **write** photo prompts in JSON and how **Phase 4** exports `{batch-id}-p
 
 | Field | Content |
 |-------|---------|
-| `title` | `Tension phrase → Payoff phrase` (no ID prefix in JSON) |
+| `title` | `Tension phrase → Payoff phrase` |
 | `characterBible` | Full CHARACTER LOCK block (multi-line bullets OK) |
-| `photoPrompt` | **Body only** — do not repeat `id \| title` or CHARACTER LOCK inside this field |
+| `photoPrompt` | **Body only** — no `id \| title` or CHARACTER LOCK inside |
 
-### `photoPrompt` body (3 parts, normal paragraphs)
+### `photoPrompt` body (3 parts)
 
-1. **Opener** (one line): `4:5 vertical photo, smartphone snapshot aesthetic, natural unposed moment, realistic phone-camera detail.`
-2. **Scene block** (one or two dense paragraphs): US location, time, lighting, every person from lock, peak-tension action, object clue, reactions. No payoff.
-3. **Framing block** (one paragraph): starts with `Framing:` — handheld angle, depth-of-field, grain, policy lines (no readable text, no watermark).
+1. **Opener** (one line): `4:5 vertical cinematic photorealistic drama still, high-budget soap opera aesthetic, shallow depth of field, emotionally charged faces.`
+2. **Scene block** (one or two dense paragraphs): US location, time, lighting, every person from lock, scroll-stop action, object clue, witness reactions.
+3. **Framing block** (one paragraph): starts with `Framing:` — angle, depth-of-field, cinematic photorealism, no readable text policy.
 
-**Do not** use caption-style staccato (one sentence per line) in `photoPrompt`.
-
-**Do** use blank lines only between the three parts above (optional single blank line between scene and Framing).
+**Do not** use caption-style staccato in `photoPrompt`.
 
 ---
 
@@ -31,44 +29,25 @@ Assembled by `scripts/json-to-txt.js`. **No `---` separators.**
 Each item = one block:
 
 ```text
-C061 | Wedding Waitress Mocked → Groom Hears Birth Mother's Song
+V001 | Under-Bed Bride Records → Apex Heiress Reverses In-Laws
 CHARACTER LOCK — do not change across photo, caption, and full story:
-• Nathan Vale — 31, groom in black tux, champagne flute paused near chest, stunned eyes
-• Theresa Vale — 58, silver-blonde bob, pearl suit, sharp accusing gesture
-• Elena Ortiz — 55, catering uniform, dark braid with gray strands, tray cloth with stitched initials
-• Setting — Rosemont Estate wedding tent, Lexington, Kentucky, string lights, Saturday 7pm
-• Object clue — stitched initials tag on tray cloth (pays off in full story Act 3–4)
+• Emma Carter — 30, bride in white lace gown and veil, tear-streaked, under bed frame, smartphone recording
+• Vanessa Cole — 58, silver sequined evening gown, silver heels, sharp gestures
+• Ethan Marsh — 32, groom, blue suit, untied bow tie, tense jaw
+• Monica Reyes — 29, pregnant, navy evening gown, composed expression, hand on stomach
+• Setting — penthouse bridal suite, downtown Chicago, night, city skyline through windows
 
-4:5 vertical photo, smartphone snapshot aesthetic, natural unposed moment, realistic phone-camera detail.
-Rosemont Estate wedding tent in Lexington, Kentucky, Saturday evening around 7pm, warm string lights glowing over white table linens and champagne flutes. Nathan Vale, 31, groom in a black tux, stands frozen mid-toast with a champagne flute paused near his chest, stunned eyes locked on the catering aisle. Theresa Vale, 58, silver-blonde bob, pearl suit, points sharply at Elena Ortiz, 55, catering uniform, dark braid with gray strands, who holds a tray cloth bunched in one hand with a small stitched tag folded toward camera but not readable. Guests at nearby tables turn in awkward silence, a half-cleared tray of glasses between them.
-Framing: eye-level handheld shot from a seated guest near the head table, slightly off-center and caught mid-argument. Shallow phone depth-of-field on Nathan's frozen face and Elena's cloth. Candid snapshot, subtle phone-camera grain, realistic skin texture. No readable text on menus, tags, signs, documents, phone screens, or badges. No subtitles. No watermark.
+4:5 vertical cinematic photorealistic drama still, high-budget soap opera aesthetic, shallow depth of field, emotionally charged faces.
+Penthouse bridal suite in downtown Chicago at night, warm interior light against cool city skyline through floor-to-ceiling windows. Emma Carter, 30, in a crushed white lace wedding gown, lies hidden beneath the bed, one hand over her mouth, smartphone raised with recording dot visible. Above: Vanessa Cole in a silver sequined gown gestures at a phone on the mattress; Ethan Marsh in a blue suit stands with hands in pockets; Monica Reyes in navy cradles her pregnant belly with a calm almost-smug expression. Luxury bed linens, champagne flutes on nightstand.
+Framing: low angle from floor level showing both the hidden bride and the three figures above. Cinematic photorealism, natural skin texture. No readable text on phone screen or documents. No watermark.
 
-C062 | Gate Guard Humiliated → Retired Studio Owner Controls Budget
-CHARACTER LOCK — do not change across photo, caption, and full story:
-...
+V002 | ...
 ```
 
 ### Rules
 
-- **Between items:** exactly **one blank line** (`\n\n`). No `---`, no `===`.
-- **First line of each block:** `{id} | {title}`
+- **Between items:** exactly **one blank line**
+- **First line:** `{id} | {title}`
 - **Then:** `characterBible` verbatim
 - **Then:** one blank line
-- **Then:** `photoPrompt` verbatim (trimmed; internal paragraph breaks preserved)
-- **No extra line breaks** injected inside `photoPrompt` during export
-
----
-
-## Package file (`-package.txt`)
-
-Photo section under each item still uses labeled blocks:
-
-```text
-[CHARACTER LOCK]
-...
-
-[PHOTO PROMPT]
-...
-```
-
-Same content as JSON; formatting can use normal line breaks for readability.
+- **Then:** `photoPrompt` verbatim
